@@ -1,0 +1,55 @@
+<div class="bg-[#F8F8F8]">
+  <div class="lg:w-[80%] m-auto px-4 lg:px-0 flex flex-col lg:flex-row py-16 gap-16">
+    <div class="lg:w-[50%] flex flex-col justify-center order-2 lg:order-1">
+      <div class="font-medium text-[#AFAFAF] text-sm lg:text-base mb-3">{{ section.settings.subtitle }}</div>
+
+      <div class="mb-3 lg:mb-7">
+        <h2 class="colored-title text-black font-bold text-3xl lg:text-4xl leading-snug uppercase lg:mb-6">
+          {{ section.settings.title }}
+        </h2>
+      </div>
+
+      <div class="desc-text text-[0.8rem] font-light text-[#222222] mb-6">
+        {{ section.settings.desc }}
+      </div>
+    </div>
+
+    <div class="lg:w-[50%] flex flex-col justify-center order-1 lg:order-2">
+      {{
+        section.settings.image
+        | image_url: width: 900
+        | image_tag: height: '100%', alt: 'Vitamins', class: 'rounded-lg'
+      }}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Why: Supplements",
+  "tag": "section",
+  "limit": 1,
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle"
+    },
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "richtext",
+      "id": "desc",
+      "label": "Description"
+    }
+  ]
+}
+{% endschema %}

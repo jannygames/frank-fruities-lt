@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.colored-title-red strong,
+.colored-title-blue strong,
+.colored-title-violet strong,
+.colored-title-notracking strong,
+.colored-title strong {
+  color: #FF5E5E;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+}
+
+.colored-title-notracking strong {
+  letter-spacing: 0;
+}
+
+.colored-title-blue strong {
+  color: #FFED04;
+}
+
+.colored-title-red strong,
+.colored-title-violet strong {
+  color: #fff;
+  font-weight: 700;
+}
+
+.colored-title-red strong {
+  color: #FFEE14;
+}
+
+.desc-text-red p,
+.desc-text p {
+  margin-bottom: 1rem;
+}
+
+.desc-text-red p > strong,
+.desc-text p > strong,
+.desc-text li > strong {
+  font-weight: 600;
+}
+
+.desc-text ul {
+  padding-left: 5px;
+  list-style: inside;
+  list-style-type: disc;
+}
+
+.desc-text ul li {
+  margin-bottom: 0.8rem;
+  line-height: 1.1rem;
+}
+
+.desc-text-red p > strong {
+  color: #FFEE14;
+}
+
+.pagination .page.current {
+  color: #9c9c9c;
+}
+
+#bundles .slick-track,
+#top-sellers .slick-track {
+  display: flex;
+  gap: 1.5rem;
+}
+
+#reviews .slick-track {
+  display: flex;
+  gap: 2.5rem;
+}
+
+#page-text h2,
+#page-text h3 {
+  color: #000
+}
+
+#page-text strong {
+  font-weight: 700;
+}
+
+#page-text p {
+  margin-bottom: 1rem;
+}
+
+.ticker { width: 100%; overflow: hidden; }
+.ticker-track { display: flex; width: max-content; animation: marquee-x 18s linear infinite; }
+.ticker-track:hover { animation-play-state: paused; }
+.ticker-list { display: flex; }
+.ticker-item { display: inline-flex; }
+
+@keyframes marquee-x {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@media (max-width: 1024px) {
+  #shopify-section-header {
+    height: 60px;
+    margin-bottom: -60px;
+    padding: 1rem;
+    top: 0;
+    position: sticky;
+    z-index: 10;
+  }
+}

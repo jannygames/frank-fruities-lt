@@ -1,0 +1,82 @@
+<div class="w-full lg:w-[20%]">
+  <div class="relative rounded-lg mb-2">
+    {% assign variant = product.selected_or_first_available_variant %}
+    {% if variant and variant.compare_at_price and variant.compare_at_price > variant.price %}
+      {% assign savings = variant.compare_at_price | minus: variant.price %}
+      {% assign discount_percent = savings | times: 100 | divided_by: variant.compare_at_price | round %}
+      {% if discount_percent > 0 %}
+        <div
+          class="absolute top-0 right-0 !z-10 bg-bts-yellow text-black font-extrabold px-3 py-1 leading-none text-xl"
+          style="background-color: #C9DF24; transform: translateY(-100%);"
+        >
+          -{{ discount_percent }}%
+        </div>
+      {% endif %}
+    {% endif %}
+    <a href="{{ product.url }}" class="block">
+      {{ product.featured_image | image_url: width: 800 | image_tag: alt: product.title }}
+    </a>
+  </div>
+
+  <div class="py-3 text-center">
+    <a href="{{ product.url }}" class="font-light">
+      {{ product.title }}
+    </a>
+  </div>
+
+  <div class="text-center">
+    <a href="{{ product.url }}" class="font-semibold text-lg">
+      {% if variant and variant.compare_at_price and variant.compare_at_price > variant.price %}
+        <span class="text-[#B3B3B3] text-sm font-light line-through" style="color: #B3B3B3;">
+          {{- variant.compare_at_price | money -}}
+        </span>
+        <span class="text-[#404A9E] ml-2" style="color: #404A9E;">{{ variant.price | money }}</span>
+      {% else %}
+        {% if variant %}
+          {{ variant.price | money }}
+        {% else %}
+          {{ product.price | money }}
+        {% endif %}
+      {% endif %}
+    </a>
+  </div>
+
+  <div class="mt-3">
+    {% assign first_available_variant = product.selected_or_first_available_variant %}
+    {% if first_available_variant and first_available_variant.available %}
+      <form method="post" action="/cart/add" class="w-full">
+        <input type="hidden" name="id" value="{{ first_available_variant.id }}">
+        <button
+          type="submit"
+          class="w-full flex items-center justify-center gap-2 bg-[#404A9E] text-white py-2 rounded-lg hover:opacity-90 mt-2 mb-5"
+          style="background-color: #404A9E; margin-top: 10px;"
+        >
+          Add to cart
+          <img
+            src="{{ 'cart-icon.svg' | asset_url }}"
+            alt="Cart"
+            class="w-4 h-4"
+            style="filter: brightness(0) invert(1);"
+            width="16"
+            height="16"
+          >
+        </button>
+      </form>
+    {% else %}
+      <button
+        class="w-full flex items-center justify-center gap-2 bg-[#404A9E] text-white py-2 rounded-lg opacity-50 cursor-not-allowed"
+        disabled
+      >
+        <img
+          src="{{ 'cart-icon.svg' | asset_url }}"
+          alt="Cart"
+          class="w-4 h-4"
+          style="filter: brightness(0) invert(1);"
+          width="16"
+          height="16"
+        >
+        Sold out
+      </button>
+    {% endif %}
+  </div>
+</div>

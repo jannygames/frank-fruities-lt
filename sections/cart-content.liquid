@@ -1,0 +1,108 @@
+<div class="py-20 px-4 lg:px-0 mt-20">
+  <div class="lg:w-[80%] m-auto pt-12 lg:pt-24">
+    <div class="mb-3 lg:mb-7">
+      <h2 class="colored-title text-black font-bold text-3xl lg:text-4xl leading-snug uppercase">
+        Review <strong>Cart</strong>
+      </h2>
+    </div>
+
+    <div class="lg:w-[80%]">
+      {% if cart.item_count > 0 %}
+        <form id="cart" action="{{ routes.cart_url }}" method="post">
+          <div class="mb-10">
+            {% for item in cart.items %}
+              <div class="py-5 {% unless forloop.last %}border-b{% endunless %} border-[#D3D3D3] flex flex-col md:flex-row gap-5">
+                <div class="rounded-md overflow-hidden">
+                  {{ item.product.featured_image | image_url: width: 100 | image_tag: alt: item.product.title }}
+                </div>
+
+                <div class="flex flex-col justify-center md:w-[30%]">
+                  <div>
+                    {{ item.title }}
+                  </div>
+
+                  <div class="font-semibold text-lg">
+                    {{ item.final_price | money }}
+                  </div>
+                </div>
+
+                <div class="flex flex-col justify-center w-[150px]">
+                  <input
+                    id="quantity-{{ forloop.index }}"
+                    type="hidden"
+                    name="updates[]"
+                    min="1"
+                    value="{{ item.quantity }}"
+                  >
+
+                  <div class="flex flex-row py-[0.3rem] px-3 border border-[#D9D9D9] rounded-[10px]">
+                    <div class="flex items-center">
+                      <a class="product-quantity-less" href="#" data-index="{{ forloop.index }}">
+                        <img src="{{ 'product-size-minus.svg' | asset_url }}" width="auto" height="auto" alt="Less">
+                      </a>
+                    </div>
+
+                    <div
+                      id="product-quantity-text-{{ forloop.index }}"
+                      class="w-16 font-semibold text-[1.25rem] text-center"
+                    >
+                      {{ item.quantity }}
+                    </div>
+
+                    <div class="flex items-center">
+                      <a class="product-quantity-more" href="#" data-index="{{ forloop.index }}">
+                        <img src="{{ 'product-size-plus.svg' | asset_url }}" width="auto" height="auto" alt="More">
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="flex flex-col justify-center">
+                  <div class="md:px-10">
+                    <a class="text-sm text-[#FF5E5E]" href="{{ item.url_to_remove }}">Remove</a>
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+
+          <div class="mb-10">
+            <div class="mb-3">
+              Subtotal: <span class="font-semibold text-lg">{{ cart.items_subtotal_price | money }}</span>
+            </div>
+
+            <div class="italic font-light">Tax included. Shipping calculated at checkout.</div>
+          </div>
+
+          <div class="mb-10 flex flex-col md:flex-row gap-4">
+            <input
+              type="submit"
+              name="checkout"
+              value="Checkout"
+              class="bg-[#343057] text-center rounded-lg text-[#fff] text-md py-3 px-16 w-full md:w-auto cursor-pointer"
+            >
+            <a
+              href="{{ routes.all_products_collection_url }}"
+              class="text-center border border-[#343057] rounded-lg text-[#343057] text-md py-3 px-16 w-full md:w-auto hover:bg-[#343057] hover:text-white transition-colors duration-200"
+            >
+              Continue Shopping
+            </a>
+          </div>
+        </form>
+      {% else %}
+        <div class="pb-60">
+          Your cart is empty.
+
+          <div class="flex flex-col md:flex-row gap-4 mt-20">
+            <a
+              href="{{ routes.all_products_collection_url }}"
+              class="text-center border border-[#343057] rounded-lg text-[#343057] text-md py-3 px-16 w-full md:w-auto hover:bg-[#343057] hover:text-white transition-colors duration-200"
+            >
+              Continue Shopping
+            </a>
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>

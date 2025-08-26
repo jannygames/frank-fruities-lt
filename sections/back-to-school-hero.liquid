@@ -1,0 +1,62 @@
+<div
+  class="relative w-full overflow-hidden lg:aspect-[16/7] min-h-[520px] text-white lg:pt-20 z-0 max-lg:h-[100vh] max-lg:w-[100dvw] bg-bts-bg"
+>
+  <img
+    src="{{ 'bts-home.png' | asset_url }}"
+    alt="Back to School Hero"
+    class="hidden lg:flex absolute top-0 left-0 w-full h-[90%] lg:h-full xl:h-[90%] object-cover"
+    width="1920"
+    height="840"
+  >
+  <img
+    src="{{ 'hero-bg-mobile.png' | asset_url }}"
+    alt=""
+    aria-hidden="true"
+    class="flex lg:hidden absolute inset-0 w-full h-full object-cover pointer-events-none"
+    width="500"
+    height="900"
+  >
+  <img
+    src="{{ 'hero-backpack-mobile.png' | asset_url }}"
+    alt="Decorative backpack"
+    class="block lg:hidden absolute bottom-[0] max-md:left-[5%] md:left-[25%] w-full max-sm:h-1/3 max-sm:w-auto sm:h-auto sm:w-[60%] pointer-events-none translate-y-[5%] !z-[3]"
+    width="640"
+    height="640"
+  >
+  <div
+    class="relative flex flex-col items-start lg:justify-center w-full min-h-full px-6 lg:px-16 z-[1] lg:pt-9 max-lg:top-[30%]"
+  >
+    <div class="lg:w-1/3 lg:ml-[7vw] w-full lg:pt-10 xl:pt-0">
+      <h1
+        class="text-white font-extrabold lg:text-4xl xl:text-5xl drop-shadow-lg text-5xl leading-[1.1]"
+      >
+        Back to School...<br class="hidden lg:block">
+        with <span class="text-bts-yellow">Frank Fruities!</span>
+      </h1>
+      <p
+        class="text-white font-light mb-8 mt-6 max-w-xl drop-shadow text-justify text-lg lg:text-[1.3vw] leading-[1.2]"
+      >
+        Give your kids the daily support they need for a year of learning, growing, and adventure! With savings up to
+        33%!
+      </p>
+      <a
+        href="#bts-products"
+        class="px-6 py-2 rounded-lg bg-bts-yellow text-bts-blue text-sm font-semibold shadow-md hover:opacity-90 transition flex items-center gap-4 justify-between relative cursor-pointer md:max-w-[30vw] lg:max-w-[16vw] lg:min-w-[300px] md:min-w-[280px] z-10"
+      >
+        Back to school discounts
+
+        <img
+          src="{{ 'tabler_sparkles.svg' | asset_url }}"
+          alt="Arrow Right"
+          class="w-6 h-6 ml-2 pointer-events-none"
+          width="16"
+          height="16"
+        >
+      </a>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{ "name": "Back to School: Hero", "tag": "section", "limit": 1, "settings": [] }
+{% endschema %}

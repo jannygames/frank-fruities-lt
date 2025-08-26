@@ -1,0 +1,51 @@
+<div class="bg-[#343057] py-14 lg:py-10">
+  <div class="lg:w-[70%] m-auto px-4 lg:px-0 flex flex-col lg:flex-row gap-y-6 justify-between">
+    <div class="flex flex-col justify-center">
+      <h2 class="colored-title-violet text-[#ACA8D1] text-xl lg:text-2xl font-bold tracking-wider text-center lg:text-left">
+        {{ section.settings.title }}
+      </h2>
+    </div>
+
+    <div class="flex flex-col justify-center md:w-[40%] md:m-auto">
+      {% comment %}
+        <button class="text-center border border-white rounded-lg text-white text-md lg:text-lg pt-[0.6rem] pb-[0.4rem] lg:py-2 px-6">
+          <span>{{ section.settings.button }}</span>
+          <img
+            src="{{ 'leave-review-icon.svg' | asset_url }}"
+            alt="{{ section.settings.button }}"
+            width="30"
+            height="auto"
+            class="inline-block ml-1 mt-[-4px]"
+          >
+        </button>
+      {% endcomment %}
+
+      <a
+        href="/account/register"
+        class="text-center border border-white rounded-lg text-white text-md lg:text-lg pt-[0.6rem] pb-[0.4rem] lg:py-2 px-6"
+      >
+        <span>Sign Up</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Front page: Leave Review",
+  "tag": "section",
+  "limit": 1,
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "text",
+      "id": "button",
+      "label": "Button text"
+    }
+  ]
+}
+{% endschema %}

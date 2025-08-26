@@ -1,0 +1,33 @@
+<div class="border border-[#D3D3D3] rounded-lg p-5">
+  <div class="flex flex-row gap-5 items-center mb-6">
+    {% if photo %}
+      <div class="rounded-full overflow-hidden">
+        {{ photo | image_url: width: 50 | image_tag: alt: name }}
+      </div>
+    {% else %}
+      <div>
+        <img src="{{ 'userpic-placeholder.svg' | asset_url }}" width="50" height="auto" alt="{{ name }}">
+      </div>
+    {% endif %}
+
+    <div class="text-[#0F1113]">
+      <div class="font-bold">{{ name }}</div>
+      <div class="font-light text-sm flex flex-row gap-2">
+        <div class="flex justify-center">
+          <img src="{{ 'star.svg' | asset_url }}" width="auto" height="auto" alt="Rate">
+        </div>
+        <div class="flex justify-center">{{ rate }}/5</div>
+      </div>
+    </div>
+  </div>
+
+  {% if image %}
+    <div class="mb-5">
+      {{ image | image_url: width: 900 | image_tag: alt: 'Review attachment' }}
+    </div>
+  {% endif %}
+
+  <div class="text-[0.8rem] font-light text-[#0F1113]">
+    {{ text }}
+  </div>
+</div>

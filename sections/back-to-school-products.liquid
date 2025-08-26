@@ -1,0 +1,52 @@
+<div id="bts-products" class="bg-bts-bg">
+  <div class="pb-10 text-center">
+    {% assign title = section.settings.title | strip %}
+    {% assign words = title | split: ' ' %}
+    {% assign words_count = words | size %}
+    {% if words_count > 0 %}
+      {% assign last_index = words_count | minus: 1 %}
+      {% assign last_word = words[last_index] %}
+      {% assign head = '' %}
+      {% for w in words %}
+        {% if forloop.index0 < last_index %}
+          {% if head == '' %}
+            {% assign head = w %}
+          {% else %}
+            {% assign head = head | append: ' ' | append: w %}
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+
+    <h2 class="text-black font-bold text-3xl lg:text-5xl leading-snug">
+      <strong>
+        {{ head -}}
+        {%- if head != '' %} {% endif -%}
+        <span class="text-bts-yellow"> {{ last_word }}</span>
+      </strong>
+    </h2>
+  </div>
+
+  <div class="lg:w-[80%] p-4 lg:px-0 m-auto pt-5">
+    <div class="grid grid-cols-2 gap-x-5 gap-y-8 lg:flex lg:flex-row lg:flex-wrap lg:justify-between">
+      {% for product in collections['back-to-school'].products %}
+        {% render 'bts-product', product: product %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Products",
+  "tag": "section",
+  "limit": 1,
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,64 @@
+<div class="py-20 mt-20">
+  <div class="pt-24 pb-10 max-sm:pb-1 max-sm:pt-6 text-center">
+    <h2 class="colored-title text-black font-bold text-3xl lg:text-4xl leading-snug uppercase">
+      {{ section.settings.title }}
+    </h2>
+  </div>
+
+  <div class="lg:w-[80%] p-4 lg:px-0 m-auto py-10 max-sm:py-3">
+    <div class="text-sm border-b pb-[0.9rem] border-[#D3D3D3] hidden md:flex flex-row justify-between">
+      <div class="w-[200px]">Filter</div>
+
+      <div class="w-[200px]">Sort</div>
+    </div>
+
+    <div class="pt-3 flex flex-col md:flex-row justify-between gap-y-8">
+      <div class="md:w-[200px]">
+        {%- capture filters -%}
+          all|All Products,bundles|Bundles,back-to-school|Back to School,for-adults|For Adults,for-kids|For Kids
+        {%- endcapture -%}
+        <label class="text-sm mb-2 block md:hidden">Filter</label>
+        {% render 'dropdown', instance: 'collection', options: filters, default: collection.handle %}
+      </div>
+
+      <div class="md:w-[200px]">
+        {%- capture sort_by -%}
+          best-selling|Popular,price-ascending|Cheaper first,price-descending|Expensive first
+        {%- endcapture -%}
+        {% assign default_sort_by = collection.sort_by | default: 'best-selling' %}
+        <label class="text-sm mb-2 block md:hidden">Sort</label>
+        {% render 'dropdown', instance: 'sort_by', options: sort_by, default: default_sort_by %}
+      </div>
+    </div>
+  </div>
+
+  <div class="lg:w-[80%] p-4 lg:px-0 m-auto pt-10">
+    {% assign products = collection.products | sort: default_sort_by %}
+    {% paginate products by 50 %}
+      <div class="grid grid-cols-2 gap-x-5 gap-y-8 lg:flex lg:flex-row lg:flex-wrap lg:justify-between items-stretch">
+        {% for product in collection.products %}
+          {% render 'product', product: product %}
+        {% endfor %}
+      </div>
+
+      <div class="pagination lg:w-[20%] m-auto pt-16 uppercase flex flex-row gap-5 justify-center">
+        {{- paginate | default_pagination }}
+      </div>
+    {% endpaginate %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Collection: Products",
+  "tag": "section",
+  "limit": 1,
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "Title"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,10 @@
+ {
+  "sections": {
+    "content": {
+      "type": "register-content"
+    },
+  },
+  "order": [
+    "content"
+  ]
+}

@@ -1,0 +1,132 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "frank": {
+      "type": "wi-frank",
+      "settings": {
+        "subtitle": "Most vitamins & supplements are made of synthetic fillers.",
+        "title": "<p>At frank, <strong>real fruits</strong> are our fillers.</p>",
+        "desc": "<p>Today vitamins or nutritional supplements are almost entirely made of <strong>fillers</strong> (for example microcrystalline cellulose, lactose, calcium, or malto-dextrin) and <strong>coated</strong> in <strong>artificially colored</strong> coating like <strong>gelatin</strong> or cellulose base to give them the bulk to look bigger and be easier to grab.</p>",
+        "button": "Explore products"
+      }
+    },
+    "newway": {
+      "type": "wi-new-way",
+      "settings": {
+        "image": "shopify://shop_images/neway-vitamins.webp",
+        "subtitle": "Out with the old",
+        "title": "<p><strong>A New Way to</strong> Take Your Vitamins</p>",
+        "desc": "<p><strong>We figured out a smarter, healthier and way tastier way to take vitamins & supplements.</strong></p><p>FRANK Fruities are made from real fruits almost entirely, over 90% of total content.  Our EcoCert certified concentration process enables us to blend fruits preserving natural taste, sweetness and gentle soft bite. Then, we fortify our fruities with the best vitamins, nutrients and vitamins, upholding to highest food & safety standards.  </p>"
+      }
+    },
+    "nomore": {
+      "type": "wi-nomore",
+      "settings": {
+        "image": "shopify://shop_images/more-than-1-kg.png",
+        "title": "<p><strong>No more</strong> unfinished bottles</p>",
+        "desc": "<p>Say goodbye to hard-to-swallow, tasteless pills and half-finished vitamin bottles. Get your vitamins, but from <strong>Frank Fruit gummies.</strong></p><p>We believe that with a smart combination of nature, science and creativity - you could <strong>snack your way into better health.</strong></p>"
+      }
+    },
+    "settle": {
+      "type": "wi-settle",
+      "settings": {
+        "subtitle": "Real fruits in every bite",
+        "title": "<p><strong>Don't</strong> settle for flavours</p>",
+        "image": "shopify://shop_images/inside-1.webp",
+        "comment": "<p><strong>&gt;1kg</strong> of real fruits.</p>",
+        "thumb1": "shopify://shop_images/real-banana.webp",
+        "thumb2": "shopify://shop_images/real-cherry.webp",
+        "thumb3": "shopify://shop_images/real-apple.webp"
+      }
+    },
+    "bite": {
+      "type": "wi-bite",
+      "settings": {
+        "title": "<p><strong>For the shape</strong><br/>and soft bite.</p>",
+        "desc": "<p>Yummyness is a real thing. We work hard for it, by making sure they taste like real fruit and have that soft juicy bite. That's why we add natural bits here and there to make the magic mix compete:</p><ul><li><strong>For taste & color: lemon juice concentrate, citrus fibre, sometimes we'd add natural flavoring.</strong></li><li><strong>Processing aids: vegetable fat (coconut, rapeseed), carnauba wax.</strong></li></ul>",
+        "button": "Try for yourself"
+      }
+    },
+    "made": {
+      "type": "wi-made",
+      "settings": {
+        "image1": "shopify://shop_images/made-1.svg",
+        "image2": "shopify://shop_images/made-2.svg",
+        "image3": "shopify://shop_images/made-3.svg",
+        "title": "<p><strong>Made in absolute</strong><br/>safety & quality</p>",
+        "desc": "<p>We follow every standard and certification to ensure great taste and nutritional health benefits are the only things you remember. Our fruities are made in the best farms, are allergen tested and safety & quality certified.</p>"
+      }
+    },
+    "takestep": {
+      "type": "wi-takestep",
+      "settings": {
+        "title": "Take the step towards a tastier, healthier life.",
+        "subtitle": "Embrace the fruity revolution & make the switch today!"
+      }
+    },
+    "reviews": {
+      "type": "wi-reviews",
+      "blocks": {
+        "review_LQXVBQ": {
+          "type": "review",
+          "settings": {
+            "rate": "5",
+            "name": "Sibilla M.",
+            "text": "It was difficult to find vegan vitamins, but now I am so happy to have found Fruities. Their products are delicious and effective and I like that the company is local.\nI also tried the kids vitamins for my children, but it was less successful because of the strong banana flavour."
+          }
+        },
+        "review_M6zKCx": {
+          "type": "review",
+          "settings": {
+            "rate": "5",
+            "name": "Oliver A.",
+            "text": "I like them they are nice, chewy, and the taste feels natural enough. The gut cultures tastes the best I think the others I tried do have the classic vitamin taste next to the condensed fruit, but over all they are nice."
+          }
+        },
+        "review_D7rfef": {
+          "type": "review",
+          "settings": {
+            "rate": "5",
+            "name": "Agata W.",
+            "text": "For a long time I struggled to take care of myself, especially after pregnancy. These gummies changed everything! they are so tasty, so easy to take and are now fixed part of my routine. Im so happy to find them! Plus there is an option for my child! Love love love :)"
+          }
+        },
+        "review_bMdmBy": {
+          "type": "review",
+          "settings": {
+            "rate": "5",
+            "name": "Samantha B.",
+            "text": "I can honestly say these are the best vitamins I have ever tasted. In fact, I have to stop myself eating more than 3 a day. Also, they are really easy to chew and swallow so great for kids and anyone like me who have difficulty swallowing."
+          }
+        }
+      },
+      "block_order": [
+        "review_LQXVBQ",
+        "review_M6zKCx",
+        "review_D7rfef",
+        "review_bMdmBy"
+      ],
+      "settings": {
+        "title": "<p><strong>Our customers agree:</strong><br/>Yes, it's worth the hype!</p>"
+      }
+    }
+  },
+  "order": [
+    "frank",
+    "newway",
+    "nomore",
+    "settle",
+    "bite",
+    "made",
+    "takestep",
+    "reviews"
+  ]
+}

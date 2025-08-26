@@ -1,0 +1,112 @@
+<div class="lg:w-[70%] px-4 lg:px-0 py-16 m-auto">
+  <div class="text-center mb-10">
+    <h3 class="colored-title text-black font-bold text-3xl lg:text-4xl leading-snug uppercase">
+      {{ section.settings.title }}
+    </h3>
+  </div>
+
+  <div class="flex flex-col lg:flex-row gap-6">
+    {% for block in section.blocks %}
+      <div>
+        <div class="border border-[#D3D3D3] rounded-bl-none px-3 py-3 rounded-lg">
+          <a href="/collections/{{ block.settings.collection_handle }}">
+            {{
+              block.settings.image
+              | image_url: width: 600
+              | image_tag: alt: block.settings.title, width: '100%', class: 'rounded-lg'
+            }}
+          </a>
+        </div>
+
+        <div class="flex flex-row">
+          <div class="w-[85%]">
+            <div class="bg-white border border-[#D3D3D3] border-t-0 rounded-tl-none rounded-tr-none px-3 pt-3 rounded-lg mt-[-1px]">
+              <div class="text-[#D3D3D3] font-light text-xs mb-1">
+                <a href="/collections/{{ block.settings.collection_handle }}">{{ block.settings.subtitle }}</a>
+              </div>
+              <div class="mb-3">
+                <a href="/collections/{{ block.settings.collection_handle }}">
+                  <h3 class="text-[#0F1113]">{{ block.settings.title }}</h3>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="w-[15%] pr-1">
+            <div class="bg-white ml-[-1px] mt-[-2px] h-[90%]">
+              <div class="border border-[#D3D3D3] border-r-0 border-b-0 rounded-tl-lg h-full flex flex-col justify-center items-center pt-2 pl-1">
+                <a href="/collections/{{ block.settings.collection_handle }}">
+                  <img
+                    src="{{ 'shop-discover-arrow.svg' | asset_url }}"
+                    alt="More"
+                    width="15"
+                    height="auto"
+                  >
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Front page: Discover",
+  "tag": "section",
+  "limit": 1,
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "Title"
+    }
+  ],
+  "max_blocks": 3,
+  "blocks": [
+    {
+      "name": "Blocks",
+      "type": "gummies",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Subtitle"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "select",
+          "id": "collection_handle",
+          "label": "Collection",
+          "options": [
+            {
+              "value": "for-kids",
+              "label": "Gummies for Kids"
+            },
+            {
+              "value": "for-adults",
+              "label": "Gummies for Adults"
+            },
+            {
+              "value": "bundles",
+              "label": "Gummy bundles"
+            }
+          ],
+          "default": "for-kids"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

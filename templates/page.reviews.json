@@ -1,0 +1,89 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "items": {
+      "type": "reviews-items",
+      "blocks": {
+        "review_UfDAaN": {
+          "type": "review",
+          "settings": {
+            "rate": "5",
+            "name": "Sibilla M.",
+            "text": "It was difficult to find vegan vitamins, but now I am so happy to have found Fruities. Their products are delicious and effective and I like that the company is local.\nI also tried the kids vitamins for my children, but it was less successful because of the strong banana flavour."
+          }
+        },
+        "review_GRKYMk": {
+          "type": "review",
+          "settings": {
+            "rate": "5",
+            "name": "Oliver A.",
+            "text": "I like them they are nice, chewy, and the taste feels natural enough. The gut cultures tastes the best I think the others I tried do have the classic vitamin taste next to the condensed fruit, but over all they are nice."
+          }
+        },
+        "review_iiXXq3": {
+          "type": "review",
+          "settings": {
+            "rate": "5",
+            "name": "Agata W.",
+            "text": "For a long time I struggled to take care of myself, especially after pregnancy. These gummies changed everything! they are so tasty, so easy to take and are now fixed part of my routine. Im so happy to find them! Plus there is an option for my child! Love love love :)"
+          }
+        },
+        "review_kcVcAz": {
+          "type": "review",
+          "settings": {
+            "rate": "5",
+            "name": "Samantha B.",
+            "text": "I can honestly say these are the best vitamins I have ever tasted. In fact, I have to stop myself eating more than 3 a day. Also, they are really easy to chew and swallow so great for kids and anyone like me who have difficulty swallowing."
+          }
+        },
+        "review_KN7ee8": {
+          "type": "review",
+          "settings": {
+            "rate": "5",
+            "name": "Sarah G.",
+            "text": "These make vitamins really easy to take. They’re nice-tasting, and natural as far as I know. Great!"
+          }
+        },
+        "review_jgayJ9": {
+          "type": "review",
+          "settings": {
+            "rate": "5",
+            "name": "Avraham E.H.",
+            "text": "As far as I used im happy, waiting to see results end benefits from the fruities, the only thing that I have to complain it's that the can contain only 80 and not 90 gummies (amount for 3 full months)"
+          }
+        }
+      },
+      "block_order": [
+        "review_UfDAaN",
+        "review_GRKYMk",
+        "review_iiXXq3",
+        "review_kcVcAz",
+        "review_KN7ee8",
+        "review_jgayJ9"
+      ],
+      "settings": {
+        "subtitle": "Reviews",
+        "title": "<p>What our <strong>customers</strong> say</p>"
+      }
+    },
+    "takestep": {
+      "type": "reviews-takestep",
+      "settings": {
+        "title": "Take the step towards a tastier, healthier life.",
+        "subtitle": "Embrace the fruity revolution & make the switch today!"
+      }
+    }
+  },
+  "order": [
+    "items",
+    "takestep"
+  ]
+}

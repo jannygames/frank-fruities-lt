@@ -1,0 +1,21 @@
+{% render 'takestep', title: section.settings.title, subtitle: section.settings.subtitle %}
+
+{% schema %}
+{
+  "name": "Why: Take Step",
+  "tag": "section",
+  "limit": 1,
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle"
+    }
+  ]
+}
+{% endschema %}

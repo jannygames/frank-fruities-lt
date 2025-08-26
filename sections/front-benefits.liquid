@@ -1,0 +1,120 @@
+<div class="py-16">
+  <div class="lg:w-[90%] m-auto px-4 lg:px-0">
+    <div class="text-center mb-10">
+      <h2 class="colored-title text-black font-bold text-3xl lg:text-4xl leading-snug uppercase">
+        {{ section.settings.title }}
+      </h2>
+    </div>
+
+    <div class="hidden lg:flex flex-row flex-wrap justify-around gap-10 mb-2">
+      {% for block in section.blocks %}
+        <div class="w-[30%] flex flex-row border border-[#D3D3D3] rounded-lg p-3">
+          <div class="w-1/5">
+            {{ block.settings.image | image_url: width: 40 | image_tag: alt: block.settings.title }}
+          </div>
+
+          <div class="w-4/5 flex flex-col gap-2">
+            <div>
+              <h3 class="colored-title font-bold text-lg">
+                {{ block.settings.title }}
+              </h3>
+            </div>
+
+            <div class="text-[0.8rem] font-light text-[#343057]">
+              {{ block.settings.desc }}
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+    <div class="lg:hidden flex flex-col mb-2 gap-3">
+      {% assign tab_number = 0 %}
+      {% for block in section.blocks %}
+        {% assign tab_number = tab_number | plus: 1 %}
+        <div class="border border-[#D3D3D3] rounded-lg px-2">
+          <button
+            onclick="toggleAccordion('benefits', {{ tab_number }}, '{{ 'benefits-accordion-icon.svg' | asset_url }}')"
+            class="w-full flex justify-between items-center py-3 text-[#3B3B3B]"
+          >
+            <div class="flex flex-row items-center w-full">
+              <div class="w-[15%]">
+                {{ block.settings.image | image_url: width: 40 | image_tag: alt: block.settings.title }}
+              </div>
+
+              <div class="w-[85%]">
+                <h3 class="colored-title font-bold text-lg text-left">
+                  {{ block.settings.title }}
+                </h3>
+              </div>
+            </div>
+
+            <span
+              id="accordion-benefits-icon-{{ tab_number }}"
+              class="transition-transform duration-300 inline-block w-6"
+            >
+              <img
+                src="{{ 'benefits-accordion-icon.svg' | asset_url }}"
+                width="13"
+                height="auto"
+                alt="Open"
+              >
+            </span>
+          </button>
+
+          <div
+            id="accordion-benefits-content-{{ tab_number }}"
+            class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out"
+          >
+            <div class="flex flex-row w-full">
+              <div class="w-[15%]"></div>
+
+              <div class="w-[85%] text-[0.8rem] font-light text-[#343057] mb-4 inline-block">
+                {{ block.settings.desc }}
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Front page: Benefits",
+  "tag": "section",
+  "limit": 1,
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "Title"
+    }
+  ],
+  "max_blocks": 6,
+  "blocks": [
+    {
+      "name": "Blocks",
+      "type": "benefits",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "richtext",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "textarea",
+          "id": "desc",
+          "label": "Description"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

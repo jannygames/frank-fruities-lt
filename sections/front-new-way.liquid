@@ -1,0 +1,78 @@
+<div class="lg:w-[70%] m-auto px-4 lg:px-0 flex flex-col lg:flex-row py-16 gap-6">
+  <div class="lg:w-[60%] flex flex-col justify-center">
+    {{ section.settings.image | image_url: width: 1000 | image_tag: alt: 'Vitamins', class: 'rounded-lg' }}
+  </div>
+
+  <div class="lg:w-[40%] flex flex-col justify-center">
+    <div class="font-medium text-[#222] text-sm lg:text-base mb-3">{{ section.settings.subtitle }}</div>
+
+    <div class="mb-3 lg:mb-7">
+      <h2 class="colored-title text-black font-bold text-3xl lg:text-4xl leading-snug uppercase lg:mb-6">
+        {{ section.settings.title }}
+      </h2>
+    </div>
+
+    <div class="desc-text text-[0.8rem] font-light text-[#343057] mb-6">
+      {{ section.settings.desc }}
+    </div>
+
+    <div class="flex flex-col gap-5">
+      <div class="flex flex-row">
+        <div class="lg:w-[15%] pr-4 lg:pr-0 flex flex-col justify-center">
+          <img src="{{ 'new-way-sad.svg' | asset_url }}" width="43" height="auto" alt="Sad">
+        </div>
+        <div class="lg:w-[85%] flex flex-col justify-center border-[#e1dfe5] border-l pl-[4%]">
+          {{ section.settings.btline1 }}
+        </div>
+      </div>
+      <div class="flex flex-row">
+        <div class="lg:w-[15%] pr-4 lg:pr-0 flex flex-col justify-center w-30">
+          <img src="{{ 'new-way-happy.svg' | asset_url }}" width="43" height="auto" alt="Sad">
+        </div>
+        <div class="w-[85%] flex flex-col justify-center border-[#e1dfe5] border-l pl-[4%]">
+          {{ section.settings.btline2 }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Front page: New Way",
+  "tag": "section",
+  "limit": 1,
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle"
+    },
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "richtext",
+      "id": "desc",
+      "label": "Description"
+    },
+    {
+      "type": "text",
+      "id": "btline1",
+      "label": "Bottom line #1"
+    },
+    {
+      "type": "text",
+      "id": "btline2",
+      "label": "Bottom line #2"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,77 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "products": {
+      "type": "collection-products",
+      "settings": {
+        "title": "<p>Our <strong>products</strong></p>"
+      }
+    },
+    "step": {
+      "type": "collection-step",
+      "settings": {
+        "title": "Take the step towards a tastier, healthier life.",
+        "subtitle": "Embrace the fruity revolution & make the switch today!"
+      }
+    },
+    "reviews": {
+      "type": "collection-reviews",
+      "blocks": {
+        "review_TGaRQr": {
+          "type": "review",
+          "settings": {
+            "rate": "5",
+            "name": "Sibilla M.",
+            "text": "It was difficult to find vegan vitamins, but now I am so happy to have found Fruities. Their products are delicious and effective and I like that the company is local.\nI also tried the kids vitamins for my children, but it was less successful because of the strong banana flavour."
+          }
+        },
+        "review_UDVTKW": {
+          "type": "review",
+          "settings": {
+            "rate": "5",
+            "name": "Oliver A.",
+            "text": "I like them they are nice, chewy, and the taste feels natural enough. The gut culture tastes the best I think the others I tried do have the classic vitamin taste next to the condensed fruit, but over all they are nice."
+          }
+        },
+        "review_78Fx8B": {
+          "type": "review",
+          "settings": {
+            "rate": "5",
+            "name": "Agata W.",
+            "text": "For a long time I struggled to take care of myself, especially after pregnancy. These gummies changed everything! they are so tasty, so easy to take and are now fixed part of my routine. Im so happy to find them! Plus there is an option for my child! Love love love :)"
+          }
+        },
+        "review_8hyppi": {
+          "type": "review",
+          "settings": {
+            "rate": "5",
+            "name": "Samantha B.",
+            "text": "I can honestly say these are the best vitamins I have ever tasted. In fact, I have to stop myself eating more than 3 a day. Also, they are really easy to chew and swallow so great for kids and anyone like me who have difficulty swallowing."
+          }
+        }
+      },
+      "block_order": [
+        "review_TGaRQr",
+        "review_UDVTKW",
+        "review_78Fx8B",
+        "review_8hyppi"
+      ],
+      "settings": {
+        "title": "<p><strong>Our customers agree:</strong><br/>Yes, it's worth the hype!</p>"
+      }
+    }
+  },
+  "order": [
+    "products",
+    "step",
+    "reviews"
+  ]
+}

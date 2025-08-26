@@ -1,0 +1,90 @@
+<div class="py-20 px-4 lg:px-0">
+  <div class="lg:w-[80%] m-auto pt-12 lg:pt-24">
+    <div class="mb-10 lg:mb-16">
+      <h2 class="colored-title text-black font-bold text-3xl lg:text-4xl leading-snug uppercase text-center">
+        <strong>Sign</strong> Up
+      </h2>
+    </div>
+
+    {% form 'create_customer' %}
+      <div class="md:w-[70%] lg:w-[50%] m-auto mb-16">
+        <div class="mb-10">
+          <label for="first-name" class="font-semibold mb-2 block">First Name</label>
+          <input
+            id="first-name"
+            type="text"
+            name="customer[first_name]"
+            class="dropdown-options w-full py-2 px-3 bg-white border border-[#D9D9D9] text-slate-800 font-light outline-none"
+            required
+          >
+        </div>
+
+        <div class="mb-10">
+          <label for="last-name" class="font-semibold mb-2 block">Last Name</label>
+          <input
+            id="last-name"
+            type="text"
+            name="customer[last_name]"
+            class="dropdown-options w-full py-2 px-3 bg-white border border-[#D9D9D9] text-slate-800 font-light outline-none"
+            required
+          >
+        </div>
+
+        <div class="mb-10">
+          <label for="email" class="font-semibold mb-2 block">E-mail</label>
+          <input
+            id="email"
+            type="email"
+            name="customer[email]"
+            class="dropdown-options w-full py-2 px-3 bg-white border border-[#D9D9D9] text-slate-800 font-light outline-none"
+            required
+          >
+        </div>
+
+        <div>
+          <label for="password" class="font-semibold mb-2 block">Password</label>
+          <input
+            id="password"
+            type="password"
+            name="customer[password]"
+            class="dropdown-options w-full py-2 px-3 bg-white border border-[#D9D9D9] text-slate-800 font-light outline-none"
+            required
+          >
+        </div>
+
+        {% if form.errors %}
+          <div class="pt-5 text-sm text-red-600">
+            {{ form.errors | default_errors }}
+          </div>
+        {% endif %}
+      </div>
+
+      <div class="text-center">
+        <input
+          type="submit"
+          value="Sign Up"
+          class="bg-[#343057] text-center rounded-lg text-[#fff] text-md py-3 px-16 w-full md:w-auto cursor-pointer"
+        >
+      </div>
+
+      <div class="mt-10 text-sm text-center">
+        Already registered? <a href="/account/login" class="text-[#FF5E5E]">Log in here.</a>
+      </div>
+    {% endform %}
+  </div>
+</div>
+
+<!--
+  Start of Judge.me code
+  <div style="clear:both"></div>
+  <div
+    id="judgeme_product_reviews"
+    class="jdgm-widget jdgm-review-widget"
+    data-product-title="{{ product.title | escape }}"
+    data-id="{{ product.id }}"
+    data-auto-install="false"
+  >
+    {{ product.metafields.judgeme.widget }}
+  </div>
+  <!-- End of Judge.me code
+-->

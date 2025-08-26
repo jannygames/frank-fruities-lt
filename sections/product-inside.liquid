@@ -1,0 +1,102 @@
+{% if product.metafields.custom.inside_blocks %}
+  <div class="relative py-12 lg:py-16 px-4 min-[1250px]:px-0">
+    <div class="absolute bg-[#FF5E5E] h-[35%] top-0 left-0 w-full z-0 lg:bg-look-forward-union1 bg-no-repeat bg-[position:center_left_1%] bg-[length:auto_47%]">
+      <div
+        class="w-full h-full lg:bg-look-forward-union2 bg-no-repeat bg-[position:center_right_1%] bg-[length:auto_47%]"
+      ></div>
+    </div>
+
+    <div class="relative flex flex-col items-center">
+      <div class="md:font-medium text-sm text-[#FF9494] tracking-wider mb-3">{{ section.settings.subtitle }}</div>
+      <div>
+        <h2 class="colored-title-red text-white font-bold text-3xl md:text-4xl leading-snug uppercase mb-8 md:mb-6 text-center">
+          {{ section.settings.title }}
+        </h2>
+      </div>
+    </div>
+
+    <div class="min-[900px]:w-[70%] m-auto relative flex flex-col md:flex-row gap-x-6 gap-y-16 pb-2">
+      {% for block in product.metafields.custom.inside_blocks.value %}
+        <div class="lg:w-1/2">
+          <div class="rounded-md overflow-hidden relative">
+            {{ block.image | image_url: width: 900 | image_tag: width: '100%', alt: block.title }}
+
+            <div class="bg-white absolute bottom-0 left-0 pt-2 md:pt-3 pb-1 pl-2 pr-10 rounded-tr-md">
+              <h3 class="colored-title-notracking text-lg md:text-2xl font-bold">
+                {{ block.title | metafield_tag }}
+              </h3>
+
+              <div
+                class="w-[20px] h-[20px] bg-[transparent] border-l-[5px] border-b-[5px] border-r-0 border-t-0 absolute right-[-15px] bottom-[-5px] rounded-bl-[12px] border-white"
+              ></div>
+
+              <div
+                class="w-[20px] h-[20px] bg-[transparent] border-r-[5px] border-t-[5px] border-l-0 border-b-0 absolute left-[-5px] top-[-15px] rounded-tr-[12px] rotate-180 border-white"
+              ></div>
+            </div>
+          </div>
+
+          {% if block.desc %}
+            <div class="text-[0.8rem] text-[#343057] text-thin pt-5 pl-2 md:pr-10">
+              {{ block.desc }}
+            </div>
+          {% endif %}
+
+          {% if block.table_features %}
+            <div class="py-5 text-[0.8rem] text-[#343057] text-thin leading-6">
+              {% assign index_first = 0 %}
+              {% assign index_second = 1 %}
+              {% for feature in block.table_features.value %}
+                <ul class="flex flex-row justify-between list-none border-b last:border-b-0 border-[#D3D3D3]">
+                  <li class="w-1/2 py-[0.4rem] pl-4 even:border-l border-[#D3D3D3] block">
+                    {{ block.table_features.value[index_first] }}
+                  </li>
+                  {% if index_second <= forloop.length %}
+                    <li class="w-1/2 py-[0.4rem] pl-4 even:border-l border-[#D3D3D3] block">
+                      {{ block.table_features.value[index_second] }}
+                    </li>
+                  {% endif %}
+                </ul>
+                {% assign index_first = index_first | plus: 2 %}
+                {% assign index_second = index_first | plus: 1 %}
+                {% if index_second > block.table_features.value.size %}
+                  {% break %}
+                {% endif %}
+              {% endfor %}
+            </div>
+          {% endif %}
+
+          {% if block.list_features %}
+            <div class="py-5 text-[0.8rem] text-[#343057] text-thin leading-6">
+              <ul class="flex flex-row flex-wrap justify-between list-disc pl-4 gap-x-5">
+                {% for feature in block.list_features.value %}
+                  <li class="w-[46%]">{{ feature }}</li>
+                {% endfor %}
+              </ul>
+            </div>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Product page: Inside",
+  "tag": "section",
+  "limit": 1,
+  "settings": [
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle"
+    },
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "Title"
+    }
+  ]
+}
+{% endschema %}

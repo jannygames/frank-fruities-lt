@@ -1,0 +1,135 @@
+<div class="py-20 px-4 lg:px-0 mt-20">
+  <div class="lg:w-[80%] m-auto pt-12 lg:pt-24">
+    <div class="mb-8">
+      <div class="font-medium text-[#AFAFAF] text-sm lg:text-base mb-3 text-center">
+        {{ section.settings.subtitle }}
+      </div>
+
+      <div class="mb-3 lg:mb-7">
+        <h2 class="colored-title text-black font-bold text-3xl lg:text-4xl leading-snug uppercase text-center">
+          {{ section.settings.title }}
+        </h2>
+      </div>
+    </div>
+
+    {% assign parts = section.blocks | size | divided_by: 3 | plus: 1 %}
+    {% assign reviews = section.blocks | size %}
+    {% assign index_first = 0 %}
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      {% for i in (0..parts) %}
+        {% assign index_second = index_first | plus: 1 %}
+        {% assign block_first = section.blocks[index_first].settings %}
+        {% assign block_second = section.blocks[index_second].settings %}
+        {% if block_first %}
+          <div class="grid gap-5">
+            <div>
+              {% render 'review',
+                photo: block_first.photo,
+                image: block_first.image,
+                name: block_first.name,
+                rate: block_first.rate,
+                text: block_first.text
+              %}
+            </div>
+
+            {% if index_second < reviews %}
+              <div>
+                {% render 'review',
+                  photo: block_second.photo,
+                  image: block_second.image,
+                  name: block_second.name,
+                  rate: block_second.rate,
+                  text: block_second.text
+                %}
+              </div>
+            {% endif %}
+          </div>
+        {% endif %}
+        {% assign index_first = index_first | plus: 2 %}
+        {% if index_second > reviews %}
+          {% break %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Reviews: Items",
+  "tag": "section",
+  "limit": 1,
+  "settings": [
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle"
+    },
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "Title"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Blocks",
+      "type": "review",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "photo",
+          "label": "Photo"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Review image"
+        },
+        {
+          "type": "select",
+          "id": "rate",
+          "label": "Rate",
+          "options": [
+            {
+              "value": "5",
+              "label": "5"
+            },
+            {
+              "value": "4",
+              "label": "4"
+            },
+            {
+              "value": "3",
+              "label": "3"
+            },
+            {
+              "value": "2",
+              "label": "2"
+            },
+            {
+              "value": "1",
+              "label": "1"
+            },
+            {
+              "value": "0",
+              "label": "0"
+            }
+          ],
+          "default": "5"
+        },
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Name"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Text"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,44 @@
+<div class="py-16">
+  <div class="max-w-[1150px] m-auto flex flex-col min-[1100px]:flex-row justify-around items-center gap-6 mb-10 px-2">
+    <div class="text-center w-full md:w-auto">
+      <h3 class="colored-title text-black font-bold text-3xl lg:text-4xl leading-snug uppercase text-center lg:text-left">
+        {{ section.settings.title }}
+      </h3>
+    </div>
+  </div>
+
+  <div id="top-sellers" class="flex flex-row gap-5">
+    {% for product in collections['top-sellers'].products %}
+      <div class="min-w-[250px]">
+        <div class="mb-3">
+          <a href="{{ product.url }}">
+            {{ product.featured_image | image_url: width: 600 | image_tag: alt: product.title, class: 'rounded-lg' }}
+          </a>
+        </div>
+
+        <div class="text-[0.8rem] text-center mb-3">
+          <a href="{{ product.url }}">{{ product.title }}</a>
+        </div>
+
+        <div class="text-[0.8rem] font-semibold text-center">
+          <a href="{{ product.url }}">{{ product.price | money }}</a>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Product page: Also",
+  "tag": "section",
+  "limit": 1,
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "Title"
+    }
+  ]
+}
+{% endschema %}

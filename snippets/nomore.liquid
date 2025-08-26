@@ -1,0 +1,19 @@
+<div class="bg-white flex flex-col lg:flex-row">
+  <div class="lg:w-[40%] bg-[#FFE2E2] pt-20 pb-12 lg:pt-0 lg:pb-0 rounded-br-[40px] lg:rounded-br-[120px] flex flex-col-reverse justify-center items-end order-2 lg:order-1">
+    <div class="lg:w-[80%] lg:pr-16 px-4 lg:pl-0">
+      <div class="mb-7">
+        <h2 class="colored-title text-black font-bold text-3xl lg:text-5xl lg:leading-[3.6rem] uppercase leading-snug mb-6">
+          {{ title }}
+        </h2>
+      </div>
+
+      <div class="desc-text text-[#343057] text-[0.85rem] font-light">
+        {{ desc }}
+      </div>
+    </div>
+  </div>
+
+  <div class="lg:w-[60%] lg:p-28 px-4 pt-12 order-1 lg:order-2 mb-[-2.5rem] lg:mb-0 relative">
+    {{ image | image_url: width: 1000 | image_tag: alt: 'Benefits' }}
+  </div>
+</div>

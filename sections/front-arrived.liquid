@@ -1,0 +1,42 @@
+{% render 'arrived',
+  title: section.settings.title,
+  desc: section.settings.desc,
+  btline: section.settings.btline,
+  imagedesktop: section.settings.imagedesktop,
+  imagemobile: section.settings.imagemobile
+%}
+
+{% schema %}
+{
+  "name": "Front page: Arrived",
+  "tag": "section",
+  "limit": 1,
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "imagedesktop",
+      "label": "Image (desktop)"
+    },
+    {
+      "type": "image_picker",
+      "id": "imagemobile",
+      "label": "Image (mobile)"
+    },
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "richtext",
+      "id": "desc",
+      "label": "Description"
+    },
+    {
+      "type": "text",
+      "id": "btline",
+      "label": "Bottom line"
+    }
+  ]
+}
+{% endschema %}

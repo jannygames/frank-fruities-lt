@@ -1,0 +1,383 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "bigblock": {
+      "type": "front-bigblock",
+      "settings": {
+        "image": "shopify://shop_images/big-product.webp",
+        "title": "Made from real fruits, that's why they're...",
+        "desc": "Welcome to the world of Frank Fruities, where we've captured the pure goodness of real fruits enhanced with vitamins in every gummy.",
+        "button1": "For Kids",
+        "button2": "Bundles"
+      }
+    },
+    "topsellers": {
+      "type": "front-top-sellers",
+      "settings": {
+        "title": "<p>Top <strong>sellers</strong></p>",
+        "button": "More products"
+      }
+    },
+    "inside": {
+      "type": "front-inside",
+      "blocks": {
+        "cans_xtyHwJ": {
+          "type": "cans",
+          "settings": {
+            "image": "shopify://shop_images/inside-1.webp",
+            "title": "<p><strong>&gt;1kg</strong> of real fruits.</p>",
+            "desc": "We take a basket of fruits and transform them into delightful gummies. We use genuine fruits ensuring a natural and wholesome product."
+          }
+        },
+        "cans_zmzTYi": {
+          "type": "cans",
+          "settings": {
+            "image": "shopify://shop_images/inside-2.webp",
+            "title": "<p><strong>Vitamins</strong> & minerals.</p>",
+            "desc": "As much as we love fruits, their natural vitamins just don't cut it when it comes to providing a full range of nutritional supplements. That's why we put a little extra magic in ever can. Tastes great, works great too."
+          }
+        }
+      },
+      "block_order": [
+        "cans_xtyHwJ",
+        "cans_zmzTYi"
+      ],
+      "settings": {
+        "subtitle": "What can you expect?",
+        "title": "<p><strong>Inside</strong> these lovely cans</p>"
+      }
+    },
+    "tasting": {
+      "type": "front-tasting",
+      "settings": {
+        "title": "<p><strong>Best tasting</strong><br/>gummies and vitamins</p>",
+        "desc": "<p>Taste matters, especially when it comes to daily supplements. We've crafted the best-tasting gummies and vitamins by harnessing the natural flavors of real fruits. Each bite is a mouthwatering experience that you'll look forward to every day.</p><p><strong>Mangos, peaches, apples, passion fruits, bananas, cherries and berries.</strong> All of them mix and match creating truly best tasting vitamin enhanced gummies.</p>",
+        "btline": "That's why everyone - kids, adults, even teenagers - loves them!",
+        "button": "Try for yourself"
+      }
+    },
+    "discover": {
+      "type": "front-discover",
+      "blocks": {
+        "gummies_wHVC4a": {
+          "type": "gummies",
+          "settings": {
+            "image": "shopify://shop_images/shop-discover-1.webp",
+            "subtitle": "For the little ones",
+            "title": "Gummies for kids",
+            "collection_handle": "for-kids"
+          }
+        },
+        "gummies_DxzBLE": {
+          "type": "gummies",
+          "settings": {
+            "image": "shopify://shop_images/shop-discover-2.webp",
+            "subtitle": "Maintain great health",
+            "title": "Gummies for Adults",
+            "collection_handle": "for-adults"
+          }
+        },
+        "gummies_FytT9J": {
+          "type": "gummies",
+          "settings": {
+            "image": "shopify://shop_images/shop-discover-3.webp",
+            "subtitle": "Variety of benefits",
+            "title": "Gummy bundles",
+            "collection_handle": "bundles"
+          }
+        }
+      },
+      "block_order": [
+        "gummies_wHVC4a",
+        "gummies_DxzBLE",
+        "gummies_FytT9J"
+      ],
+      "settings": {
+        "title": "<p><strong>Shop</strong> & discover</p>"
+      }
+    },
+    "reviews": {
+      "type": "front-reviews",
+      "blocks": {
+        "review_UhXaGm": {
+          "type": "review",
+          "settings": {
+            "rate": "5",
+            "name": "Sibilla M.",
+            "text": "It was difficult to find vegan vitamins, but now I am so happy to have found Fruities. Their products are delicious and effective and I like that the company is local.\nI also tried the kids vitamins for my children, but it was less successful because of the strong banana flavour."
+          }
+        },
+        "review_FFDdXK": {
+          "type": "review",
+          "settings": {
+            "rate": "5",
+            "name": "Oliver A.",
+            "text": "I like them they are nice, chewy, and the taste feels natural enough. The gut cultures tastes the best I think the others I tried do have the classic vitamin taste next to the condensed fruit, but over all they are nice."
+          }
+        },
+        "review_iKaLKf": {
+          "type": "review",
+          "settings": {
+            "rate": "5",
+            "name": "Agata W.",
+            "text": "For a long time I struggled to take care of myself, especially after pregnancy. These gummies changed everything! they are so tasty, so easy to take and are now fixed part of my routine. Im so happy to find them! Plus there is an option for my child! Love love love :)"
+          }
+        },
+        "review_jLdfDx": {
+          "type": "review",
+          "settings": {
+            "rate": "5",
+            "name": "Samantha B.",
+            "text": "I can honestly say these are the best vitamins I have ever tasted. In fact, I have to stop myself eating more than 3 a day. Also, they are really easy to chew and swallow so great for kids and anyone like me who have difficulty swallowing."
+          }
+        }
+      },
+      "block_order": [
+        "review_UhXaGm",
+        "review_FFDdXK",
+        "review_iKaLKf",
+        "review_jLdfDx"
+      ],
+      "settings": {
+        "title": "<p><strong>Our customers agree:</strong><br/>Yes, it's worth the hype!</p>"
+      }
+    },
+    "leavereview": {
+      "type": "front-leave-review",
+      "settings": {
+        "title": "<p><strong>Loved Frank Fruities?</strong> Please share your experience!</p>",
+        "button": "Leave a Review"
+      }
+    },
+    "newway": {
+      "type": "front-new-way",
+      "settings": {
+        "image": "shopify://shop_images/new-way-product.webp",
+        "subtitle": "Out with the old",
+        "title": "<p><strong>A new way to</strong> take your vitamins</p>",
+        "desc": "<p><strong>Say goodbye to hard-to-swallow pills and say hello to a delicious daily ritual!</strong></p><p>Frank Fruities gummies turns the tables and makes taking vitamins fun and enjoyable. Our gummies are as delightful as they are beneficial, combining the natural goodness of real fruits with essential vitamins that your body needs.</p><p><strong>Experience the combination of taste and nutrition in every bite. Be cautious as they are deliciously addictive!</strong></p>",
+        "btline1": "Before Frank Fruities, taking vitamins was dull.",
+        "btline2": "With Frank Fruities, taking vitamin is fun!"
+      }
+    },
+    "lookforward": {
+      "type": "front-look-forward",
+      "settings": {
+        "title": "<p><strong>Look forward to taking your vitamins</strong> with Frank Fruities every day!</p>",
+        "button": "Shop"
+      }
+    },
+    "arrived": {
+      "type": "front-arrived",
+      "settings": {
+        "imagedesktop": "shopify://shop_images/arrived-back.webp",
+        "imagemobile": "shopify://shop_images/arrived-back-mobile.webp",
+        "title": "<p><strong>Join the fruity</strong> revolution</p>",
+        "desc": "<p>Join others who have made the fruity switch and turn your daily vitamins into a joyful addition to your routine.</p><p>At Frank Fruities, we're transforming a healthy habit into an enjoyable experience that you'll look forward to every day. Our gummies are so delicious, now everyone will like their vitamins too!</p>",
+        "btline": "Don't miss out—join the fruity revolution and make wellness fun again."
+      }
+    },
+    "benefits": {
+      "type": "front-benefits",
+      "blocks": {
+        "benefits_VqMnCi": {
+          "type": "benefits",
+          "settings": {
+            "image": "shopify://shop_images/benefits-swiss.svg",
+            "title": "<p><strong>Swiss vitamin</strong> institute tested.</p>",
+            "desc": "Certified for quality and efficacy by the renowned Swiss Vitamin Institute. Did we mention it is from Switzerland?"
+          }
+        },
+        "benefits_3gjVTV": {
+          "type": "benefits",
+          "settings": {
+            "image": "shopify://shop_images/benefits-sugars.svg",
+            "title": "<p><strong>No added</strong> sugars.</p>",
+            "desc": "Naturally sweetened with real fruits, no extra sugar or sugar cane is added. Natural and yummy, imagine that!"
+          }
+        },
+        "benefits_yLEqTW": {
+          "type": "benefits",
+          "settings": {
+            "image": "shopify://shop_images/benefits-perservatives.svg",
+            "title": "<p><strong>No added</strong> perservatives.</p>",
+            "desc": "Just like homemade desserts: pure and natural. No added artificial flavours, colors or other preservatives."
+          }
+        },
+        "benefits_AzNYyq": {
+          "type": "benefits",
+          "settings": {
+            "image": "shopify://shop_images/benefits-fruits.svg",
+            "title": "<p><strong>Made from</strong> real fruits.</p>",
+            "desc": "A single gummy can is packed with the natural goodness of 1 kg of real fruits."
+          }
+        },
+        "benefits_z9WfDz": {
+          "type": "benefits",
+          "settings": {
+            "image": "shopify://shop_images/benefits-vegans.svg",
+            "title": "<p><strong>Vegans, we</strong> got your back.</p>",
+            "desc": "100% plant-based (more like fruit-based) gummies suitable for all vegan lifestyles nutritional needs."
+          }
+        },
+        "benefits_xjqJ8N": {
+          "type": "benefits",
+          "settings": {
+            "image": "shopify://shop_images/benefits-water.svg",
+            "title": "<p><strong>No water</strong> needed.</p>",
+            "desc": "Very convenient to consume. Just take a bite, they're chewable. Enjoy your vitamin enriched gummies anytime, anywhere!"
+          }
+        }
+      },
+      "block_order": [
+        "benefits_VqMnCi",
+        "benefits_3gjVTV",
+        "benefits_yLEqTW",
+        "benefits_AzNYyq",
+        "benefits_z9WfDz",
+        "benefits_xjqJ8N"
+      ],
+      "settings": {
+        "title": "<p><strong>All the benefits</strong> in every can</p>"
+      }
+    },
+    "bundles": {
+      "type": "front-bundles",
+      "settings": {
+        "title": "<p><strong>Bundles</strong> take care of everyone and save!</p>",
+        "button": "More products"
+      }
+    },
+    "excellence": {
+      "type": "front-excellence",
+      "settings": {
+        "title": "<p><strong>Swiss excellence</strong> in every bite</p>",
+        "desc": "<p>Frank Fruities quality is good.</p><p>Actually, it is <strong>so good</strong>, that Frank Fruities is the first vitamin enriched gummies that are certified by Swiss Vitamin Institute.</p><p>Originating also from Switzerland, Frank Fruities gummies are known <strong>world-wide</strong> by thousands of customers.</p><p>The taste, the smell, the color even the colorfull packaging. Everything is done with            <strong>highest precision</strong> to details. You know, the Swiss way.</p>"
+      }
+    },
+    "crafted": {
+      "type": "front-crafted",
+      "settings": {
+        "title": "<p>Crafted from genuine fruits,<br/><strong>not gelatin</strong></p>",
+        "desc": "<p>Choose a more natural path to wellness with Frank Fruit gummies, which are made from real fruits almost entirely, over 90% of total content. <strong>Do we use gelatin? No!</strong></p>",
+        "btline": "A true, wholesome and healthy choice.",
+        "button": "Try for yourself"
+      }
+    },
+    "nomore": {
+      "type": "front-nomore",
+      "settings": {
+        "image": "shopify://shop_images/more-than-1-kg.png",
+        "title": "<p><strong>No more</strong> unfinished bottles</p>",
+        "desc": "<p>Say goodbye to hard-to-swallow, tasteless pills and half-finished vitamin bottles. Get your vitamins, but from <strong>Frank Fruit gummies.</strong></p><p>We believe that with a smart combination of nature, science and creativity - you could <strong>snack your way into better health.</strong></p>"
+      }
+    },
+    "subscription": {
+      "type": "front-subscription",
+      "settings": {
+        "title": "<p><strong>Join the fan club</strong> and subscribe</p>",
+        "placeholder": "Enter your email address",
+        "button": "Join"
+      }
+    },
+    "social": {
+      "type": "front-social",
+      "blocks": {
+        "posts_Yy3rKr": {
+          "type": "posts",
+          "settings": {
+            "image": "shopify://shop_images/social-1.webp",
+            "mobile": "0"
+          }
+        },
+        "posts_tH8c6U": {
+          "type": "posts",
+          "settings": {
+            "image": "shopify://shop_images/social-2.webp",
+            "mobile": "0"
+          }
+        },
+        "posts_LgGkeK": {
+          "type": "posts",
+          "settings": {
+            "image": "shopify://shop_images/social-3.webp",
+            "mobile": "1"
+          }
+        },
+        "posts_jxbV4M": {
+          "type": "posts",
+          "settings": {
+            "image": "shopify://shop_images/social-4.webp",
+            "mobile": "1"
+          }
+        },
+        "posts_BL7bbV": {
+          "type": "posts",
+          "settings": {
+            "image": "shopify://shop_images/social-5.webp",
+            "mobile": "0"
+          }
+        },
+        "posts_WpBXRH": {
+          "type": "posts",
+          "settings": {
+            "image": "shopify://shop_images/social-6.webp",
+            "mobile": "0"
+          }
+        }
+      },
+      "block_order": [
+        "posts_Yy3rKr",
+        "posts_tH8c6U",
+        "posts_LgGkeK",
+        "posts_jxbV4M",
+        "posts_BL7bbV",
+        "posts_WpBXRH"
+      ],
+      "settings": {
+        "title": "<p><strong>Follow us on</strong> social media</p>",
+        "subtitle": "Share your experience and see behind the scenes of #Frankfruities",
+        "facebook": "https://www.facebook.com/FRANKfruities",
+        "instagram": "https://www.instagram.com/frank_fruities/",
+        "tiktok": "",
+        "youtube": "",
+        "pinterest": ""
+      }
+    },
+    "takestep": {
+      "type": "front-takestep",
+      "settings": {
+        "title": "Take the step towards a tastier, healthier life.",
+        "subtitle": "Embrace the fruity revolution & make the switch today!"
+      }
+    }
+  },
+  "order": [
+    "bigblock",
+    "topsellers",
+    "inside",
+    "tasting",
+    "discover",
+    "reviews",
+    "leavereview",
+    "newway",
+    "lookforward",
+    "arrived",
+    "benefits",
+    "bundles",
+    "excellence",
+    "crafted",
+    "nomore",
+    "subscription",
+    "social",
+    "takestep"
+  ]
+}

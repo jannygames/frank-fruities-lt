@@ -1,0 +1,159 @@
+<div class="bg-[#272729] py-16 hidden lg:block">
+  <div class="px-7 min-[1250px]:w-[80%] min-[1250px]:px-0 m-auto">
+    <div class="flex flex-row gap-2">
+      <div class="flex-grow">
+        <h2 class="font-bold text-[#FF5E5E] text-sm mb-4">{{ section.settings.title1 }}</h2>
+        <div>
+          <ul class="w-full text-xs flex flex-row flex-wrap gap-x-3 gap-y-[0.7rem]">
+            {% for link in linklists['footer-shop-menu'].links %}
+              <li class="w-[40%]">
+                <a href="{{ link.url }}" class="text-[#6E6E6E]">{{ link.title }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+
+      <div class="flex-grow">
+        <h2 class="font-bold text-[#FF5E5E] text-sm mb-4">{{ section.settings.title2 }}</h2>
+        <div>
+          <ul class="w-full text-xs flex flex-row flex-wrap gap-x-3 gap-y-[0.7rem]">
+            {% for link in linklists['footer-learn-more-menu'].links %}
+              <li class="w-[40%]">
+                <a href="{{ link.url }}" class="text-[#6E6E6E]">{{ link.title }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+
+      <div class="flex-grow">
+        <h2 class="font-bold text-[#FF5E5E] text-sm mb-4">{{ section.settings.title3 }}</h2>
+        <div>
+          <ul class="w-full text-xs flex flex-row flex-wrap gap-x-3 gap-y-[0.7rem]">
+            {% for link in linklists.footer.links %}
+              <li class="w-[40%]">
+                <a href="{{ link.url }}" class="text-[#6E6E6E]">{{ link.title }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+
+      <div class="flex-shrink pl-5">
+        {{ section.settings.logo | image_url: width: 170 | image_tag: alt: 'Logo' }}
+      </div>
+    </div>
+
+    <div class="text-right text-[#6E6E6E] text-xs pt-10">.all rights reserved</div>
+  </div>
+</div>
+
+<div class="bg-[#272729] py-9 px-4 lg:hidden">
+  <div>
+    <div class="border-b border-[#3B3B3B]">
+      <button
+        onclick="toggleAccordion('footer', 1, '{{ 'footer-accordion-icon.svg' | asset_url }}')"
+        class="w-full flex justify-between items-center py-5 text-[#3B3B3B]"
+      >
+        <h2 class="font-bold text-[#FF5E5E] px-1">{{ section.settings.title1 }}</h2>
+        <span id="accordion-footer-icon-1" class="text-slate-800 transition-transform duration-300">
+          <img src="{{ 'footer-accordion-icon.svg' | asset_url }}" width="13" height="auto" alt="Open">
+        </span>
+      </button>
+      <div id="accordion-footer-content-1" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+        <div class="pb-5 text-sm text-slate-500">
+          <ul class="flex flex-col gap-5 px-1">
+            {% for link in linklists['footer-shop-menu'].links %}
+              <li class="w-[40%]">
+                <a href="{{ link.url }}" class="text-[#6E6E6E]">{{ link.title }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="border-b border-[#3B3B3B]">
+      <button
+        onclick="toggleAccordion('footer', 2, '{{ 'footer-accordion-icon.svg' | asset_url }}')"
+        class="w-full flex justify-between items-center py-5 text-slate-800"
+      >
+        <h2 class="font-bold text-[#FF5E5E] px-1">{{ section.settings.title2 }}</h2>
+        <span id="accordion-footer-icon-2" class="text-slate-800 transition-transform duration-300">
+          <img src="{{ 'footer-accordion-icon.svg' | asset_url }}" width="13" height="auto" alt="Open">
+        </span>
+      </button>
+      <div id="accordion-footer-content-2" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+        <div class="pb-5 text-sm text-slate-500">
+          <ul class="flex flex-col gap-5 px-1">
+            {% for link in linklists['footer-learn-more-menu'].links %}
+              <li class="w-[40%]">
+                <a href="{{ link.url }}" class="text-[#6E6E6E]">{{ link.title }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <button
+        onclick="toggleAccordion('footer', 3, '{{ 'footer-accordion-icon.svg' | asset_url }}')"
+        class="w-full flex justify-between items-center py-5 text-slate-800"
+      >
+        <h2 class="font-bold text-[#FF5E5E] px-1">{{ section.settings.title3 }}</h2>
+        <span id="accordion-footer-icon-3" class="text-slate-800 transition-transform duration-300">
+          <img src="{{ 'footer-accordion-icon.svg' | asset_url }}" width="13" height="auto" alt="Open">
+        </span>
+      </button>
+      <div id="accordion-footer-content-3" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+        <div class="pb-5 text-sm text-slate-500">
+          <ul class="flex flex-col gap-5 px-1">
+            {% for link in linklists.footer.links %}
+              <li class="w-[40%]">
+                <a href="{{ link.url }}" class="text-[#6E6E6E]">{{ link.title }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="py-8 pl-1 text-center">
+    {{ section.settings.logo | image_url: width: 170 | image_tag: alt: 'Logo' }}
+  </div>
+
+  <div class="pl-1 text-[#6E6E6E] text-xs text-center">.all rights reserved</div>
+</div>
+
+{% schema %}
+{
+  "name": "Footer",
+  "tag": "section",
+  "limit": 1,
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Footer logo"
+    },
+    {
+      "type": "text",
+      "id": "title1",
+      "label": "1st menu title"
+    },
+    {
+      "type": "text",
+      "id": "title2",
+      "label": "2nd menu title"
+    },
+    {
+      "type": "text",
+      "id": "title3",
+      "label": "1rd menu title"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,67 @@
+<div class="w-full sm:w-[45%] lg:w-[31%] flex flex-col h-full">
+  <div class="rounded-lg overflow-hidden mb-2">
+    <a href="{{ product.url }}" class="block">
+      {{ product.featured_image | image_url: width: 800 | image_tag: alt: product.title }}
+    </a>
+  </div>
+
+  <div class="py-3 text-center flex-grow">
+    <a href="{{ product.url }}" class="font-light">
+      {{ product.title }}
+    </a>
+  </div>
+
+  <div class="text-center mb-3">
+    <a href="{{ product.url }}" class="font-semibold text-lg">
+      {% assign variant = product.selected_or_first_available_variant %}
+      {% if variant and variant.compare_at_price and variant.compare_at_price > variant.price %}
+        <span class="text-[#FF5E5E]">{{ variant.price | money }}</span>
+        <span class="text-[#C7C7C7] text-sm font-light line-through">{{ variant.compare_at_price | money }}</span>
+      {% else %}
+        {% if variant %}
+          {{ variant.price | money }}
+        {% else %}
+          {{ product.price | money }}
+        {% endif %}
+      {% endif %}
+    </a>
+  </div>
+
+  <div class="mt-auto">
+    {% assign first_available_variant = product.selected_or_first_available_variant %}
+    {% if first_available_variant and first_available_variant.available %}
+      <form method="post" action="{{ routes.cart_add_url }}" class="w-full">
+        <input type="hidden" name="id" value="{{ first_available_variant.id }}">
+        <button
+          type="submit"
+          class="w-full flex items-center justify-center gap-2 bg-[#343057] text-white py-2 rounded-lg hover:opacity-90 mt-2 mb-5"
+        >
+          Add to cart
+          <img
+            src="{{ 'cart-icon.svg' | asset_url }}"
+            alt="Cart"
+            class="w-4 h-4"
+            style="filter: brightness(0) invert(1);"
+            width="16"
+            height="16"
+          >
+        </button>
+      </form>
+    {% else %}
+      <button
+        class="w-full flex items-center justify-center gap-2 bg-[#343057] text-white py-2 rounded-lg opacity-50 cursor-not-allowed mt-2 mb-5"
+        disabled
+      >
+        Sold out
+        <img
+          src="{{ 'cart-icon.svg' | asset_url }}"
+          alt="Cart"
+          class="w-4 h-4"
+          style="filter: brightness(0) invert(1);"
+          width="16"
+          height="16"
+        >
+      </button>
+    {% endif %}
+  </div>
+</div>

@@ -1,0 +1,170 @@
+<div class="w-full absolute lg:top-3 top-10 mt-20 hidden lg:block !z-50">
+  <nav class="w-[80%] m-auto flex flex-row justify-between">
+    <div>
+      {% assign use_white_logo_desktop = false %}
+      {% if template.name == 'index' or template.suffix == 'bts' %}
+        {% assign use_white_logo_desktop = true %}
+      {% endif %}
+      <a href="{{ routes.root_url }}">
+        {% if use_white_logo_desktop and section.settings.logo_white != blank %}
+          {{ section.settings.logo_white | image_url: width: 160 | image_tag: alt: 'Logo' }}
+        {% elsif section.settings.logo_dark != blank %}
+          {{ section.settings.logo_dark | image_url: width: 160 | image_tag: alt: 'Logo' }}
+        {% else %}
+          {{ section.settings.logo | image_url: width: 160 | image_tag: alt: 'Logo' }}
+        {% endif %}
+      </a>
+    </div>
+
+    <div class="flex flex-row items-center">
+      <div class="bg-white border border-[#D0D0D0] rounded-[17px] min-[1400px]:rounded-[50px] flex flex-col pr-10 items-center min-[1400px]:flex-row min-[1400px]:pr-0 min-[1400px]:gap-10">
+        <ul class="flex flex-row items-center py-2 min-[1400px]:py-3 pl-10 text-sm gap-6">
+          {% for link in linklists['main-menu'].links %}
+            <li>
+              <a
+                href="{{ link.url }}"
+                class="pr-8 bg-menu-icon bg-no-repeat bg-[position:top_right] bg-[length:20px_auto]"
+              >
+                {{ link.title }}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+
+        <ul class="flex flex-row items-center py-2 min-[1400px]:py-3 pr-10 text-sm gap-6">
+          {% comment %}
+            <li>
+              <a
+                href="#"
+                class="pl-6 bg-no-repeat bg-[position:center_left] bg-[length:auto_15px] bg-search-icon"
+                >Search
+              </a>
+            </li>
+          {% endcomment %}
+          <li>
+            {% if customer %}
+              <a
+                href="{{ routes.account_url }}"
+                class="pl-6 bg-no-repeat bg-[position:center_left] bg-[length:auto_15px] bg-account-icon"
+                >Account
+              </a>
+            {% else %}
+              <a
+                href="{{ routes.account_login_url }}"
+                class="pl-6 bg-no-repeat bg-[position:center_left] bg-[length:auto_15px] bg-account-icon"
+                >Sign In
+              </a>
+            {% endif %}
+          </li>
+          <li>
+            <a
+              href="{{ routes.cart_url }}"
+              class="pl-6 bg-no-repeat bg-[position:center_left] bg-[length:auto_15px] bg-cart-icon"
+              >Cart - <span class="cart-item-count">{{ cart.item_count }}</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<div class="lg:hidden">
+  <nav class="bg-white rounded-lg p-4 flex flex-row justify-between border border-[#D0D0D0] w-full top-10 mt-20 !z-50">
+    <div class="w-1/3 flex flex-col justify-center items-start">
+      <button
+        id="mobile-menu-toggle"
+        type="button"
+        class="relative inline-flex items-center justify-center"
+        aria-controls="mobile-menu"
+        aria-expanded="false"
+      >
+        <img src="{{ 'mobile-menu-toggle.svg' | asset_url }}" width="25" height="auto" alt="Menu">
+      </button>
+    </div>
+
+    <div class="w-10 flex flex-col justify-center">
+      <a href="{{ routes.root_url }}">
+        {{ section.settings['mobile-logo'] | image_url: width: 28 | image_tag: alt: 'Logo' }}
+      </a>
+    </div>
+
+    <div class="w-1/3 flex flex-col justify-center items-end">
+      <ul class="flex flex-row gap-5">
+        {% comment %}
+          <li>
+            <a
+              href="#"
+              class="pl-4 bg-search-icon bg-no-repeat bg-[position:center_left] bg-[length:auto_15px]"
+            ></a>
+          </li>
+        {% endcomment %}
+
+        <li>
+          <a
+            href="{{ routes.cart_url }}"
+            class="pl-6 text-sm bg-cart-icon bg-no-repeat bg-[position:center_left] bg-[length:auto_15px]"
+          >
+            Cart - <span class="cart-item-count">{{ cart.item_count }}</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div
+    id="mobile-menu-dropdown"
+    class="hidden w-full bg-white border border-[#D0D0D0] border-t-0 rounded-lg rounded-tl-none rounded-tr-none mt-[-5px]"
+  >
+    <div class="px-4 py-5">
+      <ul class="flex flex-col gap-5">
+        {% for link in linklists['main-menu'].links %}
+          <li>
+            <a href="{{ link.url }}" class="block text-[#6F6F6F] font-light">{{ link.title }}</a>
+          </li>
+        {% endfor %}
+        {% if customer %}
+          <li>
+            <a href="{{ routes.account_url }}" class="block text-[#6F6F6F] font-light">My account</a>
+          </li>
+        {% else %}
+          <li>
+            <a href="{{ routes.account_register_url }}" class="block text-[#6F6F6F] font-light">Sign Up</a>
+          </li>
+          <li>
+            <a href="{{ routes.account_login_url }}" class="block text-[#6F6F6F] font-light">Sign In</a>
+          </li>
+        {% endif %}
+      </ul>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Header",
+  "tag": "section",
+  "limit": 1,
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile-logo",
+      "label": "Mobile logo"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo_white",
+      "label": "Desktop white logo"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo_dark",
+      "label": "Desktop dark logo"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,96 @@
+<div class="bg-[#F8F8F8] py-20">
+  <div class="px-4 lg:px-0 lg:w-[80%] m-auto">
+    <div class="flex flex-col justify-center">
+      <div class="flex flex-col items-center">
+        <div class="font-light md:font-medium text-[#AFAFAF] text-sm lg:text-base mb-3 uppercase md:normal-case">
+          {{ section.settings.subtitle }}
+        </div>
+
+        <div class="mb-3 lg:mb-7">
+          <h2 class="colored-title text-black font-bold text-3xl lg:text-4xl leading-snug uppercase lg:mb-6">
+            {{ section.settings.title }}
+          </h2>
+        </div>
+      </div>
+
+      <div class="flex flex-col lg:flex-row gap-5">
+        <div class="lg:w-1/2">
+          <div class="rounded-md overflow-hidden relative">
+            {{ section.settings.image | image_url: width: 900 | image_tag: width: '100%', alt: '1kg of real fruits.' }}
+
+            <div class="bg-[#F8F8F8] absolute bottom-0 left-0 pt-2 md:pt-3 pb-1 pl-2 pr-10 rounded-tr-md">
+              <h3 class="colored-title-notracking text-lg md:text-2xl font-bold">
+                {{ section.settings.comment }}
+              </h3>
+
+              <div
+                class="w-[20px] h-[20px] bg-[transparent] border-l-[5px] border-b-[5px] border-r-0 border-t-0 absolute right-[-15px] bottom-[-5px] rounded-bl-[12px] border-white"
+              ></div>
+
+              <div
+                class="w-[20px] h-[20px] bg-[transparent] border-r-[5px] border-t-[5px] border-l-0 border-b-0 absolute left-[-5px] top-[-15px] rounded-tr-[12px] rotate-180 border-white"
+              ></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:w-1/2 flex flex-row gap-5">
+          <div>
+            {{ section.settings.thumb1 | image_url: width: 615 | image_tag: alt: section.settings.comment }}
+          </div>
+          <div>
+            {{ section.settings.thumb2 | image_url: width: 615 | image_tag: alt: section.settings.comment }}
+          </div>
+          <div>
+            {{ section.settings.thumb3 | image_url: width: 615 | image_tag: alt: section.settings.comment }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "What's inside: Settle",
+  "tag": "section",
+  "limit": 1,
+  "settings": [
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle"
+    },
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "First image"
+    },
+    {
+      "type": "richtext",
+      "id": "comment",
+      "label": "First image comment"
+    },
+    {
+      "type": "image_picker",
+      "id": "thumb1",
+      "label": "Thumbnail #1"
+    },
+    {
+      "type": "image_picker",
+      "id": "thumb2",
+      "label": "Thumbnail #2"
+    },
+    {
+      "type": "image_picker",
+      "id": "thumb3",
+      "label": "Thumbnail #3"
+    }
+  ]
+}
+{% endschema %}

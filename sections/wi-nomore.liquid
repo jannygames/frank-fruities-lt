@@ -1,0 +1,26 @@
+{% render 'nomore', title: section.settings.title, desc: section.settings.desc, image: section.settings.image %}
+
+{% schema %}
+{
+  "name": "What's inside: No More",
+  "tag": "section",
+  "limit": 1,
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "richtext",
+      "id": "desc",
+      "label": "Description"
+    }
+  ]
+}
+{% endschema %}

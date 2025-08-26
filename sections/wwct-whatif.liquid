@@ -1,0 +1,119 @@
+<div>
+  <div class="lg:w-[80%] m-auto px-4 lg:px-0 flex flex-col lg:flex-row py-16 gap-16">
+    <div class="lg:w-[50%] flex flex-col justify-center">
+      {{
+        section.settings.image
+        | image_url: width: 900
+        | image_tag: height: '100%', alt: 'Vitamins', class: 'rounded-lg'
+      }}
+    </div>
+
+    <div class="lg:w-[50%] flex flex-col justify-center">
+      <div class="font-medium text-[#AFAFAF] text-sm lg:text-base mb-3 text-center lg:text-left">
+        {{ section.settings.subtitle }}
+      </div>
+
+      <div class="mb-3 lg:mb-7">
+        <h2 class="colored-title text-black font-bold text-3xl lg:text-4xl leading-snug uppercase text-center lg:text-left">
+          {{ section.settings.title }}
+        </h2>
+      </div>
+
+      <div class="flex flex-col sm:flex-row gap-5 mb-7 justify-center lg:justify-start">
+        <div>
+          <div class="bg-[#C1C1C1] text-white md:inline-block rounded-md pl-3 pr-6 xl:pr-20 py-2 text-center sm:text-left">
+            <img
+              src="{{ 'yuck.svg' | asset_url }}"
+              alt="Yuck"
+              width="30"
+              height="auto"
+              class="inline-block mr-2 mt-[-4px]"
+            >
+            <span class="text-xl font-extrabold uppercase tracking-wider leading-8 inline-block">Yuck</span>
+          </div>
+        </div>
+
+        <div class="text-[#0F1113] font-bold text-lg uppercase justify-center flex flex-col text-center sm:text-left">
+          To
+        </div>
+
+        <div>
+          <div class="bg-[#FF5E5E] text-white md:inline-block rounded-md pl-3 pr-6 xl:pr-20 py-2 text-center sm:text-left">
+            <img
+              src="{{ 'yummi.svg' | asset_url }}"
+              alt="Yummi"
+              width="30"
+              height="auto"
+              class="inline-block mr-2 mt-[-4px]"
+            >
+            <span class="text-xl font-extrabold uppercase tracking-wider leading-8 inline-block">Yummi!</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="desc-text text-[0.8rem] font-light text-[#222222]">
+        {{ section.settings.desc }}
+      </div>
+
+      <div class="text-[0.8rem] font-light text-[#222222] mb-4 flex flex-row gap-4">
+        <div class="flex justify-center">
+          <img
+            src="{{ 'we-swiss.svg' | asset_url }}"
+            alt="Swiss"
+            width="auto"
+            height="auto"
+            class="inline-block mr-2 mt-[3px] w-[100px]"
+          >
+        </div>
+
+        <div>
+          {{ section.settings.about }}
+        </div>
+      </div>
+
+      <div class="text-[0.8rem] font-light text-[#222222]">
+        {{ section.settings.contact }}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Why: What If",
+  "tag": "section",
+  "limit": 1,
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle"
+    },
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "richtext",
+      "id": "desc",
+      "label": "Description"
+    },
+    {
+      "type": "text",
+      "id": "about",
+      "label": "About Us"
+    },
+    {
+      "type": "richtext",
+      "id": "contact",
+      "label": "Contact Us"
+    }
+  ]
+}
+{% endschema %}

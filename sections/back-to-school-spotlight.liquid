@@ -1,0 +1,226 @@
+<section id="bts-spotlight" class="py-14 bg-bts-bg">
+  <div class="max-w-[1200px] m-auto px-4">
+    {% assign p = section.settings.product %}
+    {% if p == blank and section.settings.product_handle != blank %}
+      {% assign p = all_products[section.settings.product_handle] %}
+    {% endif %}
+
+    {% assign p = all_products['7-pack-discovery-kit'] %}
+    {% if p == blank %}
+      {% assign p = all_products['7-pack-discovery-kit'] %}
+    {% endif %}
+    {% if p == blank and section.settings.product_id != blank %}
+      {% assign target_id = section.settings.product_id | plus: 0 %}
+      {% if collections['back-to-school'] %}
+        {% for prod in collections['back-to-school'].products %}
+          {% if prod.id == target_id %}
+            {% assign p = prod %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+      {% if p == blank and collections.all %}
+        {% for prod in collections.all.products %}
+          {% if prod.id == target_id %}
+            {% assign p = prod %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+    {% endif %}
+
+    <div class="text-center mb-8">
+      {% if section.settings.title != blank %}
+        {% assign title_raw = section.settings.title | strip | strip_html %}
+        {% assign words = title_raw | split: ' ' %}
+        {% assign words_count = words | size %}
+        {% if words_count > 0 %}
+          {% assign last_index = words_count | minus: 1 %}
+          {% assign last_word = words[last_index] %}
+          {% assign head = '' %}
+          {% for w in words %}
+            {% if forloop.index0 < last_index %}
+              {% if head == '' %}
+                {% assign head = w %}
+              {% else %}
+                {% assign head = head | append: ' ' | append: w %}
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+        {% assign last_char = last_word | slice: -1 %}
+        {% assign last_word_len = last_word | size %}
+        {% assign last_word_head_len = last_word_len | minus: 1 %}
+        {% assign last_word_head = last_word | slice: 0, last_word_head_len %}
+        <h2 class="text-black font-bold text-5xl lg:text-5xl leading-snug">
+          <strong>
+            {{ head -}}
+            {%- if head != '' %} {% endif -%}
+            <span class="text-bts-yellow"> {{ last_word_head }}</span><span>{{ last_char }}</span>
+          </strong>
+        </h2>
+      {% endif %}
+      {% if section.settings.subtitle != blank %}
+        <p class="text-bts-gray mt-4 max-md:text-xl">{{ section.settings.subtitle }}</p>
+      {% endif %}
+    </div>
+
+    {% if p %}
+      <div class="flex flex-col lg:flex-row lg:flex-nowrap gap-10 justify-center items-center mt-20">
+        <div class="w-full lg:w-[50%] min-w-0">
+          {% if p.featured_media and p.featured_media.preview_image %}
+            {{
+              p.featured_media.preview_image
+              | image_url: width: 1200
+              | image_tag: alt: p.title, class: 'rounded-lg w-full h-auto'
+            }}
+          {% elsif p.featured_image %}
+            {{ p.featured_image | image_url: width: 1200 | image_tag: alt: p.title, class: 'rounded-lg w-full h-auto' }}
+          {% else %}
+            <div class="w-full aspect-[4/3] bg-bts-bg rounded-lg"></div>
+          {% endif %}
+        </div>
+
+        <div class="pt-4 w-full lg:w-[50%] min-w-0 lg:mr-[10%]">
+          {% assign v = p.selected_or_first_available_variant %}
+
+          {% if v %}
+            {% form 'product', p, id: 'bts-spotlight-form' %}
+              <input type="hidden" name="id" value="{{ v.id }}">
+
+              <div class="mb-7">
+                <div class="text-sm border-b pb-[0.9rem] border-[#D3D3D3] flex flex-row justify-between">
+                  <div>Price</div>
+                  <div>Quantity</div>
+                </div>
+
+                <div class="pt-4 flex flex-row justify-between items-center">
+                  <div class="font-semibold text-lg flex items-center">
+                    {% if v.compare_at_price and v.compare_at_price > v.price %}
+                      <span class="text-[#D3D3D3] text-sm align-middle mr-2 line-through">
+                        {{- v.compare_at_price | money -}}
+                      </span>
+                      <span class="text-bts-blue text-lg">
+                        {{- v.price | money -}}
+                      </span>
+                    {% else %}
+                      {{ v.price | money }}
+                    {% endif %}
+                  </div>
+
+                  <div>
+                    <div class="flex flex-row py-[0.3rem] px-3 border border-[#D3D3D3] rounded-[10px]">
+                      <div class="flex items-center">
+                        <button type="button" class="product-quantity-less" data-bts-qty-dec>
+                          <img src="{{ 'product-size-minus.svg' | asset_url }}" width="auto" height="auto" alt="Less">
+                        </button>
+                      </div>
+
+                      <input
+                        class="w-16 font-semibold text-[1.25rem] text-center"
+                        name="quantity"
+                        type="number"
+                        min="1"
+                        value="1"
+                        data-bts-qty
+                      >
+
+                      <div class="flex items-center">
+                        <button type="button" class="product-quantity-more" data-bts-qty-inc>
+                          <img src="{{ 'product-size-plus.svg' | asset_url }}" width="auto" height="auto" alt="More">
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {% if p.description != blank %}
+                <div class="mt-6">
+                  <div class="text-sm border-b pb-[0.9rem] border-bts-gray flex items-center justify-between">
+                    <div>Description</div>
+                    {% if section.settings.show_rating %}
+                      <div class="flex items-center gap-2">
+                        <img
+                          src="{{ 'rating-5.svg' | asset_url }}"
+                          alt="rating"
+                          class="h-4 w-auto"
+                          width="80"
+                          height="16"
+                        >
+                        <span class="text-sm text-bts-gray"
+                          >({{ section.settings.rating_value }} stars) • {{ section.settings.reviews_count -}}
+                        </span>
+                      </div>
+                    {% endif %}
+                  </div>
+                  <div class="pt-4 text-[0.8rem] text-bts-gray max-w-none">{{ p.description }}</div>
+                </div>
+              {% endif %}
+
+              <div class="mt-10 flex gap-3 items-start">
+                <button
+                  type="submit"
+                  class="w-1/2 bg-[#1E1E1E] rounded-lg text-white py-[10px] font-medium row-span-1 flex items-center justify-center gap-2"
+                >
+                  Add to Cart
+                  <img
+                    src="{{ 'cart-icon.svg' | asset_url }}"
+                    alt="Cart"
+                    class="w-4 h-4 brightness-0 invert"
+                    width="16"
+                    height="16"
+                  >
+                </button>
+                <div class="w-1/2">
+                  {{ form | payment_button }}
+                </div>
+              </div>
+            {% endform %}
+          {% else %}
+            <div class="mb-4">
+              <div class="text-sm text-bts-gray">Price</div>
+              <div class="text-2xl font-semibold"><span class="text-bts-gray">Unavailable</span></div>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    {% else %}
+      <div class="text-center text-bts-gray">
+        Select a product in the section settings or provide a valid handle to display the 7 pack.
+      </div>
+    {% endif %}
+  </div>
+
+  <script>
+    document.addEventListener('click', function (e) {
+      const form = document.getElementById('bts-spotlight-form');
+      if (!form) return;
+      const qtyInput = form.querySelector('[data-bts-qty]');
+      if (e.target.closest('[data-bts-qty-inc]')) {
+        qtyInput.value = Math.max(1, parseInt(qtyInput.value || '1') + 1);
+      }
+      if (e.target.closest('[data-bts-qty-dec]')) {
+        qtyInput.value = Math.max(1, parseInt(qtyInput.value || '1') - 1);
+      }
+    });
+  </script>
+</section>
+
+{% schema %}
+{
+  "name": "BTS Spotlight",
+  "tag": "section",
+  "limit": 1,
+  "settings": [
+    { "type": "richtext", "id": "title", "label": "Title" },
+    { "type": "text", "id": "subtitle", "label": "Subtitle" },
+    { "type": "product", "id": "product", "label": "Product (pick 7 pack)" },
+    { "type": "text", "id": "product_handle", "label": "Fallback product handle (optional)" },
+    { "type": "text", "id": "product_id", "label": "Fallback product ID (optional)" },
+    { "type": "checkbox", "id": "show_rating", "label": "Show rating row", "default": true },
+    { "type": "text", "id": "rating_value", "label": "Rating value", "default": "4.9" },
+    { "type": "text", "id": "reviews_count", "label": "Reviews count", "default": "234 reviews" }
+  ]
+}
+{% endschema %}

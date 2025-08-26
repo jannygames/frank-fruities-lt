@@ -1,0 +1,10 @@
+ {
+  "sections": {
+    "content": {
+      "type": "login-content"
+    },
+  },
+  "order": [
+    "content"
+  ]
+}

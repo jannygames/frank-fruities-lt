@@ -1,0 +1,86 @@
+<div class="py-20">
+  <div class="px-4 lg:px-0 lg:w-[80%] m-auto flex flex-col lg:flex-row gap-8">
+    <div class="lg:w-1/2 flex flex-row items-center">
+      <div class="w-1/3 h-[8.5rem] lg:h-full flex flex-col justify-center border-r border-[#e1dfe5]">
+        <div class="self-center text-center">
+          <img
+            src="{{ section.settings.image1 | image_url }}"
+            width="145"
+            height="auto"
+            alt="{{ section.settings.title | strip_html }}"
+            class="inline-block"
+          >
+        </div>
+      </div>
+      <div class="w-1/3 h-[8.5rem] lg:h-full flex flex-col justify-center border-r border-[#e1dfe5]">
+        <div class="self-center text-center">
+          <img
+            src="{{ section.settings.image2 | image_url }}"
+            width="95"
+            height="auto"
+            alt="{{ section.settings.title | strip_html }}"
+            class="inline-block"
+          >
+        </div>
+      </div>
+      <div class="w-1/3 h-[8.5rem] lg:h-full flex flex-col justify-center lg:border-r border-[#e1dfe5]">
+        <div class="self-center text-center">
+          <img
+            src="{{ section.settings.image3 | image_url }}"
+            width="90"
+            height="auto"
+            alt="{{ section.settings.title | strip_html }}"
+            class="inline-block"
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class="lg:w-1/2">
+      <div class="mb-5">
+        <h2 class="colored-title text-black font-bold text-2xl lg:text-3xl leading-snug uppercase text-center lg:text-left">
+          {{ section.settings.title }}
+        </h2>
+      </div>
+
+      <div class="text-[0.8rem] text-[#343057] font-light text-center lg:text-left">
+        {{ section.settings.desc }}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "What's inside: Made",
+  "tag": "section",
+  "limit": 1,
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image1",
+      "label": "Image #1"
+    },
+    {
+      "type": "image_picker",
+      "id": "image2",
+      "label": "Image #2"
+    },
+    {
+      "type": "image_picker",
+      "id": "image3",
+      "label": "Image #3"
+    },
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "richtext",
+      "id": "desc",
+      "label": "Description"
+    }
+  ]
+}
+{% endschema %}

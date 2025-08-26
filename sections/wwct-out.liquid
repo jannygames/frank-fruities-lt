@@ -1,0 +1,51 @@
+<div class="pt-11 lg:pt-20 mt-20">
+  <div class="lg:w-[80%] m-auto px-4 lg:px-0 flex flex-col lg:flex-row py-16">
+    <div class="lg:w-[50%] flex flex-col justify-center">
+      {{
+        section.settings.image
+        | image_url: width: 900
+        | image_tag:
+          height: '100%',
+          alt: section.settings.title,
+          class: 'rounded-tl-xl rounded-tr-xl lg:rounded-tr-none rounded-bl-none lg:rounded-bl-xl rounded-br-none'
+      }}
+    </div>
+
+    <div class="lg:w-[50%] pl-7 pt-5 pb-2 lg:py-0 pr-16 bg-[#FF5E5E] flex flex-col justify-center rounded-tl-none rounded-tr-none lg:rounded-tr-xl rounded-bl-xl lg:rounded-bl-none rounded-br-xl">
+      <div class="mb-3 lg:mb-5">
+        <h2 class="colored-title-red text-white font-bold text-2xl xl:text-3xl leading-snug uppercase">
+          {{ section.settings.title }}
+        </h2>
+      </div>
+
+      <div class="desc-text-red text-[0.8rem] font-light text-white">
+        {{ section.settings.desc }}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Why: Out",
+  "tag": "section",
+  "limit": 1,
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "richtext",
+      "id": "desc",
+      "label": "Description"
+    }
+  ]
+}
+{% endschema %}

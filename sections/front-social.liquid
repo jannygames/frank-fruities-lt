@@ -1,0 +1,154 @@
+<div class="py-12 lg:py-16">
+  <div class="lg:max-w-[1150px] m-auto flex flex-col gap-4 mb-10 lg:px-0 px-4">
+    <div>
+      <h3 class="colored-title text-black font-bold text-3xl lg:text-4xl leading-snug uppercase text-center">
+        {{ section.settings.title }}
+      </h3>
+    </div>
+
+    <div class="text-[#656565] font-light text-center mb-2 text-sm lg:text-base">
+      {{ section.settings.subtitle }}
+    </div>
+
+    <div class="flex flex-row justify-center mb-3">
+      <ul class="flex flex-row gap-3">
+        {% if section.settings.facebook %}
+          <li>
+            <a href="{{ section.settings.facebook }}">
+              <img src="{{ 'social-fb.svg' | asset_url }}" width="31" height="auto" alt="Facebook">
+            </a>
+          </li>
+        {% endif %}
+
+        {% if section.settings.instagram != empty %}
+          <li>
+            <a href="{{ section.settings.instagram }}">
+              <img src="{{ 'social-ig.svg' | asset_url }}" width="31" height="auto" alt="Instagram">
+            </a>
+          </li>
+        {% endif %}
+
+        {% if section.settings.tiktok != empty %}
+          <li>
+            <a href="{{ section.settings.tiktok }}">
+              <img src="{{ 'social-tt.svg' | asset_url }}" width="31" height="auto" alt="TikTok">
+            </a>
+          </li>
+        {% endif %}
+
+        {% if section.settings.youtube != empty %}
+          <li>
+            <a href="{{ section.settings.youtube }}">
+              <img src="{{ 'social-yt.svg' | asset_url }}" width="31" height="auto" alt="Youtube">
+            </a>
+          </li>
+        {% endif %}
+
+        {% if section.settings.pinterest != empty %}
+          <li>
+            <a href="{{ section.settings.pinterest }}">
+              <img src="{{ 'social-pn.svg' | asset_url }}" width="31" height="auto" alt="Pinterest">
+            </a>
+          </li>
+        {% endif %}
+      </ul>
+    </div>
+  </div>
+
+  <div class="hidden lg:flex flex-row justify-between gap-5">
+    {% for block in section.blocks %}
+      <div>
+        <a href="{{ section.settings.instagram }}" target="_blank" rel="nofollow">
+          {{ block.settings.image | image_url: height: 500 | image_tag: alt: shop.name }}
+        </a>
+      </div>
+    {% endfor %}
+  </div>
+
+  <div class="flex lg:hidden flex-row justify-between gap-5 px-4">
+    {% for block in section.blocks %}
+      {% if block.settings.mobile == '1' %}
+        <div>
+          <a href="{{ section.settings.instagram }}" target="_blank" rel="nofollow">
+            {{ block.settings.image | image_url: height: 500 | image_tag: alt: shop.name }}
+          </a>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Front page: Social",
+  "tag": "section",
+  "limit": 1,
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle"
+    },
+    {
+      "type": "text",
+      "id": "facebook",
+      "label": "Facebook URL"
+    },
+    {
+      "type": "text",
+      "id": "instagram",
+      "label": "Instagram URL"
+    },
+    {
+      "type": "text",
+      "id": "tiktok",
+      "label": "Tiktok URL"
+    },
+    {
+      "type": "text",
+      "id": "youtube",
+      "label": "Youtube URL"
+    },
+    {
+      "type": "text",
+      "id": "pinterest",
+      "label": "Pinterest URL"
+    }
+  ],
+  "max_blocks": 6,
+  "blocks": [
+    {
+      "name": "Blocks",
+      "type": "posts",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "select",
+          "id": "mobile",
+          "label": "Visible on mobile devices",
+          "options": [
+            {
+              "value": "0",
+              "label": "No"
+            },
+            {
+              "value": "1",
+              "label": "Yes"
+            }
+          ],
+          "default": "0"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

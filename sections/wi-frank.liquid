@@ -1,0 +1,77 @@
+<div class="lg:pt-20 px-4 lg:px-0 mt-20">
+  <div class="mt-20 lg:my-20 pt-5 pb-16 lg:pb-0 lg:w-[80%] m-auto relative flex flex-col xl:flex-row">
+    <div class="order-2 xl:order-1 xl:w-[95%] bg-[#FF5E5E] pt-12 md:pt-10 xl:pt-10 pb-6 px-5 rounded-lg relative xl:z-10">
+      <div class="md:w-[50%] xl:w-[55%]">
+        <div class="text-[#FFBEB0] font-semibold text-sm md:text-base mb-3">
+          {{ section.settings.subtitle }}
+        </div>
+
+        <div>
+          <h2 class="colored-title-red text-white font-bold text-3xl md:text-4xl leading-snug uppercase mb-4 md:mb-6">
+            {{ section.settings.title }}
+          </h2>
+        </div>
+
+        <div class="desc-text-red text-[0.8rem] font-light text-white mb-5">
+          {{ section.settings.desc }}
+        </div>
+
+        <div>
+          <a
+            href="/collections/all"
+            class="bg-[#343057] text-center rounded-lg text-[#fff] w-full sm:w-auto text-sm md:text-md lg:text-lg py-3 px-12"
+          >
+            <span>{{ section.settings.button }}</span>
+            <img
+              src="{{ 'more-products-icon.svg' | asset_url }}"
+              alt="{{ section.settings.button }}"
+              width="auto"
+              height="auto"
+              class="inline-block ml-2 mt-[-4px] w-[15px] md:w-[18px]"
+            >
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="hidden lg:flex order-1 xl:order-2 xl:absolute top-0 right-0 bg-frank-help-gut-1000 bg-no-repeat bg-[length:auto_100%] bg-[position:top_7px_right] w-1/2 absolute h-[17rem] xl:h-full mb-[-2rem] xl:mb-0 z-[1] xl:z-20"
+    ></div>
+    <div
+      class="hidden md:flex lg:hidden order-1 xl:order-2 xl:absolute top-0 left-0 bg-frank-help-gut-700 bg-no-repeat bg-[length:auto_100%] bg-[position:top_7px_right] w-full h-[17rem] xl:h-full mb-[-2rem] xl:mb-0 z-[1] xl:z-20"
+    ></div>
+    <div
+      class="md:hidden order-1 xl:order-2 xl:absolute top-0 left-0 bg-frank-help-gut-500 bg-no-repeat bg-[length:auto_100%] bg-[position:top_7px_right] w-full h-[17rem] xl:h-full mb-[-2rem] xl:mb-0 z-[1] xl:z-20"
+    ></div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "What's inside: Frank",
+  "tag": "section",
+  "limit": 1,
+  "settings": [
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle"
+    },
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "richtext",
+      "id": "desc",
+      "label": "Description"
+    },
+    {
+      "type": "text",
+      "id": "button",
+      "label": "Button"
+    }
+  ]
+}
+{% endschema %}

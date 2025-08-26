@@ -1,0 +1,101 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "out": {
+      "type": "wwct-out",
+      "settings": {
+        "image": "shopify://shop_images/out.webp",
+        "title": "<p><strong>1 out of 2</strong> people struggle to finish their vitamin bottles.</p>",
+        "desc": "<p>We started the company, because we realized vitamins & nutritional supplements had a problem. As a young family, we could never finish our bottles of vitamins and food supplements.  Regularly we would be throwing away half-filled plastic bottles of supplements, because they expired just sitting there.  Alone.  Sad. Abandoned. We now know, it’s a fact that <strong>46% of people struggle to finish vitamin / supplement bottles</strong> (US research, April 2022, 1Q).</p>"
+      }
+    },
+    "supplements": {
+      "type": "wwct-supplements",
+      "settings": {
+        "image": "shopify://shop_images/supplements.webp",
+        "subtitle": "Old ways are simply inconvenient.",
+        "title": "<p><strong>Supplements,</strong> you have a problem!</p>",
+        "desc": "<p><strong>We realized, taking vitamins or food supplements is not a fun moment in your day.</strong> It is not what people want to do, because they are tasteless, flavorless and, in some cases really yuck. On top, often you need to drink them with water, which makes the whole thing even more complex.  Even the vitamin gummies offered, taste rubbery and are made of mostly fruit flavors and gelatin.</p><p>From vast behavioral research studies, we know that people are more likely to develop and stick to habits if they are <strong>‘FUN’</strong>.  This insight and our own struggle of sticking to vitamins gave us a trigger to venture on to disrupt a $120Bn global vitamin & supplement category.</p>"
+      }
+    },
+    "whatif": {
+      "type": "wwct-whatif",
+      "settings": {
+        "image": "shopify://shop_images/elevate.webp",
+        "subtitle": "Time for a change.",
+        "title": "<p><strong>What if</strong> we could elevate vitamins from</p>",
+        "desc": "<p>We set out to take on this challenge, to create seriously awesome nutritional supplements:</p><ul><li><strong>Making vitamins & nutritional supplements from real fruit.</strong></li><li><strong>Ensuring highest grade quality & safety.</strong></li><li><strong>Avoid plastic, yet make them look & feel fun.</strong></li></ul><p>After a lot of hard work, creative problem-solving and a bit of luck, we are very proud to present you our product.</p>",
+        "about": "We are a Swiss Functional Foods company, based in Geneva. We believe that with a smart combination of nature, science and creativity - you could snack our way into better health.",
+        "contact": "<p>Do not hesitate to contact us if you have questions, suggestions, would be interested in distributing us or would like to leave a review: <a href=\"mailto:info@frankfunctionalfoods.com\" title=\"mailto:info@frankfunctionalfoods.com\">info@frankfunctionalfoods.com</a></p>"
+      }
+    },
+    "takestep": {
+      "type": "wwct-takestep",
+      "settings": {
+        "title": "Take the step towards a tastier, healthier life.",
+        "subtitle": "Embrace the fruity revolution & make the switch today!"
+      }
+    },
+    "reviews": {
+      "type": "wwct-reviews",
+      "blocks": {
+        "review_TdenkU": {
+          "type": "review",
+          "settings": {
+            "rate": "5",
+            "name": "Sibilla M.",
+            "text": "It was difficult to find vegan vitamins, but now I am so happy to have found Fruities. Their products are delicious and effective and I like that the company is local.\nI also tried the kids vitamins for my children, but it was less successful because of the strong banana flavour."
+          }
+        },
+        "review_CPkMMU": {
+          "type": "review",
+          "settings": {
+            "rate": "5",
+            "name": "Oliver A.",
+            "text": "I like them they are nice, chewy, and the taste feels natural enough. The gut culture tastes the best I think the others I tried do have the classic vitamin taste next to the condensed fruit, but over all they are nice."
+          }
+        },
+        "review_epAkRU": {
+          "type": "review",
+          "settings": {
+            "rate": "5",
+            "name": "Agata W.",
+            "text": "For a long time I struggled to take care of myself, especially after pregnancy. These gummies changed everything! they are so tasty, so easy to take and are now fixed part of my routine. Im so happy to find them! Plus there is an option for my child! Love love love :)"
+          }
+        },
+        "review_EP9bAH": {
+          "type": "review",
+          "settings": {
+            "rate": "5",
+            "name": "Samantha B.",
+            "text": "I can honestly say these are the best vitamins I have ever tasted. In fact, I have to stop myself eating more than 3 a day. Also, they are really easy to chew and swallow so great for kids and anyone like me who have difficulty swallowing."
+          }
+        }
+      },
+      "block_order": [
+        "review_TdenkU",
+        "review_CPkMMU",
+        "review_epAkRU",
+        "review_EP9bAH"
+      ],
+      "settings": {
+        "title": "<p><strong>Our customers agree:</strong><br/>Yes, it's worth the hype!</p>"
+      }
+    }
+  },
+  "order": [
+    "out",
+    "supplements",
+    "whatif",
+    "takestep",
+    "reviews"
+  ]
+}

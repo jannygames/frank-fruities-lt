@@ -1,0 +1,22 @@
+<div class="relative">
+  {{ imagedesktop | image_url: width: 1280 | image_tag: width: '100%', alt: 'Package', class: 'hidden lg:block' }}
+  {{ imagemobile | image_url: width: 1040 | image_tag: width: '100%', alt: 'Package', class: 'block lg:hidden' }}
+
+  <div class="lg:absolute bottom-9 w-full text-center bg-[#D3CFFA] lg:bg-[transparent]">
+    <div class="lg:w-[47%] px-4 lg:px-0 py-10 lg:py-0 m-auto">
+      <div class="bg-white rounded-lg px-10 py-3 mb-7">
+        <h2 class="colored-title text-black font-bold lg:text-2xl leading-snug uppercase">
+          {{ title }}
+        </h2>
+      </div>
+
+      <div class="desc-text text-[0.8rem] font-light text-[#343057] lg:text-white mb-5">
+        {{ desc }}
+      </div>
+
+      <div class="text-[#343057] lg:text-white font-semibold">
+        {{ btline }}
+      </div>
+    </div>
+  </div>
+</div>

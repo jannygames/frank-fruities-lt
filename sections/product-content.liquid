@@ -1,0 +1,97 @@
+<div class="px-4 lg:px-0 pt-28 pb-10 lg:py-20 mt-20">
+  <div class="w-[80%] m-auto text-[#6F6F6F] text-sm pt-20 mb-6 hidden lg:block">
+    <a href="/" class="text-[#AFAFAF]">Home</a> / {{ product.title }}
+  </div>
+
+  <div class="lg:w-[80%] m-auto flex flex-col lg:flex-row gap-8">
+    <div class="md:w-[50%] lg:w-[40%]">
+      {{ product.featured_image | image_url: width: 600 | image_tag: alt: product.title, class: 'rounded-lg' }}
+    </div>
+
+    <div class="product-form lg:w-[50%]">
+      {% form 'product', product %}
+        <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+        <div class="text-[#343057] text-4xl font-bold uppercase tracking-wide mb-7">
+          {{ product.title }}
+        </div>
+
+        <div class="mb-7">
+          <div class="mb-8">
+            <div class="text-sm border-b pb-[0.9rem] border-[#D3D3D3] flex flex-row justify-between">
+              <div>Price</div>
+              <div class="text-[#748492]">Quantity</div>
+            </div>
+
+            <div class="pt-4 flex flex-row justify-between">
+              <div class="font-semibold text-lg flex items-center">
+                {% if product.compare_at_price < product.price %}
+                  <span class="text-[#FF5E5E]">{{ product.compare_at_price | money }}</span>
+                  <span class="text-[#C7C7C7] text-sm font-light line-through">{{ product.price | money }}</span>
+                {% else %}
+                  {{ product.price | money }}
+                {% endif %}
+              </div>
+
+              <div>
+                <input id="quantity-0" type="hidden" name="quantity" min="1" value="1">
+
+                <div class="flex flex-row py-[0.3rem] px-3 border border-[#D9D9D9] rounded-[10px]">
+                  <div class="flex items-center">
+                    <a class="product-quantity-less" href="#" data-index="0">
+                      <img src="{{ 'product-size-minus.svg' | asset_url }}" width="auto" height="auto" alt="Less">
+                    </a>
+                  </div>
+
+                  <div id="product-quantity-text-0" class="w-16 font-semibold !text-lg text-center">1</div>
+
+                  <div class="flex items-center">
+                    <a class="product-quantity-more" href="#" data-index="0">
+                      <img src="{{ 'product-size-plus.svg' | asset_url }}" width="auto" height="auto" alt="More">
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="text-sm border-b pb-[0.9rem] border-[#D3D3D3]">Description</div>
+            <div class="pt-4 text-[0.8rem] text-[#6F6F6F]">
+              {{ product.description }}
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <button
+            type="submit"
+            class="add-to-cart bg-[#343057] text-center rounded-md text-[#fff] text-sm py-2 px-20 w-full md:w-auto"
+          >
+            <span>Add to Cart</span>
+            <img
+              src="{{ 'more-products-icon.svg' | asset_url }}"
+              alt="Add to Cart"
+              width="15"
+              height="auto"
+              class="inline-block ml-2 mt-[-4px]"
+            >
+          </button>
+        </div>
+      {% endform %}
+    </div>
+  </div>
+</div>
+<!--
+  Start of Judge.me code
+     <div style="clear:both"></div>
+     <div
+       id="judgeme_product_reviews"
+       class="jdgm-widget jdgm-review-widget"
+       data-product-title="{{ product.title | escape }}"
+       data-id="{{ product.id }}"
+       data-auto-install="false"
+     >
+       {{ product.metafields.judgeme.widget }}
+     </div>
+  End of Judge.me code
+-->

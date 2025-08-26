@@ -1,0 +1,258 @@
+<div class="py-20 px-4 lg:px-0">
+  <div class="lg:w-[80%] m-auto pt-12 lg:pt-24">
+    <div class="mb-2">
+      <h2 class="colored-title text-black font-bold text-3xl lg:text-4xl leading-snug uppercase text-center">
+        My <strong>addresses</strong>
+      </h2>
+    </div>
+
+    <div class="mb-10 lg:mb-16 text-center">
+      <a href="{{ routes.account_logout_url }}" class="text-[#656565] text-[0.8rem] font-light">Sign Out?</a>
+    </div>
+
+    <div class="mb-16 text-[0.8rem]">
+      {% if customer.addresses_count > 0 %}
+        <div class="font-light flex flex-col md:flex-row gap-5">
+          {% paginate customer.addresses by 15 %}
+            {% for address in customer.addresses %}
+              <div class="flex flex-col justify-start pt-10 pb-4 border-[{% if address == customer.default_address %}#343057{% else %}#D0D0D0{% endif %}] border rounded-md px-5 relative">
+                {% if address == customer.default_address %}
+                  <div class="bg-[#343057] text-white absolute top-0 left-0 w-full text-center py-1 text-[0.7rem] font-semibold tracking-wider">
+                    Default
+                  </div>
+                {% endif %}
+
+                {% if address.first_name != blank %}
+                  <div>
+                    <label class="font-semibold inline">First Name:</label>
+                    {{ address.first_name }}
+                  </div>
+                {% endif %}
+
+                {% if address.last_name != blank %}
+                  <div>
+                    <label class="font-semibold inline">Last Name:</label>
+                    {{ address.last_name }}
+                  </div>
+                {% endif %}
+
+                {% if address.company != blank %}
+                  <div>
+                    <label class="font-semibold inline">Company:</label>
+                    {{ address.company }}
+                  </div>
+                {% endif %}
+
+                {% if address.address1 != blank %}
+                  <div>
+                    <label class="font-semibold inline">Address 1:</label>
+                    {{ address.address1 }}
+                  </div>
+                {% endif %}
+
+                {% if address.address2 != blank %}
+                  <div>
+                    <label class="font-semibold inline">Address 2:</label>
+                    {{ address.address2 }}
+                  </div>
+                {% endif %}
+
+                {% if address.city != blank %}
+                  <div>
+                    <label class="font-semibold inline">City:</label>
+                    {{ address.city }}
+                  </div>
+                {% endif %}
+
+                {% if address.province != blank %}
+                  <div>
+                    <label class="font-semibold inline">Province:</label>
+                    {{ address.province }}
+                  </div>
+                {% endif %}
+
+                {% if address.zip != blank %}
+                  <div>
+                    <label class="font-semibold inline">ZIP/Postal Code:</label>
+                    {{ address.zip }}
+                  </div>
+                {% endif %}
+
+                {% if address.phone != blank %}
+                  <div>
+                    <label class="font-semibold inline">Phone Number:</label>
+                    {{ address.phone }}
+                  </div>
+                {% endif %}
+
+                <div class="flex flex-row gap-5 pt-3">
+                  {% if address != customer.default_address %}
+                    <div class="default-address-wrapper">
+                      {%- form 'customer_address', address -%}
+                        <input type="hidden" name="address[default]" value="{{ address.id }}">
+                        <input
+                          type="submit"
+                          value="Set as default"
+                          class="text-[#FF5E5E] cursor-pointer"
+                        >
+                      {%- endform -%}
+                    </div>
+                  {% endif %}
+
+                  <form
+                    class="address-delete-form"
+                    method="post"
+                    action="/account/addresses/{{ address.id }}"
+                  >
+                    <input type="hidden" name="_method" value="delete">
+                    <button type="submit" class="text-[#FF5E5E]">Delete</button>
+                  </form>
+                </div>
+              </div>
+            {% endfor %}
+            <div class="pagination lg:w-[20%] m-auto pt-6 uppercase flex flex-row gap-5 justify-center">
+              {{- paginate | default_pagination }}
+            </div>
+          {% endpaginate %}
+        </div>
+      {% else %}
+        You have no saved addresses.
+      {% endif %}
+    </div>
+
+    <div>
+      <div>
+        <h2 class="font-semibold text-2xl mb-5">Create new address</h2>
+      </div>
+
+      <div class="w-[60%]">
+        {% form 'customer_address', customer.new_address %}
+          <div class="flex flex-row gap-10">
+            <div class="w-[50%] mb-10">
+              <label for="first-name" class="font-semibold mb-2 block">First Name</label>
+              <input
+                id="first-name"
+                type="text"
+                name="address[first_name]"
+                class="dropdown-options w-full py-2 px-3 bg-white border border-[#D9D9D9] text-slate-800 font-light outline-none"
+                required
+              >
+            </div>
+
+            <div class="w-[50%] mb-10">
+              <label for="first-name" class="font-semibold mb-2 block">Last Name</label>
+              <input
+                id="last-name"
+                type="text"
+                name="address[last_name]"
+                class="dropdown-options w-full py-2 px-3 bg-white border border-[#D9D9D9] text-slate-800 font-light outline-none"
+                required
+              >
+            </div>
+          </div>
+
+          <div class="flex flex-row gap-10">
+            <div class="w-[50%] mb-10">
+              <label for="phone" class="font-semibold mb-2 block">Phone Number</label>
+              <input
+                id="phone"
+                type="tel"
+                name="address[phone]"
+                class="dropdown-options w-full py-2 px-3 bg-white border border-[#D9D9D9] text-slate-800 font-light outline-none"
+              >
+            </div>
+
+            <div class="w-[50%] mb-10">
+              <label for="company" class="font-semibold mb-2 block">Company</label>
+              <input
+                id="company"
+                type="text"
+                name="address[company]"
+                class="dropdown-options w-full py-2 px-3 bg-white border border-[#D9D9D9] text-slate-800 font-light outline-none"
+              >
+            </div>
+          </div>
+
+          <div class="flex flex-row gap-10">
+            <div class="w-[50%] mb-10">
+              <label for="address1" class="font-semibold mb-2 block">Address 1</label>
+              <input
+                id="address1"
+                type="text"
+                name="address[address1]"
+                class="dropdown-options w-full py-2 px-3 bg-white border border-[#D9D9D9] text-slate-800 font-light outline-none"
+                required
+              >
+            </div>
+
+            <div class="w-[50%] mb-10">
+              <label for="address2" class="font-semibold mb-2 block"
+                >Address 2 <span class="font-light">(optional)</span></label
+              >
+              <input
+                id="address2"
+                type="text"
+                name="address[address2]"
+                class="dropdown-options w-full py-2 px-3 bg-white border border-[#D9D9D9] text-slate-800 font-light outline-none"
+              >
+            </div>
+          </div>
+
+          <div class="flex flex-row gap-10">
+            <div class="w-[50%] mb-10">
+              <label for="country" class="font-semibold mb-2 block">Country</label>
+              <select
+                name="address[country]"
+                class="dropdown-options w-full py-2 px-3 bg-white border border-[#D9D9D9] text-slate-800 font-light outline-none"
+                onchange="generateProvinces(this.options[this.selectedIndex].dataset.provinces)"
+              >
+                {{ all_country_option_tags }}
+              </select>
+            </div>
+
+            <div class="w-[50%] mb-10">
+              <label for="province" class="font-semibold mb-2 block">State/Province</label>
+              <select
+                id="province"
+                name="address[province]"
+                class="dropdown-options w-full py-2 px-3 bg-white border border-[#D9D9D9] text-slate-800 font-light outline-none"
+              ></select>
+            </div>
+          </div>
+
+          <div class="flex flex-row gap-10">
+            <div class="w-[50%] mb-10">
+              <label for="city" class="font-semibold mb-2 block">City</label>
+              <input
+                id="city"
+                type="text"
+                name="address[city]"
+                class="dropdown-options w-full py-2 px-3 bg-white border border-[#D9D9D9] text-slate-800 font-light outline-none"
+                required
+              >
+            </div>
+
+            <div class="w-[50%] mb-10">
+              <label for="city" class="font-semibold mb-2 block">Zip</label>
+              <input
+                id="zip"
+                type="text"
+                name="address[zip]"
+                class="dropdown-options w-full py-2 px-3 bg-white border border-[#D9D9D9] text-slate-800 font-light outline-none"
+                required
+              >
+            </div>
+          </div>
+
+          <div>
+            <input
+              type="submit"
+              value="Create"
+              class="bg-[#343057] text-center rounded-lg text-[#fff] text-md py-3 px-16 w-full md:w-auto cursor-pointer"
+            >
+          </div>
+        {% endform %}
+      </div>
+    </div>
+  </div>
+</div>

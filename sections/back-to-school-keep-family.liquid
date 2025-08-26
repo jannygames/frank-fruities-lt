@@ -1,0 +1,46 @@
+<section class="relative lg:h-[70dvh] h-[100dvh]">
+  <div class="max-w-[1150px] mx-auto grid grid-cols-1 lg:grid-cols-2 lg:gap-20 gap-2 items-center px-4 lg:px-0 w-full h-full">
+    <div class="w-full flex flex-col lg:flex-row lg:gap-20 order-2 lg:order-1 justify-center items-center">
+      <div class="w-full flex justify-center items-center">
+        <img
+          src="{{ 'keep-family.png' | asset_url }}"
+          alt="Keep your family on track"
+          class="w-full h-auto rounded-xl shadow-sm md:max-w-[60%] md:mx-auto lg:w-full lg:mx-0 lg:min-w-[100%]"
+          width="800"
+          height="600"
+        >
+      </div>
+    </div>
+    <div class="w-full flex flex-col lg:flex-row gap-20 order-1 lg:order-2 justify-center items-center">
+      <div class="w-full md:mx-auto md:max-w-[60%] lg:w-full lg:mx-0 lg:min-w-[100%] flex flex-col justify-center">
+        <h2 class="text-black font-extrabold text-3xl lg:text-5xl leading-tight mb-6">
+          Keep your family on
+          <span class="inline-block text-bts-yellow">track!</span>
+        </h2>
+        <div class="text-bts-gray space-y-4 text-base lg:text-lg max-w-prose max-lg:text-justify">
+          <p>The school bell is ringing, the backpacks are packed, and it's time for new beginnings.</p>
+          <p>
+            But don't let busy mornings and hectic schedules get in the way of healthy habits! Frank Fruities makes it
+            simple (and delicious) to keep your family on track!
+          </p>
+        </div>
+        <img
+          src="{{ 'plane.png' | asset_url }}"
+          alt="Plane"
+          class="w-full h-auto lg:pt-10 transform md:max-w-[300px] md:mx-auto lg:w-[80%] lg:-translate-x-[15%] lg:mx-0"
+          width="800"
+          height="600"
+        >
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Keep Family",
+  "tag": "section",
+  "limit": 1,
+  "settings": []
+}
+{% endschema %}
