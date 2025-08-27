@@ -12,7 +12,6 @@
     "bigblock": {
       "type": "front-bigblock",
       "settings": {
-        "image": "shopify://shop_images/big-product.webp",
         "title": "Made from real fruits, that's why they're...",
         "desc": "Welcome to the world of Frank Fruities, where we've captured the pure goodness of real fruits enhanced with vitamins in every gummy.",
         "button1": "For Kids",
@@ -88,7 +87,6 @@
         "gummies_FytT9J": {
           "type": "gummies",
           "settings": {
-            "image": "shopify://shop_images/shop-discover-3.webp",
             "subtitle": "Variety of benefits",
             "title": "Gummy bundles",
             "collection_handle": "bundles"
@@ -178,8 +176,6 @@
     "arrived": {
       "type": "front-arrived",
       "settings": {
-        "imagedesktop": "shopify://shop_images/arrived-back.webp",
-        "imagemobile": "shopify://shop_images/arrived-back-mobile.webp",
         "title": "<p><strong>Join the fruity</strong> revolution</p>",
         "desc": "<p>Join others who have made the fruity switch and turn your daily vitamins into a joyful addition to your routine.</p><p>At Frank Fruities, we're transforming a healthy habit into an enjoyable experience that you'll look forward to every day. Our gummies are so delicious, now everyone will like their vitamins too!</p>",
         "btline": "Don't miss out—join the fruity revolution and make wellness fun again."
@@ -191,7 +187,6 @@
         "benefits_VqMnCi": {
           "type": "benefits",
           "settings": {
-            "image": "shopify://shop_images/benefits-swiss.svg",
             "title": "<p><strong>Swiss vitamin</strong> institute tested.</p>",
             "desc": "Certified for quality and efficacy by the renowned Swiss Vitamin Institute. Did we mention it is from Switzerland?"
           }
@@ -199,7 +194,6 @@
         "benefits_3gjVTV": {
           "type": "benefits",
           "settings": {
-            "image": "shopify://shop_images/benefits-sugars.svg",
             "title": "<p><strong>No added</strong> sugars.</p>",
             "desc": "Naturally sweetened with real fruits, no extra sugar or sugar cane is added. Natural and yummy, imagine that!"
           }
@@ -207,7 +201,6 @@
         "benefits_yLEqTW": {
           "type": "benefits",
           "settings": {
-            "image": "shopify://shop_images/benefits-perservatives.svg",
             "title": "<p><strong>No added</strong> perservatives.</p>",
             "desc": "Just like homemade desserts: pure and natural. No added artificial flavours, colors or other preservatives."
           }
@@ -215,7 +208,6 @@
         "benefits_AzNYyq": {
           "type": "benefits",
           "settings": {
-            "image": "shopify://shop_images/benefits-fruits.svg",
             "title": "<p><strong>Made from</strong> real fruits.</p>",
             "desc": "A single gummy can is packed with the natural goodness of 1 kg of real fruits."
           }
@@ -223,7 +215,6 @@
         "benefits_z9WfDz": {
           "type": "benefits",
           "settings": {
-            "image": "shopify://shop_images/benefits-vegans.svg",
             "title": "<p><strong>Vegans, we</strong> got your back.</p>",
             "desc": "100% plant-based (more like fruit-based) gummies suitable for all vegan lifestyles nutritional needs."
           }
@@ -231,7 +222,6 @@
         "benefits_xjqJ8N": {
           "type": "benefits",
           "settings": {
-            "image": "shopify://shop_images/benefits-water.svg",
             "title": "<p><strong>No water</strong> needed.</p>",
             "desc": "Very convenient to consume. Just take a bite, they're chewable. Enjoy your vitamin enriched gummies anytime, anywhere!"
           }
@@ -275,7 +265,6 @@
     "nomore": {
       "type": "front-nomore",
       "settings": {
-        "image": "shopify://shop_images/more-than-1-kg.png",
         "title": "<p><strong>No more</strong> unfinished bottles</p>",
         "desc": "<p>Say goodbye to hard-to-swallow, tasteless pills and half-finished vitamin bottles. Get your vitamins, but from <strong>Frank Fruit gummies.</strong></p><p>We believe that with a smart combination of nature, science and creativity - you could <strong>snack your way into better health.</strong></p>"
       }
@@ -294,42 +283,36 @@
         "posts_Yy3rKr": {
           "type": "posts",
           "settings": {
-            "image": "shopify://shop_images/social-1.webp",
             "mobile": "0"
           }
         },
         "posts_tH8c6U": {
           "type": "posts",
           "settings": {
-            "image": "shopify://shop_images/social-2.webp",
             "mobile": "0"
           }
         },
         "posts_LgGkeK": {
           "type": "posts",
           "settings": {
-            "image": "shopify://shop_images/social-3.webp",
             "mobile": "1"
           }
         },
         "posts_jxbV4M": {
           "type": "posts",
           "settings": {
-            "image": "shopify://shop_images/social-4.webp",
             "mobile": "1"
           }
         },
         "posts_BL7bbV": {
           "type": "posts",
           "settings": {
-            "image": "shopify://shop_images/social-5.webp",
             "mobile": "0"
           }
         },
         "posts_WpBXRH": {
           "type": "posts",
           "settings": {
-            "image": "shopify://shop_images/social-6.webp",
             "mobile": "0"
           }
         }
