@@ -58,6 +58,9 @@
     "made": {
       "type": "wi-made",
       "settings": {
+        "image1": "shopify://shop_images/made-1.svg",
+        "image2": "shopify://shop_images/made-2.svg",
+        "image3": "shopify://shop_images/made-3.svg",
         "title": "<p><strong>Made in absolute</strong><br/>safety & quality</p>",
         "desc": "<p>We follow every standard and certification to ensure great taste and nutritional health benefits are the only things you remember. Our fruities are made in the best farms, are allergen tested and safety & quality certified.</p>"
       }
