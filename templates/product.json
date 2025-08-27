@@ -31,8 +31,8 @@
       "blocks": {
         "benefits_TAezJC": {
           "type": "benefits",
+          "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/benefits-swiss.svg",
             "title": "<p><strong>Swiss vitamin</strong> institute tested.</p>",
             "desc": "Certified for quality and efficacy by the renowned Swiss Vitamin Institute. Did we mention it is from Switzerland?"
           }
