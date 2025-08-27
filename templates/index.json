@@ -177,6 +177,8 @@
     "arrived": {
       "type": "front-arrived",
       "settings": {
+        "imagedesktop": "shopify://shop_images/arrived-back.webp",
+        "imagemobile": "shopify://shop_images/arrived-back-mobile.webp",
         "title": "<p><strong>Join the fruity</strong> revolution</p>",
         "desc": "<p>Join others who have made the fruity switch and turn your daily vitamins into a joyful addition to your routine.</p><p>At Frank Fruities, we're transforming a healthy habit into an enjoyable experience that you'll look forward to every day. Our gummies are so delicious, now everyone will like their vitamins too!</p>",
         "btline": "Don't miss out—join the fruity revolution and make wellness fun again."
