@@ -294,36 +294,42 @@
         "posts_Yy3rKr": {
           "type": "posts",
           "settings": {
+            "image": "shopify://shop_images/social-1.webp",
             "mobile": "0"
           }
         },
         "posts_tH8c6U": {
           "type": "posts",
           "settings": {
+            "image": "shopify://shop_images/social-2.webp",
             "mobile": "0"
           }
         },
         "posts_LgGkeK": {
           "type": "posts",
           "settings": {
+            "image": "shopify://shop_images/social-3.webp",
             "mobile": "1"
           }
         },
         "posts_jxbV4M": {
           "type": "posts",
           "settings": {
+            "image": "shopify://shop_images/social-4.webp",
             "mobile": "1"
           }
         },
         "posts_BL7bbV": {
           "type": "posts",
           "settings": {
+            "image": "shopify://shop_images/social-5.webp",
             "mobile": "0"
           }
         },
         "posts_WpBXRH": {
           "type": "posts",
           "settings": {
+            "image": "shopify://shop_images/social-6.webp",
             "mobile": "0"
           }
         }
