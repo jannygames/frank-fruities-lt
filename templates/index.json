@@ -187,6 +187,7 @@
       "blocks": {
         "benefits_VqMnCi": {
           "type": "benefits",
+          "disabled": true,
           "settings": {
             "title": "<p><strong>Swiss vitamin</strong> institute tested.</p>",
             "desc": "Certified for quality and efficacy by the renowned Swiss Vitamin Institute. Did we mention it is from Switzerland?"
