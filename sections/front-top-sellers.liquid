@@ -1,4 +1,9 @@
-<div class="py-16">
+<div class="py-16 lg:py-5">
+  <style>
+    .jdgm-prev-badge__text {
+      display: none !important;
+    }
+  </style>
   <div class="max-w-[1150px] m-auto flex justify-between gap-6 mb-10 px-0 md:px-4">
     <div class="flex-shrink text-center w-full md:w-auto">
       <h3 class="colored-title text-black font-bold text-3xl lg:text-4xl leading-snug uppercase">
@@ -27,7 +32,7 @@
 
   <div
     id="top-sellers"
-    class="flex flex-row gap-5 overflow-x-auto overflow-y-hidden scrollbar-hide px-4 md:px-0 -mx-4 md:mx-0"
+    class="flex flex-row gap-5 overflow-x-auto overflow-y-hidden scrollbar-hide px-4 md:px-0 -mx-4 md:mx-0 items-stretch"
     style="-webkit-overflow-scrolling: touch; scroll-behavior: smooth;"
   >
     {% for product in collections['top-sellers'].products %}
@@ -38,11 +43,18 @@
           </a>
         </div>
 
-        <div class="text-[0.8rem] text-center mb-3 flex-grow">
-          <a href="{{ product.url }}">{{ product.title }}</a>
+        <div class="text-[0.8rem] mb-3 flex-grow flex flex-col gap-2 min-h-[42px]">
+          <div class="flex justify-between items-center">
+            <a href="{{ product.url }}" class="text-left">{{ product.title }}</a>
+            <!-- Start of Judge.me code -->
+            <div class="jdgm-widget jdgm-preview-badge" data-id="{{ product.id }}">
+              {{ product.metafields.judgeme.badge }}
+            </div>
+            <!-- End of Judge.me code -->
+          </div>
         </div>
 
-        <div class="text-[0.8rem] font-semibold text-center mb-3">
+        <div class="text-[0.8rem] font-semibold text-center mb-3 min-h-[20px]">
           <a href="{{ product.url }}">{{ product.price | money }}</a>
         </div>
 

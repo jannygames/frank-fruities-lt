@@ -1,4 +1,48 @@
 <div class="px-4 lg:px-0 pt-28 pb-10 lg:py-20 mt-20">
+  <style>
+    .jdgm-rev-widg__title {
+      font-weight: 800 !important;
+      font-size: 1.5rem !important;
+      line-height: 1.2 !important;
+      color: #000000 !important;
+    }
+    .jdgm-btn {
+      background-color: #343057 !important;
+      border: none !important;
+    }
+    .jdgm-row-readmore {
+      display: none !important;
+    }
+    .jdgm-row-readmore-link {
+      display: none !important;
+    }
+    .jdgm-row-readmore-link-text {
+      display: none !important;
+    }
+    .jdgm-verified-checkmark {
+      display: none !important;
+    }
+    /* Reorder Judge.me sections: stars row first, carousel after */
+    .jdgm-rev-widg {
+      display: flex !important;
+      flex-direction: column !important;
+    }
+    .jdgm-row-stars {
+      order: 1 !important;
+    }
+    .jdgm-rev-carousel {
+      order: 2 !important;
+    }
+    .jdgm-rev__media {
+      display: none !important;
+    }
+    .jdgm-rev__read-full::after {
+      display: none !important;
+    }
+    .jdgm-rev {
+      max-height: 50px !important;
+    }
+  </style>
   <div class="w-[80%] m-auto text-[#6F6F6F] text-sm pt-20 mb-6 hidden lg:block">
     <a href="/" class="text-[#AFAFAF]">Home</a> / {{ product.title }}
   </div>
@@ -55,7 +99,15 @@
           </div>
 
           <div>
-            <div class="text-sm border-b pb-[0.9rem] border-[#D3D3D3]">Description</div>
+            <div class="text-sm border-b pb-[0.9rem] border-[#D3D3D3] flex justify-between items-center">
+              <span>Description</span>
+              <!-- Start of Judge.me code -->
+              <div class="jdgm-widget jdgm-preview-badge font-inter" data-id="{{ product.id }}">
+                {{ product.metafields.judgeme.badge }}
+              </div>
+              <!-- End of Judge.me code -->
+            </div>
+
             <div class="pt-4 text-[0.8rem] text-[#6F6F6F]">
               {{ product.description }}
             </div>
@@ -80,18 +132,13 @@
       {% endform %}
     </div>
   </div>
+  <div
+    id="judgeme_product_reviews"
+    class="jdgm-widget jdgm-review-widget"
+    data-product-title="{{ product.title | escape }}"
+    data-id="{{ product.id }}"
+    data-auto-install="false"
+  >
+    {{ product.metafields.judgeme.widget }}
+  </div>
 </div>
-<!--
-  Start of Judge.me code
-     <div style="clear:both"></div>
-     <div
-       id="judgeme_product_reviews"
-       class="jdgm-widget jdgm-review-widget"
-       data-product-title="{{ product.title | escape }}"
-       data-id="{{ product.id }}"
-       data-auto-install="false"
-     >
-       {{ product.metafields.judgeme.widget }}
-     </div>
-  End of Judge.me code
--->
