@@ -41,7 +41,10 @@
         "subtitle": "Real fruits in every bite",
         "title": "<p><strong>Don't</strong> settle for flavours</p>",
         "image": "shopify://shop_images/inside-1.webp",
-        "comment": "<p><strong>&gt;1kg</strong> of real fruits.</p>"
+        "comment": "<p><strong>&gt;1kg</strong> of real fruits.</p>",
+        "thumb1": "shopify://shop_images/real-cherry.webp",
+        "thumb2": "shopify://shop_images/real-apple.webp",
+        "thumb3": "shopify://shop_images/real-banana.webp"
       }
     },
     "bite": {
