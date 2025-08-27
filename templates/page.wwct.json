@@ -20,7 +20,6 @@
     "supplements": {
       "type": "wwct-supplements",
       "settings": {
-        "image": "shopify://shop_images/supplements.webp",
         "subtitle": "Old ways are simply inconvenient.",
         "title": "<p><strong>Supplements,</strong> you have a problem!</p>",
         "desc": "<p><strong>We realized, taking vitamins or food supplements is not a fun moment in your day.</strong> It is not what people want to do, because they are tasteless, flavorless and, in some cases really yuck. On top, often you need to drink them with water, which makes the whole thing even more complex.  Even the vitamin gummies offered, taste rubbery and are made of mostly fruit flavors and gelatin.</p><p>From vast behavioral research studies, we know that people are more likely to develop and stick to habits if they are <strong>‘FUN’</strong>.  This insight and our own struggle of sticking to vitamins gave us a trigger to venture on to disrupt a $120Bn global vitamin & supplement category.</p>"
@@ -29,7 +28,6 @@
     "whatif": {
       "type": "wwct-whatif",
       "settings": {
-        "image": "shopify://shop_images/elevate.webp",
         "subtitle": "Time for a change.",
         "title": "<p><strong>What if</strong> we could elevate vitamins from</p>",
         "desc": "<p>We set out to take on this challenge, to create seriously awesome nutritional supplements:</p><ul><li><strong>Making vitamins & nutritional supplements from real fruit.</strong></li><li><strong>Ensuring highest grade quality & safety.</strong></li><li><strong>Avoid plastic, yet make them look & feel fun.</strong></li></ul><p>After a lot of hard work, creative problem-solving and a bit of luck, we are very proud to present you our product.</p>",
