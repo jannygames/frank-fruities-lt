@@ -275,6 +275,7 @@
     "nomore": {
       "type": "front-nomore",
       "settings": {
+        "image": "shopify://shop_images/more-than-1-kg.png",
         "title": "<p><strong>No more</strong> unfinished bottles</p>",
         "desc": "<p>Say goodbye to hard-to-swallow, tasteless pills and half-finished vitamin bottles. Get your vitamins, but from <strong>Frank Fruit gummies.</strong></p><p>We believe that with a smart combination of nature, science and creativity - you could <strong>snack your way into better health.</strong></p>"
       }
