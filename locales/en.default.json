@@ -233,20 +233,20 @@
         "other": "{{ count }} pages"
       },
       "results_suggestions_with_count": {
-        "one": "{{ count }} suggestion",
-        "other": "{{ count }} suggestions"
+        "one": "{{ count }} pasiūlymas",
+        "other": "{{ count }} pasiūlymai"
       },
       "results_products_with_count": {
-        "one": "{{ count }} product",
-        "other": "{{ count }} products"
+        "one": "{{ count }} prekė",
+        "other": "{{ count }} prekės"
       },
       "results_with_count": {
-        "one": "{{ count }} result",
-        "other": "{{ count }} results"
+        "one": "{{ count }} rezultatas",
+        "other": "{{ count }} rezultatai"
       },
       "results_with_count_and_term": {
-        "one": "{{ count }} result found for “{{ terms }}”",
-        "other": "{{ count }} results found for “{{ terms }}”"
+        "one": "{{ count }} rezultatas rastas “{{ terms }}”",
+        "other": "{{ count }} rezultatai rasti “{{ terms }}”"
       },
       "title": "Paieškos rezultatai",
       "search_for": "Ieškoti „{{ terms }}“",
