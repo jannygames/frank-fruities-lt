@@ -225,7 +225,7 @@
   },
   "templates": {
     "search": {
-      "no_results": "No results found for “{{ terms }}”. Check the spelling or use a different word or phrase.",
+      "no_results": "Rezultatų pagal „{{ terms }}“ nerasta. Patikrinkite rašybą arba naudokite kitą žodį ar frazę.",
       "page": "Page",
       "products": "Products",
       "results_pages_with_count": {
