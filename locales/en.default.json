@@ -201,8 +201,8 @@
       "filter_by_label": "Filtras:",
       "filter_button": "Filtruoti",
       "filters_selected": {
-        "one": "{{ count }} selected",
-        "other": "{{ count }} selected"
+        "one": "{{ count }} pasirinktas",
+        "other": "{{ count }} pasirinkta"
       },
       "filter_selected_accessibility": "{{ type }} ({{ count }} filtrai pasirinkti)",
       "show_more": "Rodyti daugiau",
