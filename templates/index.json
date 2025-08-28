@@ -40,7 +40,7 @@
           "type": "cans",
           "settings": {
             "image": "shopify://shop_images/inside-2.webp",
-            "title": "<p><strong>Vitamins</strong> & minerals.</p>",
+            "title": "<p>Vitaminus ir mineralus</p>",
             "desc": "As much as we love fruits, their natural vitamins just don't cut it when it comes to providing a full range of nutritional supplements. That's why we put a little extra magic in ever can. Tastes great, works great too."
           }
         }
@@ -50,8 +50,8 @@
         "cans_zmzTYi"
       ],
       "settings": {
-        "subtitle": "Ko tikėtis?",
-        "title": "<p>Šių mielų skardinių <strong>viduje </strong>rasite</p>"
+        "subtitle": "Ko tikėtis iš Frank Fruities?",
+        "title": "<p>pakuočių <strong>viduje </strong>rasite</p>"
       }
     },
     "tasting": {
