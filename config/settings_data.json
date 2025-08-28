@@ -23,9 +23,9 @@
         "type": "footer",
         "settings": {
           "logo": "shopify://shop_images/footer-logo.svg",
-          "title1": "Shop",
-          "title2": "Learn More",
-          "title3": "Information"
+          "title1": "Prekės",
+          "title2": "Sužinoti daugiau",
+          "title3": "Informacija"
         }
       },
       "announcement-bar": {
