@@ -21,9 +21,9 @@
     },
     "social": {
       "alt_text": {
-        "share_on_facebook": "Share on Facebook",
-        "share_on_twitter": "Share on X",
-        "share_on_pinterest": "Pin on Pinterest"
+        "share_on_facebook": "Pasidalinti Facebook",
+        "share_on_twitter": "Pasidalinti X",
+        "share_on_pinterest": "Pasidalinti Pinterest"
       },
       "links": {
         "twitter": "X (Twitter)",
@@ -37,33 +37,33 @@
         "tiktok": "TikTok"
       }
     },
-    "continue_shopping": "Continue shopping",
+    "continue_shopping": "Tęsti apsipirkimą",
     "pagination": {
       "label": "Pagination",
-      "page": "Page {{ number }}",
-      "next": "Next page",
-      "previous": "Previous page"
+      "page": "Puslapis {{ number }}",
+      "next": "Sekantis puslapis",
+      "previous": "Ankstesnis puslapis"
     },
     "search": {
-      "search": "Search",
-      "reset": "Clear search term"
+      "search": "Paieška",
+      "reset": "Valyti paiešką"
     },
     "cart": {
-      "view": "View cart ({{ count }})",
-      "view_empty_cart": "View cart",
-      "item_added": "Item added to your cart"
+      "view": "Peržiūrėti krepšelį ({{ count }})",
+      "view_empty_cart": "Peržiūrėti krepšelį",
+      "item_added": "Prekė pridėta į krepšelį"
     },
     "share": {
-      "close": "Close share",
-      "copy_to_clipboard": "Copy link",
-      "share_url": "Link",
-      "success_message": "Link copied to clipboard"
+      "close": "Uždaryti dalinimąsi",
+      "copy_to_clipboard": "Kopijuoti nuorodą",
+      "share_url": "Nuoroda",
+      "success_message": "Nuoroda nukopijuota"
     },
     "slider": {
-      "of": "of",
-      "next_slide": "Slide right",
-      "previous_slide": "Slide left",
-      "name": "Slider"
+      "of": "iš",
+      "next_slide": "Į dešinę",
+      "previous_slide": "Į kairę",
+      "name": "Skaidrės"
     }
   },
   "newsletter": {
