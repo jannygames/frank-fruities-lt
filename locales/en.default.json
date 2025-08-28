@@ -383,13 +383,13 @@
     }
   },
   "localization": {
-    "country_label": "Country/region",
-    "language_label": "Language",
-    "update_language": "Update language",
-    "update_country": "Update country/region",
-    "search": "Search",
-    "popular_countries_regions": "Popular countries/regions",
-    "country_results_count": "{{ count }} countries/regions found"
+    "country_label": "Šalis/regionas",
+    "language_label": "Kalba",
+    "update_language": "Atnaujinti kalbą",
+    "update_country": "Atnaujinti šalį/regioną",
+    "search": "Paieška",
+    "popular_countries_regions": "Popularios šalys/regionai",
+    "country_results_count": "Rasta {{ count }} šalių/regionų"
   },
   "customer": {
     "account": {
