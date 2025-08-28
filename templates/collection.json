@@ -12,14 +12,14 @@
     "products": {
       "type": "collection-products",
       "settings": {
-        "title": "<p>Our <strong>products</strong></p>"
+        "title": "<p>Mūsų <strong>produktai</strong></p>"
       }
     },
     "step": {
       "type": "collection-step",
       "settings": {
-        "title": "Take the step towards a tastier, healthier life.",
-        "subtitle": "Embrace the fruity revolution & make the switch today!"
+        "title": "Ženk žingsnį link skanesnio ir sveikesnio gyvenimo.",
+        "subtitle": "Priimk vaisių revoliuciją ir pakeisk savo įpročius jau šiandien!"
       }
     },
     "reviews": {
