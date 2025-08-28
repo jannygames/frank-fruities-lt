@@ -41,16 +41,16 @@
           "type": "benefits",
           "settings": {
             "image": "shopify://shop_images/benefits-sugars.svg",
-            "title": "<p><strong>No added</strong> sugars.</p>",
-            "desc": "Naturally sweetened with real fruits, no extra sugar or sugar cane is added. Natural and yummy, imagine that!"
+            "title": "<p><strong>Jokio</strong> pridėtinio cukraus.</p>",
+            "desc": "Saldus skonis kyla iš natūralių vaisių, o ne pridėdinio įprasto ar cukranendrių cukraus. Patikėkite - ir skanu, ir natūralu!"
           }
         },
         "benefits_aY3mAd": {
           "type": "benefits",
           "settings": {
             "image": "shopify://shop_images/benefits-perservatives.svg",
-            "title": "<p><strong>No added</strong> perservatives.</p>",
-            "desc": "Just like homemade desserts: pure and natural. No added artificial flavours, colors or other preservatives."
+            "title": "<p><strong>Jokių</strong> konservantų.</p>",
+            "desc": "Lyg namų desertas: natūralus ir grynas. Nėra jokių dirbtinių skonių, dažiklių ar kitų konservantų."
           }
         },
         "benefits_qtRCwQ": {
@@ -87,7 +87,7 @@
         "benefits_9a6UhA"
       ],
       "settings": {
-        "title": "<p><strong>All the benefits</strong> in every can</p>"
+        "title": "<p><strong>KIEKVIENA SKARDINĖ</strong> PILNA PRIVALUMŲ</p>"
       }
     },
     "arrived": {
