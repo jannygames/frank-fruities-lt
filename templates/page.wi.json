@@ -61,15 +61,15 @@
         "image1": "shopify://shop_images/made-1.svg",
         "image2": "shopify://shop_images/made-2.svg",
         "image3": "shopify://shop_images/made-3.svg",
-        "title": "<p><strong>Made in absolute</strong><br/>safety & quality</p>",
-        "desc": "<p>We follow every standard and certification to ensure great taste and nutritional health benefits are the only things you remember. Our fruities are made in the best farms, are allergen tested and safety & quality certified.</p>"
+        "title": "<p><strong>SUKURTA LAIKANTIS AUKŠČIAUSIŲ </strong>SAUGOS IR KOKYBĖS STANDARTŲ</p>",
+        "desc": "<p>Mes laikomės visų standartų ir sertifikavimo reikalavimų, kad užtikrintume puikų skonį ir maistinę naudą – tai viskas, ką prisiminsite. Mūsų vaisinukai gaminami geriausiuose ūkiuose, patikrinti dėl alergenų bei sertifikuoti pagal saugos ir kokybės reikalavimus.</p>"
       }
     },
     "takestep": {
       "type": "wi-takestep",
       "settings": {
-        "title": "Take the step towards a tastier, healthier life.",
-        "subtitle": "Embrace the fruity revolution & make the switch today!"
+        "title": "ŽENK ŽINGSNĮ LINK SKANESNIO IR SVEIKESNIO GYVENIMO.",
+        "subtitle": "PRISIJUNK PRIE VAISIŲ REVOLIUCIJOS IR  NAUJO STANDARTO JAU ŠIANDIEN!"
       }
     },
     "reviews": {
