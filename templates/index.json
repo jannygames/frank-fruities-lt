@@ -70,8 +70,8 @@
           "type": "gummies",
           "settings": {
             "image": "shopify://shop_images/shop-discover-1.webp",
-            "subtitle": "For the little ones",
-            "title": "Gummies for kids",
+            "subtitle": "Mažiesiems",
+            "title": "Guminukai vaikams",
             "collection_handle": "for-kids"
           }
         },
@@ -79,8 +79,8 @@
           "type": "gummies",
           "settings": {
             "image": "shopify://shop_images/shop-discover-2.webp",
-            "subtitle": "Maintain great health",
-            "title": "Gummies for Adults",
+            "subtitle": "Sveikatai",
+            "title": "Guminukais suaugusiems",
             "collection_handle": "for-adults"
           }
         },
@@ -88,8 +88,8 @@
           "type": "gummies",
           "settings": {
             "image": "shopify://shop_images/shop-discover-3.webp",
-            "subtitle": "Variety of benefits",
-            "title": "Gummy bundles",
+            "subtitle": "Naudų įvairovė",
+            "title": "Guminukų rinkiniai",
             "collection_handle": "bundles"
           }
         }
