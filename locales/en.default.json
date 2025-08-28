@@ -17,7 +17,7 @@
       "login_form_error": "Neteisingas slaptažodis!",
       "login_form_submit": "Prisijungti",
       "admin_link_html": "Ar jūs parduotuvės vadybininkas? <a href=\"/admin\" class=\"link underlined-link\">Prisijunkite čia</a>",
-      "powered_by_shopify_html": ""
+      "powered_by_shopify_html": "Ši parduotuvė sukurta su {{ shopify}}"
     },
     "social": {
       "alt_text": {
