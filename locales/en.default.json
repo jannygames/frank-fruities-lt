@@ -216,11 +216,11 @@
         "one": "{{ count }} product",
         "other": "{{ count }} products"
       },
-      "reset": "Reset",
-      "sort_button": "Sort",
-      "sort_by_label": "Sort by:",
-      "to": "To",
-      "clear_filter": "Remove filter"
+      "reset": "Atstatyti",
+      "sort_button": "Rūšiuoti",
+      "sort_by_label": "Rūšiuoti pagal:",
+      "to": "Iki",
+      "clear_filter": "Išvalyti filtrą"
     }
   },
   "templates": {
