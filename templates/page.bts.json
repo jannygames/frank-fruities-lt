@@ -46,14 +46,14 @@
     "spotlight": {
       "type": "back-to-school-spotlight",
       "settings": {
-        "title": "<p>Want to try <strong>everything</strong>?</p>",
-        "subtitle": "Explore the whole of Frank Fruities with 7 pack!",
+        "title": "<p>Norite išbandyti viską?</p>",
+        "subtitle": "Atraskite visą Frank Fruities asortimentą su 7 pakuotėmis!",
         "product": "",
         "product_handle": "7-pack",
         "product_id": "",
         "show_rating": true,
         "rating_value": "4.9",
-        "reviews_count": "234 reviews"
+        "reviews_count": "234 atsiliepimai"
       }
     },
     "reviews": {
