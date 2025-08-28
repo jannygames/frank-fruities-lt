@@ -21,7 +21,7 @@
     "topsellers": {
       "type": "front-top-sellers",
       "settings": {
-        "title": "<p>Top <strong>sellers</strong></p>",
+        "title": "<p><strong>POPULIARIAUSI</strong></p>",
         "button": "More products"
       }
     },
