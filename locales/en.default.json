@@ -357,29 +357,29 @@
       "title": "Puslapio antraštė"
     },
     "quick_order_list": {
-      "product_total": "Product subtotal",
-      "view_cart": "View cart",
-      "each": "{{ money }}/ea",
-      "product": "Product",
-      "variant": "Variant",
-      "variant_total": "Variant total",
+      "product_total": "Prekių suma",
+      "view_cart": "Peržiūrėti krepšelį",
+      "each": "{{ money }}/vnt",
+      "product": "Prekė",
+      "variant": "Variantas",
+      "variant_total": "Varianto suma",
       "items_added": {
-        "one": "{{ quantity }} item added",
-        "other": "{{ quantity }} items added"
+        "one": "{{ quantity }} prekė pridėta",
+        "other": "{{ quantity }} prekės pridėtos"
       },
       "items_removed": {
-        "one": "{{ quantity }} item removed",
-        "other": "{{ quantity }} items removed"
+        "one": "{{ quantity }} prekė pašalinta",
+        "other": "{{ quantity }} prekės pašalintos"
       },
-      "product_variants": "Product variants",
-      "total_items": "Total items",
-      "remove_all_single_item_confirmation": "Remove 1 item from your cart?",
-      "remove_all_items_confirmation": "Remove all {{ quantity }} items from your cart?",
-      "remove_all": "Remove all",
-      "cancel": "Cancel",
-      "min_error": "This item has a minimum of {{ min }}",
-      "max_error": "This item has a maximum of {{ max }}",
-      "step_error": "You can only add this item in increments of {{ step }}"
+      "product_variants": "Prekės variantai",
+      "total_items": "Iš viso prekių",
+      "remove_all_single_item_confirmation": "Pašalinti 1 prekę iš krepšelio?",
+      "remove_all_items_confirmation": "Pašalinti visas {{ quantity }} prekes iš krepšelio?",
+      "remove_all": "Pašalinti viską",
+      "cancel": "Atšaukti",
+      "min_error": "Šiai prekei mažiausias kiekis yra {{ min }}",
+      "max_error": "Šiai prekei didžiausias kiekis yra {{ max }}",
+      "step_error": "Jūs galite pridėti tik po {{ step }} prekes"
     }
   },
   "localization": {
