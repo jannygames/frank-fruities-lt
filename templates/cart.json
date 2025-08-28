@@ -1,8 +1,29 @@
- {
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
   "sections": {
     "content": {
-      "type": "cart-content"
-    },
+      "type": "cart-content",
+      "settings": {
+        "review_title_prefix": "Peržiūrėti",
+        "review_title_strong": "Krepšelį",
+        "qty_less_alt": "Mažiau",
+        "qty_more_alt": "Daugiau",
+        "remove_text": "Šalinti",
+        "subtotal_label": "Suma:",
+        "tax_shipping_text": "Mokesčiai įskaičiuoti. Pristatymo kaina apskaičiuojama apmokėjimo lange.",
+        "checkout_text": "Apmokėti",
+        "continue_shopping_text": "Tęsti apsipirkimą",
+        "empty_cart_text": "Jūsų krepšelis tuščias."
+      }
+    }
   },
   "order": [
     "content"
