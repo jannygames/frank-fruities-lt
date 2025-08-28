@@ -189,25 +189,25 @@
       "shipping_policy_html": "<a href=\"{{ link }}\">Pristatymas</a> apskaičiuojamas atsiskaitymo lange."
     },
     "modal": {
-      "label": "Media gallery"
+      "label": "Medijos galerija"
     },
     "facets": {
-      "filter_and_operator_subtitle": "Match all",
-      "apply": "Apply",
-      "clear": "Clear",
-      "clear_all": "Remove all",
-      "from": "From",
-      "filter_and_sort": "Filter and sort",
-      "filter_by_label": "Filter:",
-      "filter_button": "Filter",
+      "filter_and_operator_subtitle": "Atitikti visus",
+      "apply": "Taikyti",
+      "clear": "Išvalyti",
+      "clear_all": "Išvalyti viską",
+      "from": "Nuo",
+      "filter_and_sort": "Filtruoti ir rūšiuoti",
+      "filter_by_label": "Filtras:",
+      "filter_button": "Filtruoti",
       "filters_selected": {
         "one": "{{ count }} selected",
         "other": "{{ count }} selected"
       },
-      "filter_selected_accessibility": "{{ type }} ({{ count }} filters selected)",
-      "show_more": "Show more",
-      "show_less": "Show less",
-      "max_price": "The highest price is {{ price }}",
+      "filter_selected_accessibility": "{{ type }} ({{ count }} filtrai pasirinkti)",
+      "show_more": "Rodyti daugiau",
+      "show_less": "Rodyti mažiau",
+      "max_price": "Didžiausia kaina yra {{ price }}",
       "product_count": {
         "one": "{{ product_count }} of {{ count }} product",
         "other": "{{ product_count }} of {{ count }} products"
