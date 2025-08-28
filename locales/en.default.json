@@ -300,25 +300,25 @@
       "empty": "Jūsų krepšelis tuščias",
       "cart_error": "Įvyko klaida atnaujinant krepšelį. Bandykite dar kartą.",
       "cart_quantity_error_html": "Į krepšelį galite pridėti tik {{ quantity }} šios prekės.",
-      "duties_and_taxes_included_shipping_at_checkout_with_policy_html": "Duties and taxes included. Discounts and <a href=\"{{ link }}\">shipping</a> calculated at checkout.",
-      "duties_and_taxes_included_shipping_at_checkout_without_policy": "Duties and taxes included. Discounts and shipping calculated at checkout.",
-      "taxes_included_shipping_at_checkout_with_policy_html": "Taxes included. Discounts and <a href=\"{{ link }}\">shipping</a> calculated at checkout.",
-      "taxes_included_shipping_at_checkout_without_policy": "Taxes included. Discounts and shipping calculated at checkout.",
-      "duties_included_taxes_at_checkout_shipping_at_checkout_with_policy_html": "Duties included. Taxes, discounts and <a href=\"{{ link }}\">shipping</a> calculated at checkout.",
-      "duties_included_taxes_at_checkout_shipping_at_checkout_without_policy": "Duties included. Taxes, discounts and shipping calculated at checkout.",
-      "taxes_at_checkout_shipping_at_checkout_with_policy_html": "Taxes, discounts and <a href=\"{{ link }}\">shipping</a> calculated at checkout.",
-      "taxes_at_checkout_shipping_at_checkout_without_policy": "Taxes, discounts and shipping calculated at checkout.",
+      "duties_and_taxes_included_shipping_at_checkout_with_policy_html": "Muito mokesčiai ir PVM įtraukti. Nuolaidos ir <a href=\"{{ link }}\">pristatymas</a> apskaičiuojami atsiskaitant.",
+      "duties_and_taxes_included_shipping_at_checkout_without_policy": "Muito mokesčiai ir PVM įtraukti. Nuolaidos ir pristatymas apskaičiuojami atsiskaitant.",
+      "taxes_included_shipping_at_checkout_with_policy_html": "Mokesčiai įtraukti. Nuolaidos ir <a href=\"{{ link }}\">pristatymas</a> apskaičiuojami atsiskaitant.",
+      "taxes_included_shipping_at_checkout_without_policy": "Mokesčiai įtraukti. Nuolaidos ir pristatymas apskaičiuojami atsiskaitant.",
+      "duties_included_taxes_at_checkout_shipping_at_checkout_with_policy_html": "Muito mokesčiai įtraukti. Mokesčiai, nuolaidos ir <a href=\"{{ link }}\">pristatymas</a> apskaičiuojami atsiskaitant.",
+      "duties_included_taxes_at_checkout_shipping_at_checkout_without_policy": "Muito mokesčiai įtraukti. Mokesčiai, nuolaidos ir pristatymas apskaičiuojami atsiskaitant.",
+      "taxes_at_checkout_shipping_at_checkout_with_policy_html": "Mokesčiai, nuolaidos ir <a href=\"{{ link }}\">pristatymas</a> apskaičiuojami atsiskaitant.",
+      "taxes_at_checkout_shipping_at_checkout_without_policy": "Mokesčiai, nuolaidos ir pristatymas apskaičiuojami atsiskaitant.",
       "headings": {
-        "product": "Product",
-        "price": "Price",
-        "total": "Total",
-        "quantity": "Quantity",
-        "image": "Product image"
+        "product": "Prekė",
+        "price": "Kaina",
+        "total": "Iš viso",
+        "quantity": "Kiekis",
+        "image": "Prekės nuotrauka"
       },
-      "update": "Update",
+      "update": "Atnaujinti",
       "login": {
-        "title": "Have an account?",
-        "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Log in</a> to check out faster."
+        "title": "Turite paskyrą?",
+        "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Prisijungti</a> greitesniam atsiskaitymui."
       }
     },
     "footer": {
