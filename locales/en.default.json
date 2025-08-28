@@ -226,8 +226,8 @@
   "templates": {
     "search": {
       "no_results": "Rezultatų pagal „{{ terms }}“ nerasta. Patikrinkite rašybą arba naudokite kitą žodį ar frazę.",
-      "page": "Page",
-      "products": "Products",
+      "page": "Puslapis",
+      "products": "Prekės",
       "results_pages_with_count": {
         "one": "{{ count }} page",
         "other": "{{ count }} pages"
@@ -248,10 +248,10 @@
         "one": "{{ count }} result found for “{{ terms }}”",
         "other": "{{ count }} results found for “{{ terms }}”"
       },
-      "title": "Search results",
-      "search_for": "Search for “{{ terms }}”",
-      "suggestions": "Suggestions",
-      "pages": "Pages"
+      "title": "Paieškos rezultatai",
+      "search_for": "Ieškoti „{{ terms }}“",
+      "suggestions": "Pasiūlymai",
+      "pages": "Puslapiai"
     },
     "cart": {
       "cart": "Cart"
