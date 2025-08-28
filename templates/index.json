@@ -267,8 +267,8 @@
     "crafted": {
       "type": "front-crafted",
       "settings": {
-        "title": "<p>Crafted from genuine fruits,<br/><strong>not gelatin</strong></p>",
-        "desc": "<p>Choose a more natural path to wellness with Frank Fruit gummies, which are made from real fruits almost entirely, over 90% of total content. <strong>Do we use gelatin? No!</strong></p>",
+        "title": "<p>Pagaminta iš tikrų vaisių,<br/><strong>NE IŠ ŽELATINO</strong></p>",
+        "desc": "<p>Pasirink natūralesnį kelią geros savijautos link su Frank Fruities vitaminais praturtintais guminukais, kurie pagaminti kone vien tik iš tikrų vaisų <strong>(&gt;90% sudėties!)</strong>.</p>",
         "btline": "A true, wholesome and healthy choice.",
         "button": "Try for yourself"
       }
