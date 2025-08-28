@@ -284,9 +284,9 @@
     "subscription": {
       "type": "front-subscription",
       "settings": {
-        "title": "<p><strong>Join the fan club</strong> and subscribe</p>",
+        "title": "<p><strong>Prisijunk prie Frank Fruities gerbėjų klubo! </strong>Užsiprenumeruok naujienas!<br/></p>",
         "placeholder": "Enter your email address",
-        "button": "Join"
+        "button": "Prisijunk"
       }
     },
     "social": {
