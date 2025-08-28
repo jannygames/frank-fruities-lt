@@ -31,10 +31,10 @@
       "settings": {
         "image": "shopify://shop_images/elevate.webp",
         "subtitle": "Time for a change.",
-        "title": "<p><strong>What if</strong> we could elevate vitamins from</p>",
-        "desc": "<p>We set out to take on this challenge, to create seriously awesome nutritional supplements:</p><ul><li><strong>Making vitamins & nutritional supplements from real fruit.</strong></li><li><strong>Ensuring highest grade quality & safety.</strong></li><li><strong>Avoid plastic, yet make them look & feel fun.</strong></li></ul><p>After a lot of hard work, creative problem-solving and a bit of luck, we are very proud to present you our product.</p>",
-        "about": "We are a Swiss Functional Foods company, based in Geneva. We believe that with a smart combination of nature, science and creativity - you could snack our way into better health.",
-        "contact": "<p>Do not hesitate to contact us if you have questions, suggestions, would be interested in distributing us or would like to leave a review: <a href=\"mailto:info@frankfunctionalfoods.com\" title=\"mailto:info@frankfunctionalfoods.com\">info@frankfunctionalfoods.com</a></p>"
+        "title": "<p><strong>O KAS JEI</strong> MES GALĖTUME PAVERSTI VITAMINUS?</p>",
+        "desc": "<p>Mes ėmėmės šio iššūkio – sukurti iš tikrųjų nuostabius maisto papildus:</p><ul><li><strong>Vitaminus ir papildus gaminti iš tikrų vaisių.</strong></li><li><strong>Užtikrinti aukščiausios kokybės ir saugos standartus.</strong></li><li><strong>Vengti plastiko, bet padaryti juos patrauklius ir smagius.</strong></li></ul><p>Po daug sunkaus darbo, kūrybiškų sprendimų ir truputį sėkmės – didžiuojamės galėdami jums pristatyti savo produktą.</p>",
+        "about": "Mes esame Šveicarijos funkcinio maisto įmonė, įsikūrusi Ženevoje. Tikime, kad išmanus gamtos, mokslo ir kūrybos derinys gali padėti mums \"užkandžiaujant\" žengti sveikatos link.",
+        "contact": "<p>Jeigu turite klausimų, pasiūlymų, norite bendradarbiauti ar palikti atsiliepimą – rašykite mums:</p><p><a href=\"mailto:info@frankfunctionalfoods.com\"><span style=\"text-decoration:underline\">info@frankfunctionalfoods.com</span></a></p>"
       }
     },
     "takestep": {
