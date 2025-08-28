@@ -254,22 +254,22 @@
       "pages": "Puslapiai"
     },
     "cart": {
-      "cart": "Cart"
+      "cart": "Krepšelis"
     },
     "contact": {
       "form": {
-        "title": "Contact form",
-        "name": "Name",
-        "email": "Email",
-        "phone": "Phone number",
-        "comment": "Comment",
-        "send": "Send",
-        "post_success": "Thanks for contacting us. We'll get back to you as soon as possible.",
-        "error_heading": "Please adjust the following:"
+        "title": "Kontaktinė forma",
+        "name": "Vardas",
+        "email": "El. paštas",
+        "phone": "Tel. nr.",
+        "comment": "Komentaras",
+        "send": "Siųsti",
+        "post_success": "Ačiū, kad susisiekėte su mumis. Atsakysime kuo greičiau.",
+        "error_heading": "Prašome pakoreguoti šiuos laukus:"
       }
     },
     "404": {
-      "title": "Page not found",
+      "title": "Puslapis nerastas",
       "subtext": "404"
     }
   },
