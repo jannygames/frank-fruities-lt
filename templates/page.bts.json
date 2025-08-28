@@ -1,15 +1,61 @@
 /*
  * ------------------------------------------------------------
  * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
- {
+{
   "sections": {
-    "hero": {"type": "back-to-school-hero", "settings": {}},
-    "keep_family": {"type": "back-to-school-keep-family", "settings": {}},
-    "products": {"type": "back-to-school-products", "settings": {"title": "<p>Choose your discount</p>"}},
-    "benefits": {"type": "back-to-school-benefits", "settings": {}},
-    "spotlight": {"type": "back-to-school-spotlight", "settings": {"title": "<p>Want to try <strong>everything</strong>?</p>", "subtitle": "Explore the whole of Frank Fruities with 7 pack!", "product_handle": "7-pack"}},
+    "hero": {
+      "type": "back-to-school-hero",
+      "settings": {}
+    },
+    "products": {
+      "type": "back-to-school-products",
+      "settings": {
+        "title": "<p>Choose your discount</p>"
+      }
+    },
+    "keep_family": {
+      "type": "back-to-school-keep-family",
+      "settings": {}
+    },
+    "benefits": {
+      "type": "back-to-school-benefits",
+      "settings": {
+        "heading_prefix": "Kodėl rinktis",
+        "heading_highlight": "Frank Fruities",
+        "heading_suffix": "grįžimui į mokyklą?",
+        "item1_icon_alt": "Real fruit",
+        "item1_title_prefix": ">1kg",
+        "item1_title_suffix": "tikrų vaisių",
+        "item1_description": "Guminukai, pagaminti iš >1kg tikrų vaisių",
+        "item2_icon_alt": "All natural",
+        "item2_title_prefix": "Pilnai",
+        "item2_title_suffix": "naturalūs.",
+        "item2_description": "Jokių dirbtinių spalvų, skonių ar želatino - viskas tik iš tikrų vaisių",
+        "item3_icon_alt": "Loved by all",
+        "item3_title_prefix": "Mylimi",
+        "item3_title_suffix": "visų",
+        "item3_description": "Lengvai valgomi vaikams - jokių kovų per pusryčius"
+      }
+    },
+    "spotlight": {
+      "type": "back-to-school-spotlight",
+      "settings": {
+        "title": "<p>Want to try <strong>everything</strong>?</p>",
+        "subtitle": "Explore the whole of Frank Fruities with 7 pack!",
+        "product": "",
+        "product_handle": "7-pack",
+        "product_id": "",
+        "show_rating": true,
+        "rating_value": "4.9",
+        "reviews_count": "234 reviews"
+      }
+    },
     "reviews": {
       "type": "product-reviews",
       "blocks": {
@@ -53,9 +99,16 @@
         "review_b8pcxz"
       ],
       "settings": {
-        "title": "<p>Our customers agree:<br/><strong>Yes, it's worth the hype!</strong></p>"
+        "title": "<p><strong>Frank Fruities klientai sutinka:</strong><br/>Taip, jie tikrai verti dėmesio!</p>"
       }
     }
   },
-  "order": ["hero", "products", "keep_family", "benefits", "spotlight", "reviews"]
+  "order": [
+    "hero",
+    "products",
+    "keep_family",
+    "benefits",
+    "spotlight",
+    "reviews"
+  ]
 }
