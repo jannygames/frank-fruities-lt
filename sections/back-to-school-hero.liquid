@@ -3,7 +3,7 @@
 >
   <img
     src="{{ 'bts-home.png' | asset_url }}"
-    alt="Back to School Hero"
+    alt="{{ section.settings.desktop_image_alt }}"
     class="hidden lg:flex absolute top-0 left-0 w-full h-[90%] lg:h-full xl:h-[90%] object-cover"
     width="1920"
     height="840"
@@ -18,7 +18,7 @@
   >
   <img
     src="{{ 'hero-backpack-mobile.png' | asset_url }}"
-    alt="Decorative backpack"
+    alt="{{ section.settings.mobile_backpack_alt }}"
     class="block lg:hidden absolute bottom-[0] max-md:left-[5%] md:left-[25%] w-full max-sm:h-1/3 max-sm:w-auto sm:h-auto sm:w-[60%] pointer-events-none translate-y-[5%] !z-[3]"
     width="640"
     height="640"
@@ -30,24 +30,26 @@
       <h1
         class="text-white font-extrabold lg:text-4xl xl:text-5xl drop-shadow-lg text-5xl leading-[1.1]"
       >
-        Atgal į mokyklą...<br class="hidden lg:block">
-        su <span class="text-bts-yellow">Frank Fruities!</span>
+        {{ section.settings.heading_line1 -}}
+        <br class="hidden lg:block">
+        {{ section.settings.heading_line2_prefix }}
+        <span class="text-bts-yellow">{{ section.settings.heading_line2_highlight }}</span>
       </h1>
       <p
         class="text-white font-light mb-8 mt-6 max-w-xl drop-shadow text-justify text-lg lg:text-[1.3vw] leading-[1.2]"
       >
-        Suteikite savo vaikams kasdienę pagalbą, kurios jiems reikia mokymosi, augimo ir nuotykių kupiniems metams!
-        Sutaupykite iki 33 %!
+        {{ section.settings.paragraph_1 }}
+        {{ section.settings.paragraph_2 }}
       </p>
       <a
-        href="#bts-products"
+        href="{{ section.settings.cta_link }}"
         class="px-6 py-2 rounded-lg bg-bts-yellow text-bts-blue text-sm font-semibold shadow-md hover:opacity-90 transition flex items-center gap-4 justify-between relative cursor-pointer md:max-w-[30vw] lg:max-w-[16vw] lg:min-w-[300px] md:min-w-[280px] z-10"
       >
-        Sugrįžimo į mokyklą nuolaidos
+        {{ section.settings.cta_text }}
 
         <img
           src="{{ 'tabler_sparkles.svg' | asset_url }}"
-          alt="Arrow Right"
+          alt="{{ section.settings.cta_icon_alt }}"
           class="w-6 h-6 ml-2 pointer-events-none"
           width="16"
           height="16"
@@ -58,5 +60,31 @@
 </div>
 
 {% schema %}
-{ "name": "Back to School: Hero", "tag": "section", "limit": 1, "settings": [] }
+{
+  "name": "Back to School: Hero",
+  "tag": "section",
+  "limit": 1,
+  "settings": [
+    { "type": "text", "id": "desktop_image_alt", "label": "Desktop image alt", "default": "Back to School Hero" },
+    { "type": "text", "id": "mobile_backpack_alt", "label": "Mobile backpack alt", "default": "Decorative backpack" },
+    { "type": "text", "id": "heading_line1", "label": "Heading line 1", "default": "Atgal į mokyklą..." },
+    { "type": "text", "id": "heading_line2_prefix", "label": "Heading line 2 prefix", "default": "su" },
+    {
+      "type": "text",
+      "id": "heading_line2_highlight",
+      "label": "Heading line 2 highlight",
+      "default": "Frank Fruities!"
+    },
+    {
+      "type": "text",
+      "id": "paragraph_1",
+      "label": "Paragraph 1",
+      "default": "Suteikite savo vaikams kasdienę pagalbą, kurios jiems reikia mokymosi, augimo ir nuotykių kupiniems metams!"
+    },
+    { "type": "text", "id": "paragraph_2", "label": "Paragraph 2", "default": "Sutaupykite iki 33 %!" },
+    { "type": "url", "id": "cta_link", "label": "CTA link" },
+    { "type": "text", "id": "cta_text", "label": "CTA text", "default": "Sugrįžimo į mokyklą nuolaidos" },
+    { "type": "text", "id": "cta_icon_alt", "label": "CTA icon alt", "default": "Arrow Right" }
+  ]
+}
 {% endschema %}
