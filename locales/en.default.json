@@ -129,14 +129,14 @@
       "on_sale": "Išpardavimas",
       "product_variants": "Prekės variantai",
       "media": {
-        "gallery_viewer": "Gallery Viewer",
-        "load_image": "Load image {{ index }} in gallery view",
-        "load_model": "Load 3D Model {{ index }} in gallery view",
-        "load_video": "Play video {{ index }} in gallery view",
-        "image_available": "Image {{ index }} is now available in gallery view",
-        "open_media": "Open media {{ index }} in modal",
-        "play_model": "Play 3D Viewer",
-        "play_video": "Play video"
+        "gallery_viewer": "Galerijos peržiūra",
+        "load_image": "Užkrauti paveikslėlį {{ index }} galerijoje",
+        "load_model": "Užkrauti 3D modelį {{ index }} galerijoje",
+        "load_video": "Paleisti vaizdo įrašą {{ index }} galerijoje",
+        "image_available": "Paveikslėlis {{ index }} dabar pasiekiamas galerijoje",
+        "open_media": "Atidaryti mediją {{ index }} modaliniame lange",
+        "play_model": "Paleisti 3D peržiūrą",
+        "play_video": "Paleisti vaizdo įrašą"
       },
       "quantity": {
         "label": "Quantity",
@@ -180,13 +180,13 @@
       "value_unavailable": "{{ option_value }} - Nepasiekiama",
       "variant_sold_out_or_unavailable": "Variantas išparduotas arba nepasiekiamas",
       "video_exit_message": "{{ title }} atidaromas per visą ekraną tame pačiame lange.",
-      "view_full_details": "View full details",
-      "xr_button": "View in your space",
-      "xr_button_label": "View in your space, loads item in augmented reality window",
-      "taxes_included": "Taxes included.",
-      "duties_included": "Duties included.",
-      "duties_and_taxes_included": "Duties and taxes included.",
-      "shipping_policy_html": "<a href=\"{{ link }}\">Shipping</a> calculated at checkout."
+      "view_full_details": "Peržiūrėti visą informaciją",
+      "xr_button": "Peržiūrėti savo erdvėje",
+      "xr_button_label": "Peržiūrėti savo erdvėje, įkelia prekę į papildytos realybės langą",
+      "taxes_included": "Mokesčiai įskaičiuoti.",
+      "duties_included": "Muito mokesčiai įskaičiuoti.",
+      "duties_and_taxes_included": "PVM ir muito mokesčiai įskaičiuoti.",
+      "shipping_policy_html": "<a href=\"{{ link }}\">Pristatymas</a> apskaičiuojamas atsiskaitymo lange."
     },
     "modal": {
       "label": "Media gallery"
