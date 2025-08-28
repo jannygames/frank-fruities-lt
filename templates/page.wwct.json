@@ -13,8 +13,8 @@
       "type": "wwct-out",
       "settings": {
         "image": "shopify://shop_images/out.webp",
-        "title": "<p><strong>1 out of 2</strong> people struggle to finish their vitamin bottles.</p>",
-        "desc": "<p>We started the company, because we realized vitamins & nutritional supplements had a problem. As a young family, we could never finish our bottles of vitamins and food supplements.  Regularly we would be throwing away half-filled plastic bottles of supplements, because they expired just sitting there.  Alone.  Sad. Abandoned. We now know, it’s a fact that <strong>46% of people struggle to finish vitamin / supplement bottles</strong> (US research, April 2022, 1Q).</p>"
+        "title": "<p><strong>1 iš 2 žmonių</strong> nesugeba suvartoti viso vitaminų buteliuko.</p>",
+        "desc": "<p>Mes įkūrėme šią įmonę, nes supratome – su vitaminais ir maisto papildais yra problema. Kaip jauna šeima, mes patys niekada nesugebėdavome sunaudoti viso buteliuko vitaminų ar papildų. Nuolat tekdavo išmesti pusiau pilnus plastikinius buteliukus – jie tiesiog pasibaigdavo galiojimo laiką stovėdami lentynoje. Vieniši. Liūdni. Užmiršti. Dabar žinome – tai ne tik mūsų problema. JAV atliktas tyrimas (2022 m. balandis, 1 ketv.) parodė, kad <strong>net 46 % žmonių nesugeba suvartoti viso vitaminų ar papildų buteliuko</strong>.</p>"
       }
     },
     "supplements": {
