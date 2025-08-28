@@ -30,7 +30,19 @@
       },
       "announcement-bar": {
         "type": "announcement-bar",
-        "settings": {}
+        "settings": {
+          "cta_bg_color": "#1e40af",
+          "cta_text_color": "#ffffff",
+          "background_color": "#c9df24",
+          "text_color": "#000000",
+          "desktop_announcement_text": "FRUITY BACK TO SCHOOL DEALS! SAVINGS UP TO 33% ONLY UNTIL SEPT 14!",
+          "ticker_item_1": "FRUITY BACK TO SCHOOL DEALS!",
+          "ticker_item_2": "SAVINGS UP TO 33%",
+          "ticker_item_3": "ONLY UNTIL SEPT 14!",
+          "cta_link_url": "",
+          "cta_link_text": "Back to school discounts",
+          "cta_icon_alt": "Arrow Right"
+        }
       }
     },
     "content_for_index": []
