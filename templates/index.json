@@ -171,8 +171,8 @@
     "lookforward": {
       "type": "front-look-forward",
       "settings": {
-        "title": "<p><strong>Look forward to taking your vitamins</strong> with Frank Fruities every day!</p>",
-        "button": "Shop"
+        "title": "<p><strong>Su nekantriu džiaugsmu laukite</strong> kasdienės vitaminų porcijos su Frank Fruities!</p>",
+        "button": "Įsigykite internetu"
       }
     },
     "arrived": {
