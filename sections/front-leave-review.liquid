@@ -21,7 +21,7 @@
       {% endcomment %}
 
       <a
-        href="/account/register"
+        href="{{ section.settings.button_link }}"
         class="text-center border border-white rounded-lg text-white text-md lg:text-lg pt-[0.6rem] pb-[0.4rem] lg:py-2 px-6"
       >
         <span>{{ section.settings.button }}</span>
@@ -45,6 +45,11 @@
       "type": "text",
       "id": "button",
       "label": "Button text"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
     }
   ]
 }
