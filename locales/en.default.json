@@ -94,19 +94,19 @@
       "blog": "Blogai",
       "read_more_title": "Skaityti daugiau: {{ title }}",
       "comments": {
-        "one": "{{ count }} comment",
-        "other": "{{ count }} comments"
+        "one": "{{ count }} komentaras",
+        "other": "{{ count }} komentarai"
       },
       "moderated": "Atkreipkite dėmesį, kad komentarai turi būti patvirtinti prieš juos publikuojant.",
-      "comment_form_title": "Leave a comment",
-      "name": "Name",
-      "email": "Email",
-      "message": "Comment",
-      "post": "Post comment",
-      "back_to_blog": "Back to blog",
-      "share": "Share this article",
-      "success": "Your comment was posted successfully! Thank you!",
-      "success_moderated": "Your comment was posted successfully. We will publish it in a little while, as our blog is moderated."
+      "comment_form_title": "Palikite komentarą",
+      "name": "Vardas",
+      "email": "El. paštas",
+      "message": "Komentaras",
+      "post": "Paskelbti komentarą",
+      "back_to_blog": "Atgal į blogą",
+      "share": "Pasidalinti šiuo straipsniu",
+      "success": "Jūsų komentaras sėkmingai paskelbtas! Ačiū!",
+      "success_moderated": "Jūsų komentaras sėkmingai paskelbtas. Jį netrukus publikuosime, nes mūsų tinklaraštis yra moderuojamas."
     }
   },
   "onboarding": {
