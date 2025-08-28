@@ -275,31 +275,31 @@
   },
   "sections": {
     "announcements": {
-      "previous_announcement": "Previous announcement",
-      "next_announcement": "Next announcement",
-      "carousel": "Carousel",
-      "announcement": "Announcement",
-      "announcement_bar": "Announcement bar"
+      "previous_announcement": "Ankstesnis pranešimas",
+      "next_announcement": "Kitas pranešimas",
+      "carousel": "Karuselė",
+      "announcement": "Pranešimas",
+      "announcement_bar": "Pranešimų juosta"
     },
     "header": {
-      "announcement": "Announcement",
-      "menu": "Menu",
+      "announcement": "Antraštė",
+      "menu": "Meniu",
       "cart_count": {
-        "one": "{{ count }} item",
-        "other": "{{ count }} items"
+        "one": "{{ count }} elementas",
+        "other": "{{ count }} elementai"
       }
     },
     "cart": {
-      "title": "Your cart",
-      "caption": "Cart items",
-      "remove_title": "Remove {{ title }}",
-      "estimated_total": "Estimated total",
-      "new_estimated_total": "New estimated total",
-      "note": "Order special instructions",
-      "checkout": "Check out",
-      "empty": "Your cart is empty",
-      "cart_error": "There was an error while updating your cart. Please try again.",
-      "cart_quantity_error_html": "You can only add {{ quantity }} of this item to your cart.",
+      "title": "Jūsų krepšelis",
+      "caption": "Krepšelio prekės",
+      "remove_title": "Pašalinti {{ title }}",
+      "estimated_total": "Numatoma suma",
+      "new_estimated_total": "Nauja numatoma suma",
+      "note": "Užsakymo specialios instrukcijos",
+      "checkout": "Pereiti prie apmokėjimo",
+      "empty": "Jūsų krepšelis tuščias",
+      "cart_error": "Įvyko klaida atnaujinant krepšelį. Bandykite dar kartą.",
+      "cart_quantity_error_html": "Į krepšelį galite pridėti tik {{ quantity }} šios prekės.",
       "duties_and_taxes_included_shipping_at_checkout_with_policy_html": "Duties and taxes included. Discounts and <a href=\"{{ link }}\">shipping</a> calculated at checkout.",
       "duties_and_taxes_included_shipping_at_checkout_without_policy": "Duties and taxes included. Discounts and shipping calculated at checkout.",
       "taxes_included_shipping_at_checkout_with_policy_html": "Taxes included. Discounts and <a href=\"{{ link }}\">shipping</a> calculated at checkout.",
