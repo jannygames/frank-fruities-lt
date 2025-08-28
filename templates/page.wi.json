@@ -12,10 +12,10 @@
     "frank": {
       "type": "wi-frank",
       "settings": {
-        "subtitle": "Most vitamins & supplements are made of synthetic fillers.",
-        "title": "<p>At frank, <strong>real fruits</strong> are our fillers.</p>",
-        "desc": "<p>Today vitamins or nutritional supplements are almost entirely made of <strong>fillers</strong> (for example microcrystalline cellulose, lactose, calcium, or malto-dextrin) and <strong>coated</strong> in <strong>artificially colored</strong> coating like <strong>gelatin</strong> or cellulose base to give them the bulk to look bigger and be easier to grab.</p>",
-        "button": "Explore products"
+        "subtitle": "Dauguma vitaminų ir maisto papildų gaminami iš sintetinių užpildų.",
+        "title": "<p>O „Frank Fruities“ atveju mūsų „užpildas“ – <strong>tikri vaisiai</strong>.</p>",
+        "desc": "<p>Šiandien beveik visi vitaminai ar papildai sudaryti beveik vien tik iš užpildų (pavyzdžiui, mikrokristalinės celiuliozės, laktozės, kalcio ar malto-dekstrino) ir padengti dirbtiniais dažytais sluoksniais, tokiais kaip želatina ar celiuliozės pagrindas, kad atrodytų didesni ir juos būtų lengviau paimti.</p>",
+        "button": "Peržiūrėti produktus"
       }
     },
     "newway": {
