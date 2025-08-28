@@ -322,39 +322,39 @@
       }
     },
     "footer": {
-      "payment": "Payment methods"
+      "payment": "Apmokėjimo būdai"
     },
     "featured_blog": {
-      "view_all": "View all",
-      "onboarding_title": "Blog post",
-      "onboarding_content": "Give your customers a summary of your blog post"
+      "view_all": "Peržiūrėti viską",
+      "onboarding_title": "Tinklaraščio įrašas",
+      "onboarding_content": "Pateikite klientams savo tinklaraščio įrašo santrauką"
     },
     "featured_collection": {
-      "view_all": "View all",
-      "view_all_label": "View all products in the {{ collection_name }} collection"
+      "view_all": "Peržiūrėti visus",
+      "view_all_label": "Peržiūrėti visas prekes kolekcijoje {{ collection_name }}"
     },
     "collection_list": {
-      "view_all": "View all"
+      "view_all": "Peržiūrėti visus"
     },
     "collection_template": {
-      "empty": "No products found",
-      "title": "Collection",
-      "use_fewer_filters_html": "Use fewer filters or <a class=\"{{ class }}\" href=\"{{ link }}\">remove all</a>"
+      "empty": "Prekių nerasta",
+      "title": "Kolekcija",
+      "use_fewer_filters_html": "Naudokite mažiau filtrų arba <a class=\"{{ class }}\" href=\"{{ link }}\">pašalinkite visus</a>"
     },
     "video": {
-      "load_video": "Load video: {{ description }}"
+      "load_video": "Krauti vaizdo įrašą: {{ description }}"
     },
     "slideshow": {
-      "load_slide": "Load slide",
-      "previous_slideshow": "Previous slide",
-      "next_slideshow": "Next slide",
-      "pause_slideshow": "Pause slideshow",
-      "play_slideshow": "Play slideshow",
-      "carousel": "Carousel",
-      "slide": "Slide"
+      "load_slide": "Krauti skaidrę",
+      "previous_slideshow": "Ankstesnė skaidrė",
+      "next_slideshow": "Kita skaidrė",
+      "pause_slideshow": "Stabdyti skaidrių peržiūrą",
+      "play_slideshow": "Paleisti skaidrių peržiūrą",
+      "carousel": "Karuselė",
+      "slide": "Skaidrė"
     },
     "page": {
-      "title": "Page title"
+      "title": "Puslapio antraštė"
     },
     "quick_order_list": {
       "product_total": "Product subtotal",
