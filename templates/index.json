@@ -153,7 +153,8 @@
       "type": "front-leave-review",
       "settings": {
         "title": "<p><strong>Patiko Frank Fruities?</strong> Pasidalinkite savo patirtimi!</p>",
-        "button": "Įvertinti"
+        "button": "Įvertinti",
+        "button_link": "https://frankfruities.lt/pages/reviews"
       }
     },
     "newway": {
