@@ -91,13 +91,13 @@
   },
   "blogs": {
     "article": {
-      "blog": "Blog",
-      "read_more_title": "Read more: {{ title }}",
+      "blog": "Blogai",
+      "read_more_title": "Skaityti daugiau: {{ title }}",
       "comments": {
         "one": "{{ count }} comment",
         "other": "{{ count }} comments"
       },
-      "moderated": "Please note, comments need to be approved before they are published.",
+      "moderated": "Atkreipkite dėmesį, kad komentarai turi būti patvirtinti prieš juos publikuojant.",
       "comment_form_title": "Leave a comment",
       "name": "Name",
       "email": "Email",
