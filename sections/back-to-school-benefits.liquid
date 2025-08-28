@@ -5,53 +5,98 @@
     <h2
       class="text-center font-extrabold text-2xl md:text-4xl lg:text-5xl leading-tight lg:mb-[5vh] mb-20 !z-0"
     >
-      Why choose <span class="text-bts-yellow">Frank Fruities</span> for back to school?
+      {{ section.settings.heading_prefix }}
+      <span class="text-bts-yellow">{{ section.settings.heading_highlight }}</span>
+      {{ section.settings.heading_suffix }}
     </h2>
 
     <div class="hidden lg:grid-cols-2 lg:justify-center lg:items-start text-center mt-[5vh] lg:flex lg:flex-row lg:gap-16">
       <div class="flex-1 flex flex-col items-center gap-3 max-w-[15%]">
-        <img src="{{ 'school-apple.svg' | asset_url }}" alt="Real fruit" width="56" height="56">
-        <div class="text-base lg:text-lg"><span class="text-bts-yellow font-bold">1kg</span> real fruit</div>
-        <p class="text-sm max-w-[260px] m-auto opacity-70">Gummies made from &gt;1kg of real fruit per can</p>
+        <img
+          src="{{ 'school-apple.svg' | asset_url }}"
+          alt="{{ section.settings.item1_icon_alt }}"
+          width="56"
+          height="56"
+        >
+        <div class="text-base lg:text-lg">
+          <span class="text-bts-yellow font-bold">{{ section.settings.item1_title_prefix }}</span>
+          {{ section.settings.item1_title_suffix }}
+        </div>
+        <p class="text-sm max-w-[260px] m-auto opacity-70">{{ section.settings.item1_description }}</p>
       </div>
 
       <div class="flex-1 flex flex-col items-center gap-3 max-w-[15%]">
-        <img src="{{ 'school-leaf.svg' | asset_url }}" alt="All natural" width="56" height="56">
-        <div class="text-base lg:text-lg"><span class="text-bts-yellow font-bold">All</span> natural.</div>
-        <p class="text-sm max-w-[260px] m-auto opacity-70">
-          No artificial colors, flavors, or gelatin - just pure, plant-based goodness
-        </p>
+        <img
+          src="{{ 'school-leaf.svg' | asset_url }}"
+          alt="{{ section.settings.item2_icon_alt }}"
+          width="56"
+          height="56"
+        >
+        <div class="text-base lg:text-lg">
+          <span class="text-bts-yellow font-bold">{{ section.settings.item2_title_prefix }}</span>
+          {{ section.settings.item2_title_suffix }}
+        </div>
+        <p class="text-sm max-w-[260px] m-auto opacity-70">{{ section.settings.item2_description }}</p>
       </div>
 
       <div class="flex-1 flex flex-col items-center gap-3 max-w-[15%]">
-        <img src="{{ 'school-love.svg' | asset_url }}" alt="Loved by all" width="56" height="56">
-        <div class="text-base lg:text-lg"><span class="text-bts-yellow font-bold">Loved</span> by all.</div>
-        <p class="text-sm max-w-[260px] m-auto opacity-70">
-          Easy for kids to take (and love!) every day - no more battles at breakfast
-        </p>
+        <img
+          src="{{ 'school-love.svg' | asset_url }}"
+          alt="{{ section.settings.item3_icon_alt }}"
+          width="56"
+          height="56"
+        >
+        <div class="text-base lg:text-lg">
+          <span class="text-bts-yellow font-bold">{{ section.settings.item3_title_prefix }}</span>
+          {{ section.settings.item3_title_suffix }}
+        </div>
+        <p class="text-sm max-w-[260px] m-auto opacity-70">{{ section.settings.item3_description }}</p>
       </div>
     </div>
 
     <!-- mobile stack -->
     <div class="lg:hidden grid grid-cols-1 gap-6 text-center  content-center !z-0">
       <div class="flex flex-col items-center gap-3 px-2 !z-0">
-        <img src="{{ 'school-apple.svg' | asset_url }}" alt="Real fruit" width="56" height="56" class="!z-0">
-        <div class="text-base"><span class="text-bts-yellow font-bold !z-0">1 kg</span> real fruit</div>
-        <p class="text-sm max-w-[260px] m-auto opacity-70 !z-0">Gummies made from &gt;1 kg of real fruit per can</p>
+        <img
+          src="{{ 'school-apple.svg' | asset_url }}"
+          alt="{{ section.settings.item1_icon_alt }}"
+          width="56"
+          height="56"
+          class="!z-0"
+        >
+        <div class="text-base">
+          <span class="text-bts-yellow font-bold !z-0">{{ section.settings.item1_title_prefix }}</span>
+          {{ section.settings.item1_title_suffix }}
+        </div>
+        <p class="text-sm max-w-[260px] m-auto opacity-70 !z-0">{{ section.settings.item1_description }}</p>
       </div>
       <div class="flex flex-col items-center gap-3 px-2 !z-0">
-        <img src="{{ 'school-leaf.svg' | asset_url }}" alt="All natural" width="56" height="56" class="!z-0">
-        <div class="text-base"><span class="text-bts-yellow font-bold !z-0">All</span> natural.</div>
-        <p class="text-sm max-w-[260px] m-auto opacity-70 !z-0">
-          No artificial colors, flavors, or gelatin—just pure, plant-based goodness
-        </p>
+        <img
+          src="{{ 'school-leaf.svg' | asset_url }}"
+          alt="{{ section.settings.item2_icon_alt }}"
+          width="56"
+          height="56"
+          class="!z-0"
+        >
+        <div class="text-base">
+          <span class="text-bts-yellow font-bold !z-0">{{ section.settings.item2_title_prefix }}</span>
+          {{ section.settings.item2_title_suffix }}
+        </div>
+        <p class="text-sm max-w-[260px] m-auto opacity-70 !z-0">{{ section.settings.item2_description }}</p>
       </div>
       <div class="flex flex-col items-center gap-3 px-2 !z-0">
-        <img src="{{ 'school-love.svg' | asset_url }}" alt="Loved by all" width="56" height="56" class="!z-0">
-        <div class="text-base"><span class="text-bts-yellow font-bold !z-0">Loved</span> by all.</div>
-        <p class="text-sm max-w-[260px] m-auto opacity-70 !z-0">
-          Easy for kids to take (and love!) every day—no more battles at breakfast
-        </p>
+        <img
+          src="{{ 'school-love.svg' | asset_url }}"
+          alt="{{ section.settings.item3_icon_alt }}"
+          width="56"
+          height="56"
+          class="!z-0"
+        >
+        <div class="text-base">
+          <span class="text-bts-yellow font-bold !z-0">{{ section.settings.item3_title_prefix }}</span>
+          {{ section.settings.item3_title_suffix }}
+        </div>
+        <p class="text-sm max-w-[260px] m-auto opacity-70 !z-0">{{ section.settings.item3_description }}</p>
       </div>
     </div>
   </div>
@@ -62,6 +107,40 @@
   "name": "Back to School: Benefits",
   "tag": "section",
   "limit": 1,
-  "settings": []
+  "settings": [
+    { "type": "text", "id": "heading_prefix", "label": "Heading prefix", "default": "Kodėl rinktis" },
+    { "type": "text", "id": "heading_highlight", "label": "Heading highlight", "default": "Frank Fruities" },
+    { "type": "text", "id": "heading_suffix", "label": "Heading suffix", "default": "grįžimui į mokyklą?" },
+
+    { "type": "text", "id": "item1_icon_alt", "label": "Item 1 icon alt", "default": "Real fruit" },
+    { "type": "text", "id": "item1_title_prefix", "label": "Item 1 title prefix", "default": ">1kg" },
+    { "type": "text", "id": "item1_title_suffix", "label": "Item 1 title suffix", "default": "tikrų vaisių" },
+    {
+      "type": "text",
+      "id": "item1_description",
+      "label": "Item 1 description",
+      "default": "Guminukai, pagaminti iš >1kg tikrų vaisių"
+    },
+
+    { "type": "text", "id": "item2_icon_alt", "label": "Item 2 icon alt", "default": "All natural" },
+    { "type": "text", "id": "item2_title_prefix", "label": "Item 2 title prefix", "default": "Pilnai" },
+    { "type": "text", "id": "item2_title_suffix", "label": "Item 2 title suffix", "default": "naturalūs." },
+    {
+      "type": "text",
+      "id": "item2_description",
+      "label": "Item 2 description",
+      "default": "Jokių dirbtinių spalvų, skonių ar želatino - viskas tik iš tikrų vaisių"
+    },
+
+    { "type": "text", "id": "item3_icon_alt", "label": "Item 3 icon alt", "default": "Loved by all" },
+    { "type": "text", "id": "item3_title_prefix", "label": "Item 3 title prefix", "default": "Mylimi" },
+    { "type": "text", "id": "item3_title_suffix", "label": "Item 3 title suffix", "default": "visų" },
+    {
+      "type": "text",
+      "id": "item3_description",
+      "label": "Item 3 description",
+      "default": "Lengvai valgomi vaikams - jokių kovų per pusryčius"
+    }
+  ]
 }
 {% endschema %}
