@@ -90,8 +90,8 @@
 
               <div class="mb-7">
                 <div class="text-sm border-b pb-[0.9rem] border-[#D3D3D3] flex flex-row justify-between">
-                  <div>Price</div>
-                  <div>Quantity</div>
+                  <div>Kaina</div>
+                  <div>Kiekis</div>
                 </div>
 
                 <div class="pt-4 flex flex-row justify-between items-center">
@@ -138,7 +138,7 @@
               {% if p.description != blank %}
                 <div class="mt-6">
                   <div class="text-sm border-b pb-[0.9rem] border-bts-gray flex items-center justify-between">
-                    <div>Description</div>
+                    <div>Aprašymas</div>
                     {% if section.settings.show_rating %}
                       <div class="flex items-center gap-2">
                         <img
@@ -163,7 +163,7 @@
                   type="submit"
                   class="w-1/2 bg-[#1E1E1E] rounded-lg text-white py-[10px] font-medium row-span-1 flex items-center justify-center gap-2"
                 >
-                  Add to Cart
+                  Pridėti į krepšelį
                   <img
                     src="{{ 'cart-icon.svg' | asset_url }}"
                     alt="Cart"
@@ -179,15 +179,15 @@
             {% endform %}
           {% else %}
             <div class="mb-4">
-              <div class="text-sm text-bts-gray">Price</div>
-              <div class="text-2xl font-semibold"><span class="text-bts-gray">Unavailable</span></div>
+              <div class="text-sm text-bts-gray">Kaina</div>
+              <div class="text-2xl font-semibold"><span class="text-bts-gray">Neturime</span></div>
             </div>
           {% endif %}
         </div>
       </div>
     {% else %}
       <div class="text-center text-bts-gray">
-        Select a product in the section settings or provide a valid handle to display the 7 pack.
+        Pasirinkite produktą arba įveskite tinkamą produkto kodą, kad parodytų 7-pack.
       </div>
     {% endif %}
   </div>
@@ -220,7 +220,7 @@
     { "type": "text", "id": "product_id", "label": "Fallback product ID (optional)" },
     { "type": "checkbox", "id": "show_rating", "label": "Show rating row", "default": true },
     { "type": "text", "id": "rating_value", "label": "Rating value", "default": "4.9" },
-    { "type": "text", "id": "reviews_count", "label": "Reviews count", "default": "234 reviews" }
+    { "type": "text", "id": "reviews_count", "label": "Reviews count", "default": "234 atsiliepimai" }
   ]
 }
 {% endschema %}
