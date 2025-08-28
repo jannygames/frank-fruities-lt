@@ -31,17 +31,17 @@
       "type": "wi-nomore",
       "settings": {
         "image": "shopify://shop_images/more-than-1-kg.png",
-        "title": "<p><strong>No more</strong> unfinished bottles</p>",
-        "desc": "<p>Say goodbye to hard-to-swallow, tasteless pills and half-finished vitamin bottles. Get your vitamins, but from <strong>Frank Fruit gummies.</strong></p><p>We believe that with a smart combination of nature, science and creativity - you could <strong>snack your way into better health.</strong></p>"
+        "title": "<p><strong>Daugiau jokios </strong>nepabaigtos vitaminų pakuotės</p>",
+        "desc": "<p>Pamiršk sunkiai nuryjamas, beskones tabletes ir pusiau suvartotus buteliukus. Su „Frank Fruities“ guminukais vitaminus gausi skaniai.</p><p>Mes tikime, kad protingai derinant gamtą, mokslą ir kūrybiškumą – galima užkandžiaujant pasirūpinti geresne sveikata.</p>"
       }
     },
     "settle": {
       "type": "wi-settle",
       "settings": {
-        "subtitle": "Real fruits in every bite",
-        "title": "<p><strong>Don't</strong> settle for flavours</p>",
+        "subtitle": "Tikri vaisiai kiekviename kąsnyje",
+        "title": "<p><strong>Neapsigauk</strong> tik skoniu – rinkis tikrumą.</p>",
         "image": "shopify://shop_images/inside-1.webp",
-        "comment": "<p><strong>&gt;1kg</strong> of real fruits.</p>",
+        "comment": "<p><strong>&gt;1kg</strong> tikrų vaisių.</p>",
         "thumb1": "shopify://shop_images/real-cherry.webp",
         "thumb2": "shopify://shop_images/real-apple.webp",
         "thumb3": "shopify://shop_images/real-banana.webp"
@@ -50,7 +50,7 @@
     "bite": {
       "type": "wi-bite",
       "settings": {
-        "title": "<p><strong>For the shape</strong><br/>and soft bite.</p>",
+        "title": "<p><strong>DĖL FORMOS</strong> IR ŠVELNAUS KĄSNIO</p>",
         "desc": "<p>Yummyness is a real thing. We work hard for it, by making sure they taste like real fruit and have that soft juicy bite. That's why we add natural bits here and there to make the magic mix compete:</p><ul><li><strong>For taste & color: lemon juice concentrate, citrus fibre, sometimes we'd add natural flavoring.</strong></li><li><strong>Processing aids: vegetable fat (coconut, rapeseed), carnauba wax.</strong></li></ul>",
         "button": "Try for yourself"
       }
