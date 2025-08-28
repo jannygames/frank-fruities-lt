@@ -152,8 +152,8 @@
     "leavereview": {
       "type": "front-leave-review",
       "settings": {
-        "title": "<p><strong>Loved Frank Fruities?</strong> Please share your experience!</p>",
-        "button": "Leave a Review"
+        "title": "<p><strong>Patiko Frank Fruities?</strong> Pasidalinkite savo patirtimi!</p>",
+        "button": "Įvertinti"
       }
     },
     "newway": {
