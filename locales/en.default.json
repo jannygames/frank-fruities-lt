@@ -67,9 +67,9 @@
     }
   },
   "newsletter": {
-    "label": "Email",
-    "success": "Thanks for subscribing",
-    "button_label": "Subscribe"
+    "label": "El. paštas",
+    "success": "Ačiū, kad prisijungėte",
+    "button_label": "Prenumeruoti"
   },
   "accessibility": {
     "skip_to_text": "Skip to content",
