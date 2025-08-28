@@ -268,9 +268,9 @@
       "type": "front-crafted",
       "settings": {
         "title": "<p>Pagaminta iš tikrų vaisių,<br/><strong>NE IŠ ŽELATINO</strong></p>",
-        "desc": "<p>Pasirink natūralesnį kelią geros savijautos link su Frank Fruities vitaminais praturtintais guminukais, kurie pagaminti kone vien tik iš tikrų vaisų <strong>(&gt;90% sudėties!)</strong>.</p>",
-        "btline": "A true, wholesome and healthy choice.",
-        "button": "Try for yourself"
+        "desc": "<p>Pasirink natūralesnį kelią geros savijautos link su Frank Fruities vitaminais praturtintais guminukais, kurie pagaminti kone vien tik iš tikrų vaisų <strong>(&gt;90% sudėties!)</strong>. </p><p><strong>Ar naudojame želatiną? Ne!</strong></p>",
+        "btline": "Tikras, sveikas ir sąmoningas pasirinkimas.",
+        "button": "Išbandyk pats"
       }
     },
     "nomore": {
