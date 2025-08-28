@@ -32,7 +32,7 @@
           "type": "cans",
           "settings": {
             "image": "shopify://shop_images/inside-1.webp",
-            "title": "<p><strong>&gt;1kg</strong> of real fruits.</p>",
+            "title": "<p><strong>&gt;1kg</strong> tikrų vaisių.</p>",
             "desc": "We take a basket of fruits and transform them into delightful gummies. We use genuine fruits ensuring a natural and wholesome product."
           }
         },
@@ -50,8 +50,8 @@
         "cans_zmzTYi"
       ],
       "settings": {
-        "subtitle": "What can you expect?",
-        "title": "<p><strong>Inside</strong> these lovely cans</p>"
+        "subtitle": "Ko tikėtis?",
+        "title": "<p>Šių mielų skardinių <strong>viduje </strong>rasite</p>"
       }
     },
     "tasting": {
