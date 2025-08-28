@@ -72,22 +72,22 @@
     "button_label": "Prenumeruoti"
   },
   "accessibility": {
-    "skip_to_text": "Skip to content",
-    "skip_to_product_info": "Skip to product information",
-    "close": "Close",
-    "unit_price_separator": "per",
-    "vendor": "Vendor:",
-    "error": "Error",
-    "refresh_page": "Choosing a selection results in a full page refresh.",
+    "skip_to_text": "Pereiti prie turinio",
+    "skip_to_product_info": "Pereiti prie prekės informacijos",
+    "close": "Uždaryti",
+    "unit_price_separator": "už",
+    "vendor": "Tiekėjas:",
+    "error": "Klaida",
+    "refresh_page": "Pasirinkus įvyksta viso puslapio perkrovimas.",
     "link_messages": {
-      "new_window": "Opens in a new window.",
-      "external": "Opens external website."
+      "new_window": "Atidaroma naujame lange.",
+      "external": "Atidaroma naujoje svetainėje."
     },
-    "loading": "Loading...",
-    "total_reviews": "total reviews",
-    "star_reviews_info": "{{ rating_value }} out of {{ rating_max }} stars",
-    "collapsible_content_title": "Collapsible content",
-    "complementary_products": "Complementary products"
+    "loading": "Kraunama...",
+    "total_reviews": "iš viso atsiliepimų",
+    "star_reviews_info": "{{ rating_value }} iš {{ rating_max }} žvaigždučių",
+    "collapsible_content_title": "Išskleidžiamasis turinys",
+    "complementary_products": "Papildomi produktai"
   },
   "blogs": {
     "article": {
