@@ -139,23 +139,23 @@
         "play_video": "Paleisti vaizdo įrašą"
       },
       "quantity": {
-        "label": "Quantity",
-        "input_label": "Quantity for {{ product }}",
-        "increase": "Increase quantity for {{ product }}",
-        "decrease": "Decrease quantity for {{ product }}",
-        "minimum_of": "Minimum of {{ quantity }}",
-        "maximum_of": "Maximum of {{ quantity }}",
-        "multiples_of": "Increments of {{ quantity }}",
+        "label": "Prekės kiekis",
+        "input_label": "{{ product }} kiekis",
+        "increase": "Padidinti {{ product }} kiekį",
+        "decrease": "Sumažinti {{ product }} kiekį ",
+        "minimum_of": "Mažiausiai {{ quantity }}",
+        "maximum_of": "Daugiausiai {{ quantity }}",
+        "multiples_of": "Daugikliais po {{ quantity }} ",
         "min_of": "Min {{ quantity }}",
         "max_of": "Max {{ quantity }}",
-        "in_cart_html": "<span class=\"quantity-cart\">{{ quantity }}</span> in cart",
-        "note": "View quantity rules"
+        "in_cart_html": "<span class=\"quantity-cart\">{{ quantity }}</span> krepšelyje",
+        "note": "Peržiūrėti kiekio taisykles"
       },
       "volume_pricing": {
-        "title": "Volume Pricing",
-        "note": "Volume pricing available",
+        "title": "Kiekio nuolaidos",
+        "note": "Galimos kiekio nuolaidos",
         "minimum": "{{ quantity }}+",
-        "price_at_each_html": "at {{ price }}/ea",
+        "price_at_each_html": "po {{ price }}/vnt",
         "price_range": "{{ minimum }} - {{ maximum }}"
       },
       "pickup_availability": {
