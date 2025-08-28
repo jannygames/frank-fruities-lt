@@ -110,8 +110,8 @@
     }
   },
   "onboarding": {
-    "product_title": "Example product title",
-    "collection_title": "Your collection's name"
+    "product_title": "Produkto pavadinimo pavyzdys",
+    "collection_title": "Jūsų kolekcijos pavadinimas"
   },
   "products": {
     "product": {
