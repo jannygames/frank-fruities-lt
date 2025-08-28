@@ -46,13 +46,13 @@
               <a
                 href="{{ routes.account_url }}"
                 class="pl-6 bg-no-repeat bg-[position:center_left] bg-[length:auto_15px] bg-account-icon"
-                >Account
+                >Paskyra
               </a>
             {% else %}
               <a
                 href="{{ routes.account_login_url }}"
                 class="pl-6 bg-no-repeat bg-[position:center_left] bg-[length:auto_15px] bg-account-icon"
-                >Sign In
+                >Prisijungti
               </a>
             {% endif %}
           </li>
@@ -60,7 +60,7 @@
             <a
               href="{{ routes.cart_url }}"
               class="pl-6 bg-no-repeat bg-[position:center_left] bg-[length:auto_15px] bg-cart-icon"
-              >Cart - <span class="cart-item-count">{{ cart.item_count }}</span>
+              >Krepšelis - <span class="cart-item-count">{{ cart.item_count }}</span>
             </a>
           </li>
         </ul>
@@ -105,7 +105,7 @@
             href="{{ routes.cart_url }}"
             class="pl-6 text-sm bg-cart-icon bg-no-repeat bg-[position:center_left] bg-[length:auto_15px]"
           >
-            Cart - <span class="cart-item-count">{{ cart.item_count }}</span>
+            Krepšelis - <span class="cart-item-count">{{ cart.item_count }}</span>
           </a>
         </li>
       </ul>
@@ -124,14 +124,14 @@
         {% endfor %}
         {% if customer %}
           <li>
-            <a href="{{ routes.account_url }}" class="block text-[#6F6F6F] font-light">My account</a>
+            <a href="{{ routes.account_url }}" class="block text-[#6F6F6F] font-light">Paskyra</a>
           </li>
         {% else %}
           <li>
-            <a href="{{ routes.account_register_url }}" class="block text-[#6F6F6F] font-light">Sign Up</a>
+            <a href="{{ routes.account_register_url }}" class="block text-[#6F6F6F] font-light">Registruotis</a>
           </li>
           <li>
-            <a href="{{ routes.account_login_url }}" class="block text-[#6F6F6F] font-light">Sign In</a>
+            <a href="{{ routes.account_login_url }}" class="block text-[#6F6F6F] font-light">Prisijungti</a>
           </li>
         {% endif %}
       </ul>
