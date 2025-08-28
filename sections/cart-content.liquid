@@ -2,7 +2,8 @@
   <div class="lg:w-[80%] m-auto pt-12 lg:pt-24">
     <div class="mb-3 lg:mb-7">
       <h2 class="colored-title text-black font-bold text-3xl lg:text-4xl leading-snug uppercase">
-        Review <strong>Cart</strong>
+        {{ section.settings.review_title_prefix }}
+        <strong>{{ section.settings.review_title_strong }}</strong>
       </h2>
     </div>
 
@@ -38,7 +39,12 @@
                   <div class="flex flex-row py-[0.3rem] px-3 border border-[#D9D9D9] rounded-[10px]">
                     <div class="flex items-center">
                       <a class="product-quantity-less" href="#" data-index="{{ forloop.index }}">
-                        <img src="{{ 'product-size-minus.svg' | asset_url }}" width="auto" height="auto" alt="Less">
+                        <img
+                          src="{{ 'product-size-minus.svg' | asset_url }}"
+                          width="auto"
+                          height="auto"
+                          alt="{{ section.settings.qty_less_alt }}"
+                        >
                       </a>
                     </div>
 
@@ -51,7 +57,12 @@
 
                     <div class="flex items-center">
                       <a class="product-quantity-more" href="#" data-index="{{ forloop.index }}">
-                        <img src="{{ 'product-size-plus.svg' | asset_url }}" width="auto" height="auto" alt="More">
+                        <img
+                          src="{{ 'product-size-plus.svg' | asset_url }}"
+                          width="auto"
+                          height="auto"
+                          alt="{{ section.settings.qty_more_alt }}"
+                        >
                       </a>
                     </div>
                   </div>
@@ -59,7 +70,9 @@
 
                 <div class="flex flex-col justify-center">
                   <div class="md:px-10">
-                    <a class="text-sm text-[#FF5E5E]" href="{{ item.url_to_remove }}">Remove</a>
+                    <a class="text-sm text-[#FF5E5E]" href="{{ item.url_to_remove }}">
+                      {{- section.settings.remove_text -}}
+                    </a>
                   </div>
                 </div>
               </div>
@@ -68,37 +81,38 @@
 
           <div class="mb-10">
             <div class="mb-3">
-              Subtotal: <span class="font-semibold text-lg">{{ cart.items_subtotal_price | money }}</span>
+              {{ section.settings.subtotal_label }}
+              <span class="font-semibold text-lg">{{ cart.items_subtotal_price | money }}</span>
             </div>
 
-            <div class="italic font-light">Tax included. Shipping calculated at checkout.</div>
+            <div class="italic font-light">{{ section.settings.tax_shipping_text }}</div>
           </div>
 
           <div class="mb-10 flex flex-col md:flex-row gap-4">
             <input
               type="submit"
               name="checkout"
-              value="Checkout"
+              value="{{ section.settings.checkout_text }}"
               class="bg-[#343057] text-center rounded-lg text-[#fff] text-md py-3 px-16 w-full md:w-auto cursor-pointer"
             >
             <a
               href="{{ routes.all_products_collection_url }}"
               class="text-center border border-[#343057] rounded-lg text-[#343057] text-md py-3 px-16 w-full md:w-auto hover:bg-[#343057] hover:text-white transition-colors duration-200"
             >
-              Continue Shopping
+              {{ section.settings.continue_shopping_text }}
             </a>
           </div>
         </form>
       {% else %}
         <div class="pb-60">
-          Your cart is empty.
+          {{ section.settings.empty_cart_text }}
 
           <div class="flex flex-col md:flex-row gap-4 mt-20">
             <a
               href="{{ routes.all_products_collection_url }}"
               class="text-center border border-[#343057] rounded-lg text-[#343057] text-md py-3 px-16 w-full md:w-auto hover:bg-[#343057] hover:text-white transition-colors duration-200"
             >
-              Continue Shopping
+              {{ section.settings.continue_shopping_text }}
             </a>
           </div>
         </div>
@@ -106,3 +120,73 @@
     </div>
   </div>
 </div>
+
+{% schema %}
+{
+  "name": "Cart Content",
+  "tag": "section",
+  "limit": 1,
+  "settings": [
+    {
+      "type": "text",
+      "id": "review_title_prefix",
+      "label": "Review title prefix",
+      "default": "Review"
+    },
+    {
+      "type": "text",
+      "id": "review_title_strong",
+      "label": "Review title strong",
+      "default": "Cart"
+    },
+    {
+      "type": "text",
+      "id": "qty_less_alt",
+      "label": "Quantity less icon alt",
+      "default": "Less"
+    },
+    {
+      "type": "text",
+      "id": "qty_more_alt",
+      "label": "Quantity more icon alt",
+      "default": "More"
+    },
+    {
+      "type": "text",
+      "id": "remove_text",
+      "label": "Remove link text",
+      "default": "Remove"
+    },
+    {
+      "type": "text",
+      "id": "subtotal_label",
+      "label": "Subtotal label",
+      "default": "Subtotal:"
+    },
+    {
+      "type": "text",
+      "id": "tax_shipping_text",
+      "label": "Tax and shipping note",
+      "default": "Tax included. Shipping calculated at checkout."
+    },
+    {
+      "type": "text",
+      "id": "checkout_text",
+      "label": "Checkout button text",
+      "default": "Checkout"
+    },
+    {
+      "type": "text",
+      "id": "continue_shopping_text",
+      "label": "Continue shopping text",
+      "default": "Continue Shopping"
+    },
+    {
+      "type": "text",
+      "id": "empty_cart_text",
+      "label": "Empty cart message",
+      "default": "Your cart is empty."
+    }
+  ]
+}
+{% endschema %}
