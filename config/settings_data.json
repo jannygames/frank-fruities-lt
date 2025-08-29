@@ -9,43 +9,50 @@
  */
 {
   "current": {
+    "blocks": {
+      "6744518860797519131": {
+        "disabled": false,
+        "settings": {},
+        "type": "shopify://apps/langwill-translate/blocks/floating-selector/35c05b0e-4f05-4fc9-adc7-77b6ccb6b2ca"
+      }
+    },
+    "content_for_index": [],
     "sections": {
-      "header": {
-        "type": "header",
+      "announcement-bar": {
         "settings": {
-          "logo": "shopify://shop_images/logo.svg",
-          "mobile-logo": "shopify://shop_images/mobile-logo.svg",
-          "logo_white": "shopify://shop_images/footer-logo.svg",
-          "logo_dark": "shopify://shop_images/logo.svg"
-        }
+          "background_color": "#c9df24",
+          "cta_bg_color": "#1e40af",
+          "cta_icon_alt": "Arrow Right",
+          "cta_link_text": "Sugrįžimo į mokyklą nuolaidos",
+          "cta_link_url": "/pages/back-to-school#bts-products",
+          "cta_text_color": "#ffffff",
+          "desktop_announcement_text": "ATGAL Į MOKYKLĄ AKCIJOS! NUOLAIDOS IKI 33% TIK IKI RUGSĖJO 14 D.!",
+          "text_color": "#000000",
+          "ticker_item_1": "ATGAL Į MOKYKLĄ AKCIJOS!",
+          "ticker_item_2": "NUOLAIDOS IKI 33%",
+          "ticker_item_3": "TIK IKI RUGSĖJO 14d.!"
+        },
+        "type": "announcement-bar"
       },
       "footer": {
-        "type": "footer",
         "settings": {
           "logo": "shopify://shop_images/footer-logo.svg",
           "title1": "Prekės",
           "title2": "Sužinoti daugiau",
           "title3": "Informacija"
-        }
+        },
+        "type": "footer"
       },
-      "announcement-bar": {
-        "type": "announcement-bar",
+      "header": {
         "settings": {
-          "cta_bg_color": "#1e40af",
-          "cta_text_color": "#ffffff",
-          "background_color": "#c9df24",
-          "text_color": "#000000",
-          "desktop_announcement_text": "ATGAL Į MOKYKLĄ AKCIJOS! NUOLAIDOS IKI 33% TIK IKI RUGSĖJO 14 D.!",
-          "ticker_item_1": "ATGAL Į MOKYKLĄ AKCIJOS!",
-          "ticker_item_2": "NUOLAIDOS IKI 33%",
-          "ticker_item_3": "TIK IKI RUGSĖJO 14d.!",
-          "cta_link_url": "/pages/back-to-school#bts-products",
-          "cta_link_text": "Sugrįžimo į mokyklą nuolaidos",
-          "cta_icon_alt": "Arrow Right"
-        }
+          "logo": "shopify://shop_images/logo.svg",
+          "logo_dark": "shopify://shop_images/logo.svg",
+          "logo_white": "shopify://shop_images/footer-logo.svg",
+          "mobile-logo": "shopify://shop_images/mobile-logo.svg"
+        },
+        "type": "header"
       }
-    },
-    "content_for_index": []
+    }
   },
   "presets": {}
 }
