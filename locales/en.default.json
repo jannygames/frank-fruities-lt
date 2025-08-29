@@ -594,7 +594,21 @@
         "submit": "Pateitki",
         "processing": "Vykdoma…",
         "remove_item": "Pašalinti {{ label }}",
-        "remove_tag": "Pašalinti žymą"
+        "remove_tag": "Pašalinti žymą",
+        "forwarding_indicator": {
+          "new_window": "Atsidaro naujame lange.",
+          "external": "Atsidaro kitame puslapyje.",
+          "external_and_new_window": "Atsidaro kitame puslapyje naujame lange."
+        },
+        "checkout_context": {
+          "step_one": "{{shop_name}} - Apmokėjimas"
+        },
+        "errors": {
+          "only_empty_terms_accepted": "Ši politika priima tik tuščias sąlygas.",
+          "session_identifier_not_unique_error": "Įvyko klaida apdorojant jūsų užsakymą, prašome pabandyti atsiskaityti dar kartą.",
+          "line_item_limit_reached": "Pasiektas didžiausias prekių skaičius.",
+          "session_is_already_finished": "Ši atsiskaitymo sesija jau yra užbaigta."
+        }
       }
     }
   }
