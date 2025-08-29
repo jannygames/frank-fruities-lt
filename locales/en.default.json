@@ -639,6 +639,26 @@
             "title_too_long": "Prekės pavadinimas yra per ilgas.",
             "title_empty": "Prekės pavadinimas yra tuščias."
           }
+        },
+        "dates": {
+          "weekdays": {
+            "monday": "Pirmadienis",
+            "tuesday": "Antradienis",
+            "wednesday": "Trečiadienis",
+            "thursday": "Ketvirtadienis",
+            "friday": "Penktadienis",
+            "saturday": "Šeštadienis",
+            "sunday": "Sekmadienis"
+          },
+          "weekdays_abbreviation": {
+            "monday": "Pr",
+            "tuesday": "An",
+            "wednesday": "Tr",
+            "thursday": "Kv",
+            "friday": "Pn",
+            "saturday": "Še",
+            "sunday": "Se"
+          }
         }
       }
     }
