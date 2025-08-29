@@ -673,6 +673,13 @@
             "november": "Lapkritis",
             "december": "Gruodis"
           }
+        },
+        "datepicker": {
+          "show_previous_month": "Rodyti ankstesnį mėnesį {{month}} {{year}}",
+          "show_next_month": "Rodyti sekantį mėnesį {{month}} {{year}}",
+          "range_start": "Intervalo pradžia",
+          "in_range": "Intervale",
+          "range_end": "Intervalo pabaiga"
         }
       }
     }
