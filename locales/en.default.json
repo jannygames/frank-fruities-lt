@@ -630,7 +630,14 @@
             "inventory_not_found": "Šiai prekei atsargų nerasta.",
             "product_not_published": "Prekė nepublikuota.",
             "product_not_published_in_buyer_location": "Prekė nepublikuota pirkėjo vietoje.",
-            "duplicated_stable_id": "Ši prekių eilutė turi tokį pat stabilų ID, kaip ir kita eilutė."
+            "duplicated_stable_id": "Ši prekių eilutė turi tokį pat stabilų ID, kaip ir kita eilutė.",
+            "minimum_quantity_not_met": "Kai kurių prekių kiekis neatitinka minimalaus reikalaujamo kiekio.",
+            "maximum_quantity_exceeded": "Kai kurių prekių kiekis viršija maksimaliai leistiną.",
+            "quantity_increment_not_met": "Kai kurių prekių kiekis neatitinka užsakymo ribų.",
+            "quantity_rules_not_met": "Kai kurių prekių kiekis neatitinka užsakymo ribų.",
+            "bundle_requires_components": "Šis prekių rinkinys neturi komponentų.",
+            "title_too_long": "Prekės pavadinimas yra per ilgas.",
+            "title_empty": "Prekės pavadinimas yra tuščias."
           }
         }
       }
