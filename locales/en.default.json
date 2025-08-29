@@ -658,6 +658,20 @@
             "friday": "Pn",
             "saturday": "Še",
             "sunday": "Se"
+          },
+          "months": {
+            "january": "Sausis",
+            "february": "Vasaris",
+            "march": "Kovas",
+            "april": "Balandis",
+            "may": "Gegužė",
+            "june": "Birželis",
+            "july": "Liepa",
+            "august": "Rugpjūtis",
+            "september": "Rugsėjis",
+            "october": "Spalis",
+            "november": "Lapkritis",
+            "december": "Gruodis"
           }
         }
       }
