@@ -621,7 +621,16 @@
             "gift_card_used": "Dovanų kortelės kodas {{code}} jau priskirtas dovanų kortelei. Kodai suformuojami prieš palyginant.",
             "gift_card_invalid": "Dovanų kortelės kodas {{code}} yra neteisingas.",
             "gift_card_code_changed": "Dovanų kortelės kodas {{proposed_code}} buvo pakeistas į {{formatted_code}}, kad atitiktų formatavimo taisykles.",
-            "gift_card_with_attributes_not_supported": "Dovanų kortelės su papildomais atributais šiame atsiskaityme nepalaikomos."
+            "gift_card_with_attributes_not_supported": "Dovanų kortelės su papildomais atributais šiame atsiskaityme nepalaikomos.",
+            "gift_card_with_components_not_supported": "Dovanų kortelės su komponentais šiame atsiskaityme nepalaikomos.",
+            "selling_plan_mismatch": "Prenumerata buvo atnaujinta.",
+            "selling_plan_not_supported": "Prenumeratos nepalaikomos.",
+            "selling_plan_not_supported_b2b": "Prenumeratos nepalaikomos B2B atsiskaityme.",
+            "price_mismatch": "Anksčiau pasiūlyta šios prekės kaina buvo netinkama ir buvo atnaujinta.",
+            "inventory_not_found": "Šiai prekei atsargų nerasta.",
+            "product_not_published": "Prekė nepublikuota.",
+            "product_not_published_in_buyer_location": "Prekė nepublikuota pirkėjo vietoje.",
+            "duplicated_stable_id": "Ši prekių eilutė turi tokį pat stabilų ID, kaip ir kita eilutė."
           }
         }
       }
