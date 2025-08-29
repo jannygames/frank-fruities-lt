@@ -638,6 +638,13 @@
             "bundle_requires_components": "Šis prekių rinkinys neturi komponentų.",
             "title_too_long": "Prekės pavadinimas yra per ilgas.",
             "title_empty": "Prekės pavadinimas yra tuščias."
+          },
+          "buyer_identity": {
+            "business_customer_does_not_match_company": "Įmonės kontaktas neturi prieigos prie įmonės.",
+            "customer_account_required": "Norėdami tęsti, turite prisijungti.",
+            "company_location_required": "Norėdami tęsti, turite pasirinkti įmonės vietą.",
+            "company_purchase_permission_required": "Klientas neturi leidimo pateikti įmonės užsakymų.",
+            "personal_order_not_allowed": "Šioje parduotuvėje asmeniniai užsakymai neleidžiami."
           }
         },
         "dates": {
