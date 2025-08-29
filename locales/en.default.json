@@ -607,7 +607,22 @@
           "only_empty_terms_accepted": "Ši politika priima tik tuščias sąlygas.",
           "session_identifier_not_unique_error": "Įvyko klaida apdorojant jūsų užsakymą, prašome pabandyti atsiskaityti dar kartą.",
           "line_item_limit_reached": "Pasiektas didžiausias prekių skaičius.",
-          "session_is_already_finished": "Ši atsiskaitymo sesija jau yra užbaigta."
+          "session_is_already_finished": "Ši atsiskaitymo sesija jau yra užbaigta.",
+          "merchandise": {
+            "only_value_constraint": "Prekių įvedime leidžiamos tik tikslios reikšmės.",
+            "merchandise_not_found": "Prekė nerasta.",
+            "merchandise_variant_not_found": "Prekės variantas nerastas.",
+            "merchandise_not_applicable": "Prekės varianto įsigyti negalima.",
+            "mixed_currencies": "Atsiskaityme yra prekių eilučių su skirtingomis valiutomis.",
+            "bundle_products_not_supported_for_b2b": "Šioje vietoje B2B užsakymams negalima pridėti prekių rinkinių.",
+            "gift_card_quantity_mismatch": "Nurodant dovanų kortelių kodus, prekių eilutės kiekis ir dovanų kortelių kodų skaičius turi sutapti.",
+            "gift_card_not_supported": "Šiame atsiskaityme dovanų kortelės nepalaikomos.",
+            "gift_card_not_unique": "Dovanų kortelės kodas {{code}} šio atsiskaitymo metu pasikartoja daugiau nei vieną kartą.",
+            "gift_card_used": "Dovanų kortelės kodas {{code}} jau priskirtas dovanų kortelei. Kodai suformuojami prieš palyginant.",
+            "gift_card_invalid": "Dovanų kortelės kodas {{code}} yra neteisingas.",
+            "gift_card_code_changed": "Dovanų kortelės kodas {{proposed_code}} buvo pakeistas į {{formatted_code}}, kad atitiktų formatavimo taisykles.",
+            "gift_card_with_attributes_not_supported": "Dovanų kortelės su papildomais atributais šiame atsiskaityme nepalaikomos."
+          }
         }
       }
     }
