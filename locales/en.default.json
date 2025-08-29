@@ -533,5 +533,69 @@
       "send_on": "YYYY-MM-DD",
       "send_on_label": "Išsiuntimo data (etiketė)"
     }
+  },
+  "shopify": {
+    "sentence": {
+      "two_words_connector": "ir",
+      "last_word_connector": ", ir"
+    },
+    "checkout": {
+      "address_management": {
+        "confirm_address_deletion": "Ar tikrai norite pašalinti šį adresą?"
+      },
+      "general": {
+        "page_title": "Apmokėjimas",
+        "error_page_title": "Klaida",
+        "skip_to_content": "Pereiti prie turinio",
+        "breadcrumb": "Naršymo kelias",
+        "continue_button_label": "Tęsti",
+        "complete_purchase_button_label": "Užbaigti užsakymą",
+        "pay_now_button_label": "Mokėti dabar",
+        "authenticate_purchase_button_label": "Patvirtinti mokėjimą",
+        "edit_link_label": "Redaguoti",
+        "all_rights_reserved": "Visos teisės saugomos {{ shop_name }}",
+        "print_policies_link_label": "Spausdinti",
+        "cart": "Krepšelis",
+        "close_modal_label": "Uždaryti",
+        "close_notice_label": "Uždaryti",
+        "expand_notice_label": "Peržiūrėti daugiau",
+        "continue_to_shipping_method": "Pereiti prie pristatymo",
+        "continue_to_payment_method": "Pereiti prie apmokėjimo",
+        "continue_to_review": "Peržūrėti užsakymą",
+        "back_to_cart": "Atgal į krepšelį",
+        "back_to_contact_information": "Atgal į informaciją",
+        "back_to_shipping_method": "Atgal į pristatymą",
+        "back_to_payment_method": "Atgal į apmokėjimą",
+        "choose_shipping_method": "Pasirinkite pristatymo būdą",
+        "choose_payment_method": "Pasirinkite mokėjimo būdą",
+        "choose_billing_address": "Pasirinkite mokėjimo adresą",
+        "contact_us_html": "Susisiekite dėl daugiau informacijos",
+        "autocomplete_title": "Pasiūlymai",
+        "autocomplete_single_item": "1 prekė",
+        "autocomplete_multi_item": "{{number}} prekės",
+        "autocomplete_selection": "{{number}} iš {{total}}",
+        "autocomplete_close": "Uždaryti pasiūlymus",
+        "tooltip_accessibility_label": "Daugiau informacijos",
+        "qr_code": "QR kodas",
+        "full_price": "Pilna kaina:",
+        "title": "Apmokėjimas - {{shopName}}",
+        "full_title": "{{pageTitle}} - {{shopName}} apmokėjimas",
+        "loading": "Kraunama...",
+        "loading_title": "Apmokėjimas - {{shopName}]",
+        "confirm_order_button_label": "Tvirtinti užsakymą",
+        "submit_order_button_label": "Pateikti užsakymą",
+        "submit_for_review_button_label": "Pateikti peržiūrai",
+        "submit_for_review_notice_label": "Mokėjimas nebus taikomas, kol jūsų užsakymas nebus peržiūrėtas",
+        "continue_to_payment_plans_button_label": "Tęsti į mokėjimo planus",
+        "back_button_label": "Grįžti",
+        "choose_delivery_strategy": "Pasirinkite pristatymo būdą",
+        "autocomplete_zero_item": "Nėra galimų prekių",
+        "autocomplete_powered_by_google": "Sukurta naudojant {{brandName}}",
+        "submit": "Pateitki",
+        "processing": "Vykdoma…",
+        "remove_item": "Pašalinti {{ label }}",
+        "remove_tag": "Pašalinti žymą"
+      }
+    }
   }
 }
