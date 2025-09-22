@@ -2765,6 +2765,10 @@ video {
     width: 17rem;
   }
 
+  .sm\:w-\[45\%\] {
+    width: 45%;
+  }
+
   .sm\:w-\[60\%\] {
     width: 60%;
   }
@@ -3118,6 +3122,10 @@ video {
     width: 20%;
   }
 
+  .lg\:w-\[24\%\] {
+    width: 24%;
+  }
+
   .lg\:w-\[40\%\] {
     width: 40%;
   }
@@ -3205,10 +3213,6 @@ video {
 
   .lg\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .lg\:grid-cols-4 {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .lg\:flex-row {
