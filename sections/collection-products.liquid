@@ -33,8 +33,7 @@
   </div>
 
   <div class="lg:w-[80%] p-4 lg:px-0 m-auto pt-10">
-    {% assign products = collection.products | sort: default_sort_by %}
-    {% paginate products by 50 %}
+    {% paginate collection.products by 50 %}
       <div class="grid grid-cols-2 gap-x-5 gap-y-8 lg:flex lg:flex-row lg:flex-wrap lg:justify-between items-stretch">
         {% for product in collection.products %}
           {% render 'product', product: product %}
