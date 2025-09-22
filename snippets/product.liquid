@@ -1,14 +1,14 @@
-<div class="w-full sm:w-[45%] lg:w-[23%] flex flex-col h-full">
+<div class="w-full sm:w-[45%] lg:w-[24%] flex flex-col h-full">
   <style>
     .jdgm-prev-badge__text {
       display: none !important;
     }
   </style>
-  <div class="rounded-lg overflow-hidden mb-2" style="aspect-ratio: 4 / 5;">
+  <div class="rounded-lg overflow-hidden mb-2" style="aspect-ratio: 4 / 4;">
     <a href="{{ product.url }}" class="block w-full h-full">
       {{
         product.featured_image
-        | image_url: width: 800
+        | image_url: width: 600
         | image_tag: alt: product.title, class: 'w-full h-full object-cover'
       }}
     </a>
@@ -74,7 +74,7 @@
         class="w-full flex items-center justify-center gap-2 bg-[#343057] text-white py-2 rounded-lg opacity-50 cursor-not-allowed mt-2 mb-5"
         disabled
       >
-        Sold out
+        Išparduota
         <img
           src="{{ 'cart-icon.svg' | asset_url }}"
           alt="Cart"
