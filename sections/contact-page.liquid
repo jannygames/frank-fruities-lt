@@ -1,0 +1,91 @@
+<div class="px-4 lg:px-0 pt-28 pb-20 mt-20">
+  <div class="lg:w-[80%] m-auto">
+    <div class="rounded-2xl overflow-hidden mb-12">
+      <img src="{{ 'contact-bg.png' | asset_url }}" alt="Kontaktai" width="1600" height="400" class="w-full h-auto">
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+      <div>
+        <h1 class="text-4xl font-bold text-[#343057] mb-6">Susisiekite</h1>
+
+        {% form 'contact' %}
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <input
+              type="email"
+              name="contact[email]"
+              placeholder="Email address"
+              value="{{ form.email }}"
+              class="w-full border border-[#E5E5E5] rounded-md px-4 py-3"
+              required
+            >
+            <input
+              type="text"
+              name="contact[name]"
+              placeholder="Your name"
+              value="{{ form.name }}"
+              class="w-full border border-[#E5E5E5] rounded-md px-4 py-3"
+            >
+          </div>
+
+          <div class="mt-4">
+            <textarea
+              name="contact[body]"
+              placeholder="Message"
+              rows="4"
+              class="w-full border border-[#E5E5E5] rounded-md px-4 py-3"
+              required
+            >{{ form.body }}</textarea>
+          </div>
+
+          {% if form.posted_successfully? %}
+            <p class="mt-4 text-green-700 bg-green-50 border border-green-200 rounded-md px-4 py-3">
+              Dėkojame! Jūsų žinutė buvo išsiųsta.
+            </p>
+          {% endif %}
+          {% if form.errors %}
+            <div class="mt-4 text-red-700 bg-red-50 border border-red-200 rounded-md px-4 py-3">
+              {{ form.errors | default_errors }}
+            </div>
+          {% endif %}
+
+          <div class="mt-5 flex justify-end w-full mb-10">
+            <button type="submit" class="ml-auto bg-[#343057] text-white rounded-md px-16 py-3">Siųsti</button>
+          </div>
+        {% endform %}
+      </div>
+
+      <div>
+        <h2 class="text-4xl font-bold text-[#343057] mb-6">Frank Fruities</h2>
+        <ul class="space-y-4 text-sm text-[#6F6F6F]">
+          <li class="flex flex-row items-start gap-3">
+            <img class="mt-1" src="{{ 'phone.svg' | asset_url }}" alt="Phone" width="20" height="20">
+            <span>+41 79 962 45 32</span>
+          </li>
+          <li class="flex flex-row items-start gap-3">
+            <img class="mt-1" src="{{ 'email.svg' | asset_url }}" alt="Email" width="20" height="20">
+            <div>
+              <div><span class="text-[#343057] font-medium">Klientų aptarnavimas</span></div>
+              <a href="mailto:info@frankfunctionalfoods.com" class="underline">info@frankfunctionalfoods.com</a>
+            </div>
+          </li>
+          <li class="flex flex-row items-start gap-3">
+            <img class="mt-1" src="{{ 'email.svg' | asset_url }}" alt="Email" width="20" height="20">
+            <div>
+              <div><span class="text-[#343057] font-medium">Partneriams</span></div>
+              <a href="mailto:sales@frankfunctionalfoods.com" class="underline">sales@frankfunctionalfoods.com</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Contact Page",
+  "tag": "section",
+  "limit": 1,
+  "settings": []
+}
+{% endschema %}
