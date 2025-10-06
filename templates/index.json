@@ -285,9 +285,9 @@
     "subscription": {
       "type": "front-subscription",
       "settings": {
-        "title": "<p><strong>Prisijunk prie Frank Fruities gerbėjų klubo! </strong>Užsiprenumeruok naujienas!<br/></p>",
+        "title": "<p><strong>PRISIJUNKITE PRIE FRANK FRUITIES GERBĖJŲ KLUBO!</strong> </p><p>UŽSIPRENUMERUOKITE NAUJIENAS!</p>",
         "placeholder": "Enter your email address",
-        "button": "Prisijunk"
+        "button": "Prisijunkite"
       }
     },
     "social": {
