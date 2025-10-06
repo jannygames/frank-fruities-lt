@@ -21,9 +21,9 @@
       "type": "wwct-supplements",
       "settings": {
         "image": "shopify://shop_images/supplements.webp",
-        "subtitle": "Old ways are simply inconvenient.",
+        "subtitle": "Seni būdai tiesiog nepatogūs.",
         "title": "<p><strong>PAPILDAI</strong>, JŪS TURITE PROBLEMĄ!</p>",
-        "desc": "<p>Mes supratome, kad vitaminų ar maisto papildų vartojimas nėra smagi dienos dalis<strong>. </strong>Žmonės to nenori daryti, nes jie yra beskoniai, be aromato ir kartais tiesiog šlykštūs. Be to, dažnai juos reikia užgerti vandeniu, o tai dar labiau apsunkina procesą. Net ir siūlomi vitaminų guminukai dažnai būna guminiai, gumos skonio ir sudaryti daugiausia iš vaisių kvapiųjų medžiagų bei želatinos.</p><p>Iš elgesio tyrimų žinome, kad žmonėms lengviau susiformuoti įpročius ir jų laikytis, jei tai yra <strong>„SMAGU“</strong>. Ši įžvalga ir mūsų pačių sunkumai vartojant vitaminus tapo paskata imtis pokyčių ir iš esmės perkurti 120 mlrd. dolerių vertės pasaulinę vitaminų ir papildų kategoriją.<br/><br/></p>"
+        "desc": "<p>Mes supratome, kad vitaminų ir maisto papildų vartojimas retai būna smagioji dienos dalis. Žmonės to vengia, nes dauguma papildų yra beskoniai, be aromato arba net nemalonūs vartoti. Be to, dažnai juos reikia užgerti vandeniu, kas tik dar labiau apsunkina procesą. Net ir vitaminų guminukai, esantys rinkoje, dažnai primena kietą gumą, turi dirbtiną skonį ir sudėtyje turi daugiau kvapiųjų medžiagų bei želatinos nei natūralių komponentų.<br/><br/>Elgesio tyrimai rodo, kad žmonėms daug lengviau susiformuoti įpročius ir jų laikytis, jei tai yra <strong>„SMAGU“</strong>. Ši įžvalga ir mūsų pačių patirtis su vitaminais tapo paskata imtis pokyčių ir iš esmės perkurti pasaulinę, 120 mlrd. dolerių vertės, vitaminų ir papildų kategoriją.</p>"
       }
     },
     "whatif": {
