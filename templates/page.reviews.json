@@ -77,8 +77,8 @@
     "takestep": {
       "type": "reviews-takestep",
       "settings": {
-        "title": "Ženk žingsnį link skanesnio ir sveikesnio gyvenimo.",
-        "subtitle": "Priimk vaisišką revoliuciją ir pakeisk savo įpročius jau šiandien!"
+        "title": "Ženkite žingsnį link skanesnio ir sveikesnio gyvenimo.",
+        "subtitle": "Priimkite vaisišką revoliuciją ir pakeiskite savo įpročius jau šiandien!"
       }
     }
   },
