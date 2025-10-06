@@ -73,8 +73,8 @@
           "type": "benefits",
           "settings": {
             "image": "shopify://shop_images/benefits-water.svg",
-            "title": "<p><strong>Nereikalingas</strong> vanduo</p>",
-            "desc": "Labai, labai patogu vartoti. Tiesiog kąskite – jie kramtomi, lyg natūralūs vaisiai! Mėgaukis vitaminais praturtintais guminukais bet kur ir bet kada."
+            "title": "<p><strong>Nereikalauja</strong> vandens</p>",
+            "desc": "Tiesiog įsidėkite į burną ir sukramtykite, lyg valgytumėte paprastas uogas ar vaisių gabaliukus! Mėgaukitės vitaminais praturtintais guminukais bet kur ir bet kada."
           }
         }
       },
