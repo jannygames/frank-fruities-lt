@@ -7,26 +7,26 @@
 
   <div class="lg:w-[80%] p-4 lg:px-0 m-auto py-10 max-sm:py-3">
     <div class="text-sm border-b pb-[0.9rem] border-[#D3D3D3] hidden md:flex flex-row justify-between">
-      <div class="w-[200px]">Filter</div>
+      <div class="w-[200px]">Filtras</div>
 
-      <div class="w-[200px]">Sort</div>
+      <div class="w-[200px]">Rikiuoti</div>
     </div>
 
     <div class="pt-3 flex flex-col md:flex-row justify-between gap-y-8">
       <div class="md:w-[200px]">
         {%- capture filters -%}
-          all|All Products,bundles|Bundles,back-to-school|Back to School,for-adults|For Adults,for-kids|For Kids
+          all|Visi produktai,bundles|Rinkiniai,back-to-school|Atgal į mokyklą,for-adults|Suaugusiems,for-kids|Vaikams
         {%- endcapture -%}
-        <label class="text-sm mb-2 block md:hidden">Filter</label>
+        <label class="text-sm mb-2 block md:hidden">Filtras</label>
         {% render 'dropdown', instance: 'collection', options: filters, default: collection.handle %}
       </div>
 
       <div class="md:w-[200px]">
         {%- capture sort_by -%}
-          best-selling|Popular,price-ascending|Cheaper first,price-descending|Expensive first
+          best-selling|Populiariausi,price-ascending|Pigiausi viršuje,price-descending|Brangiausi viršuje
         {%- endcapture -%}
         {% assign default_sort_by = collection.sort_by | default: 'best-selling' %}
-        <label class="text-sm mb-2 block md:hidden">Sort</label>
+        <label class="text-sm mb-2 block md:hidden">Rikiuoti</label>
         {% render 'dropdown', instance: 'sort_by', options: sort_by, default: default_sort_by %}
       </div>
     </div>
