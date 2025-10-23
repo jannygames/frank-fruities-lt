@@ -40,9 +40,18 @@
       rel="stylesheet"
     >
   </head>
+  <script>
+    (function () {
+      try {
+        if (window.location && window.location.pathname === '/partners-proposal') {
+          window.location.replace("{{ 'Frank_Fruities-partnership_proposal.pdf' | asset_url }}");
+        }
+      } catch (e) {}
+    })();
+  </script>
 
   <body class="font-inter">
-    {% comment %} {% section 'announcement-bar' %} {% endcomment %}
+    {% comment %} section 'announcement-bar' {% endcomment %}
     {% section 'header' %}
 
     <main id="content" class="" role="main" tabindex="-1">
@@ -50,6 +59,7 @@
     </main>
 
     {% section 'footer' %}
+    {% section 'newsletter-popup' %}
 
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="{{ 'theme.js' | asset_url }}" async></script>

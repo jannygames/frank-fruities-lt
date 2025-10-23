@@ -1,0 +1,121 @@
+<div id="newsletter-popup" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden items-center justify-center">
+  <div class="bg-white rounded-lg p-8 max-w-md mx-4 relative">
+    <button id="close-popup" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700" aria-label="Close popup">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" width="24" height="24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </button>
+
+    <div class="text-center">
+      <h2 class="text-2xl font-bold text-[#343057] mb-4">Join the Frank Fruities Club!</h2>
+      <p class="text-gray-600 mb-6">Subscribe to our newsletter and get <strong>10% off</strong> your next purchase!</p>
+
+      {% form 'customer' %}
+        <div class="mb-4">
+          <input
+            type="email"
+            name="contact[email]"
+            placeholder="Enter your email address"
+            value="{{ form.email }}"
+            class="w-full border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#343057]"
+            required
+          >
+        </div>
+
+        <input type="hidden" name="contact[tags]" value="newsletter">
+
+        <button
+          type="submit"
+          class="w-full bg-[#343057] text-white rounded-md px-6 py-3 font-medium hover:bg-[#2a2645] transition-colors"
+        >
+          Subscribe & Get 15% Off
+        </button>
+
+        {% if form.posted_successfully? %}
+          <div class="mt-4 p-3 bg-green-50 border border-green-200 rounded-md">
+            <p class="text-green-700 text-sm">Thank you! Check your email for your discount code.</p>
+          </div>
+          <script>
+            // Hide popup after successful subscription
+            setTimeout(() => {
+              document.getElementById('newsletter-popup').classList.add('hidden');
+              document.getElementById('newsletter-popup').classList.remove('flex');
+              localStorage.setItem('newsletter-popup-seen', 'true');
+            }, 2000);
+          </script>
+        {% endif %}
+
+        {% if form.errors %}
+          <div class="mt-4 p-3 bg-red-50 border border-red-200 rounded-md">
+            <p class="text-red-700 text-sm">{{ form.errors | default_errors }}</p>
+          </div>
+        {% endif %}
+      {% endform %}
+
+      <p class="text-xs text-gray-500 mt-4">We will email you a discount code for 15% off your next purchase.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const popup = document.getElementById('newsletter-popup');
+    const closeBtn = document.getElementById('close-popup');
+
+    // Check if user has already seen the popup
+    if (!localStorage.getItem('newsletter-popup-seen')) {
+      // Show popup after 3 seconds
+      setTimeout(() => {
+        popup.classList.remove('hidden');
+        popup.classList.add('flex');
+      }, 3000);
+    }
+
+    // Close popup
+    closeBtn.addEventListener('click', function () {
+      popup.classList.add('hidden');
+      popup.classList.remove('flex');
+      localStorage.setItem('newsletter-popup-seen', 'true');
+    });
+
+    // Close popup when clicking outside
+    popup.addEventListener('click', function (e) {
+      if (e.target === popup) {
+        popup.classList.add('hidden');
+        popup.classList.remove('flex');
+        localStorage.setItem('newsletter-popup-seen', 'true');
+      }
+    });
+
+    // Handle form submission
+    const form = popup.querySelector('form');
+    if (form) {
+      form.addEventListener('submit', function (e) {
+        // You can add additional logic here if needed
+        // The form will submit to Shopify's customer API
+      });
+    }
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Newsletter Popup",
+  "tag": "section",
+  "limit": 1,
+  "settings": [
+    {
+      "type": "text",
+      "id": "discount_code",
+      "label": "Discount Code",
+      "default": "FRANKKLUBAS10"
+    },
+    {
+      "type": "text",
+      "id": "discount_percentage",
+      "label": "Discount Percentage",
+      "default": "10%"
+    }
+  ]
+}
+{% endschema %}

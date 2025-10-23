@@ -49,14 +49,54 @@
 
   <div class="lg:w-[80%] m-auto flex flex-col lg:flex-row gap-8">
     <div class="md:w-[50%] lg:w-[40%]">
-      {{ product.featured_image | image_url: width: 600 | image_tag: alt: product.title, class: 'rounded-lg' }}
+      <div class="mb-4">
+        <img
+          id="featured-product-image"
+          src="{{ product.featured_image | image_url: width: 600 }}"
+          alt="{{ product.title }}"
+          class="rounded-lg w-full h-auto"
+          width="600"
+          height="600"
+        >
+      </div>
+
+      {% if product.images.size > 1 %}
+        <div class="product-gallery grid grid-cols-7 gap-2">
+          {% for image in product.images %}
+            <div
+              class="gallery-thumbnail cursor-pointer border-2 border-transparent hover:border-[#343057] rounded-lg overflow-hidden {% if forloop.first %}border-[#343057]{% endif %}"
+              data-image-url="{{ image | image_url: width: 600 }}"
+              data-image-alt="{{ image.alt | default: product.title }}"
+            >
+              <img
+                src="{{ image | image_url: width: 150 }}"
+                alt="{{ image.alt | default: product.title }}"
+                class="w-full h-auto rounded-lg"
+                width="100"
+                height="100"
+              >
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
     </div>
 
     <div class="product-form lg:w-[50%]">
-      {% form 'product', product %}
-        <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+      {% form 'product', product, id: 'product-form' %}
+        <input
+          type="hidden"
+          name="id"
+          value="{{ product.selected_or_first_available_variant.id }}"
+          id="product-variant-id"
+        >
+        <input type="hidden" name="selling_plan" value="" id="product-selling-plan">
         <div class="text-[#343057] text-4xl font-bold uppercase tracking-wide mb-7">
           {{ product.title }}
+          <!-- Start of Judge.me code -->
+          <div class="jdgm-widget jdgm-preview-badge font-inter mt-2 !text-sm" data-id="{{ product.id }}">
+            {{ product.metafields.judgeme.badge }}
+          </div>
+          <!-- End of Judge.me code -->
         </div>
 
         <div class="mb-7">
@@ -101,33 +141,155 @@
           <div>
             <div class="text-sm border-b pb-[0.9rem] border-[#D3D3D3] flex justify-between items-center">
               <span>Aprašymas</span>
-              <!-- Start of Judge.me code -->
-              <div class="jdgm-widget jdgm-preview-badge font-inter" data-id="{{ product.id }}">
-                {{ product.metafields.judgeme.badge }}
+
+              <div>
+                <button
+                  type="submit"
+                  class="add-to-cart bg-[#FF5E5E] text-center rounded-md text-[#fff] text-sm py-2 px-20 w-full md:w-auto"
+                >
+                  <span>Į krepšelį</span>
+                  <img
+                    src="{{ 'more-products-icon.svg' | asset_url }}"
+                    alt="Į krepšelį"
+                    width="15"
+                    height="auto"
+                    class="inline-block ml-2 mt-[-4px] brightness-0 invert"
+                  >
+                </button>
               </div>
-              <!-- End of Judge.me code -->
             </div>
 
             <div class="pt-4 text-[0.8rem] text-[#6F6F6F]">
               {{ product.description }}
             </div>
           </div>
-        </div>
 
-        <div>
-          <button
-            type="submit"
-            class="add-to-cart bg-[#343057] text-center rounded-md text-[#fff] text-sm py-2 px-20 w-full md:w-auto"
-          >
-            <span></span>
-            <img
-              src="{{ 'more-products-icon.svg' | asset_url }}"
-              alt="Į krepšelį"
-              width="15"
-              height="auto"
-              class="inline-block ml-2 mt-[-4px]"
-            >
-          </button>
+          <!-- Subscription Options -->
+          {% if product.selling_plan_groups.size > 0 %}
+            {% assign monthly_plan = null %}
+            {% for group in product.selling_plan_groups %}
+              {% for plan in group.selling_plans %}
+                {% assign monthly_plan = plan %}
+                {% break %}
+              {% endfor %}
+              {% if monthly_plan %}
+                {% break %}
+              {% endif %}
+            {% endfor %}
+
+            {% if monthly_plan %}
+              <div class="mt-8 bg-gradient-to-r from-[#f8f9fa] to-[#e9ecef] rounded-lg p-6">
+                <div class="text-center mb-4">
+                  <h3 class="text-xl font-bold mb-1 text-[#343057]">Sutaupykite 15% su mėnesine prenumerata</h3>
+                  <p class="text-sm text-[#6F6F6F]">Prekės atvyks kas mėnesį. Atšaukti galite bet kada.</p>
+                </div>
+
+                <div class="flex items-center justify-center gap-4 mb-5">
+                  <div class="text-center">
+                    <div class="text-sm text-[#6F6F6F] mb-1">Prenumeratos kaina</div>
+                    <div class="text-3xl font-bold text-[#FF5E5E]" id="subscription-price-display">
+                      {% assign sub_price = product.selected_or_first_available_variant.price | times: 0.85 | round %}
+                      {{ sub_price | money }}
+                    </div>
+                  </div>
+                  <div class="text-center">
+                    <div class="text-sm text-[#6F6F6F] mb-1">Įprasta kaina</div>
+                    <div class="text-xl line-through text-[#C7C7C7]" id="subscription-compare-display">
+                      {{ product.selected_or_first_available_variant.price | money }}
+                    </div>
+                  </div>
+                </div>
+
+                <button
+                  type="button"
+                  onclick="selectSubscription('{{ monthly_plan.id }}')"
+                  id="subscribe-button"
+                  class="w-full bg-[#FF5E5E] hover:bg-[#ff4545] text-white font-semibold py-3 px-6 rounded-md transition-colors duration-200 flex items-center justify-center gap-2"
+                >
+                  <span>✓ Prenumeruokite ir sutaupykite 15%</span>
+                </button>
+
+                <div class="mt-3 text-center">
+                  <button
+                    type="button"
+                    onclick="selectOneTime()"
+                    id="onetime-link"
+                    class="text-sm underline text-[#6F6F6F] hover:text-[#343057]"
+                  >
+                    arba pirkite vieną kartą {{ product.selected_or_first_available_variant.price | money }}
+                  </button>
+                </div>
+
+                <input
+                  type="radio"
+                  name="purchase_type"
+                  value="subscription"
+                  id="subscription-radio"
+                  class="hidden"
+                  data-plan-id="{{ monthly_plan.id }}"
+                >
+                <input type="radio" name="purchase_type" value="onetime" id="onetime-radio" class="hidden" checked>
+              </div>
+            {% endif %}
+          {% endif %}
+
+          <!-- Product-specific upsell using metafields -->
+          {% assign product_upsell_handle = product.metafields.custom.upsell_product %}
+          {% assign product_upsell_title = product.metafields.custom.upsell_title %}
+          {% assign product_upsell_text = product.metafields.custom.upsell_text %}
+
+          {% if product_upsell_handle != blank %}
+            {% assign upsell_product = all_products[product_upsell_handle] %}
+            {% if upsell_product != blank %}
+              <div class="mt-8 p-4 bg-gray-50 rounded-lg border border-gray-200">
+                <div class="flex items-center justify-between mb-3">
+                  <div class="flex-1">
+                    <h3 class="text-lg font-semibold text-[#343057] mb-2">
+                      {{ product_upsell_title | default: 'Save Money with Bundle' }}
+                    </h3>
+                    <p class="text-sm text-[#6F6F6F] mb-3">
+                      {{ product_upsell_text | default: 'Save 33% by buying a 3 pack' }}
+                    </p>
+
+                    <div class="flex items-center gap-3">
+                      <div class="w-16 h-16 rounded-lg overflow-hidden">
+                        <img
+                          src="{{ upsell_product.featured_image | image_url: width: 64 }}"
+                          alt="{{ upsell_product.title }}"
+                          class="w-full h-full object-cover"
+                          width="64"
+                          height="64"
+                        >
+                      </div>
+                      <div class="flex-1">
+                        <h4 class="font-medium text-[#343057]">{{ upsell_product.title }}</h4>
+                        <div class="flex items-center gap-2">
+                          {% if upsell_product.compare_at_price > upsell_product.price %}
+                            <span class="text-[#FF5E5E] font-semibold">{{ upsell_product.price | money }}</span>
+                            <span class="text-[#C7C7C7] text-sm line-through">
+                              {{- upsell_product.compare_at_price | money -}}
+                            </span>
+                          {% else %}
+                            <span class="font-semibold text-[#343057]">{{ upsell_product.price | money }}</span>
+                          {% endif %}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="ml-4">
+                    <button
+                      type="button"
+                      onclick="window.location.href='{{ upsell_product.url }}'"
+                      class="bg-[#343057] text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-[#2a2645] transition-colors"
+                    >
+                      Peržiūrėti rinkinį
+                    </button>
+                  </div>
+                </div>
+              </div>
+            {% endif %}
+          {% endif %}
         </div>
       {% endform %}
     </div>
@@ -141,4 +303,174 @@
   >
     {{ product.metafields.judgeme.widget }}
   </div>
+
+  {% render 'subscription-handler', product: product %}
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const featuredImage = document.getElementById('featured-product-image');
+      const thumbnails = document.querySelectorAll('.gallery-thumbnail');
+
+      thumbnails.forEach((thumbnail) => {
+        thumbnail.addEventListener('click', function () {
+          const imageUrl = this.getAttribute('data-image-url');
+          const imageAlt = this.getAttribute('data-image-alt');
+
+          // Update featured image
+          featuredImage.src = imageUrl;
+          featuredImage.alt = imageAlt;
+
+          // Update active thumbnail styling
+          thumbnails.forEach((thumb) => thumb.classList.remove('border-[#343057]'));
+          this.classList.add('border-[#343057]');
+        });
+      });
+
+      // Initialize subscription state
+      initializeSubscription();
+    });
+
+    // Subscription handling
+    function selectSubscription(planId) {
+      const sellingPlanInput = document.getElementById('product-selling-plan');
+      const subscriptionRadio = document.getElementById('subscription-radio');
+      const onetimeRadio = document.getElementById('onetime-radio');
+      const subscribeButton = document.getElementById('subscribe-button');
+      const onetimeLink = document.getElementById('onetime-link');
+
+      sellingPlanInput.value = planId;
+      subscriptionRadio.checked = true;
+      onetimeRadio.checked = false;
+
+      // Update button styling with inline styles to ensure it works
+      subscribeButton.style.backgroundColor = '#d94444';
+      subscribeButton.style.color = '#000000'; // BLACK TEXT so you can see it!
+      subscribeButton.innerHTML = '<span>✓ Prenumerata pasirinkta</span>';
+
+      // Add hover effect
+      subscribeButton.onmouseover = function () {
+        this.style.backgroundColor = '#c93838';
+        this.style.color = '#000000'; // Keep text black on hover
+      };
+      subscribeButton.onmouseout = function () {
+        this.style.backgroundColor = '#d94444';
+        this.style.color = '#000000'; // Keep text black
+      };
+
+      if (onetimeLink) {
+        onetimeLink.style.color = '#343057';
+        onetimeLink.style.fontWeight = 'bold';
+      }
+    }
+
+    function selectOneTime() {
+      const sellingPlanInput = document.getElementById('product-selling-plan');
+      const subscriptionRadio = document.getElementById('subscription-radio');
+      const onetimeRadio = document.getElementById('onetime-radio');
+      const subscribeButton = document.getElementById('subscribe-button');
+      const onetimeLink = document.getElementById('onetime-link');
+
+      sellingPlanInput.value = '';
+      subscriptionRadio.checked = false;
+      onetimeRadio.checked = true;
+
+      // Update button styling back to original red with inline styles
+      subscribeButton.style.backgroundColor = '#FF5E5E';
+      subscribeButton.style.color = 'white';
+      subscribeButton.innerHTML = '<span>✓ Subscribe & Save 15%</span>';
+
+      // Reset hover effect
+      subscribeButton.onmouseover = function () {
+        this.style.backgroundColor = '#ff4545';
+      };
+      subscribeButton.onmouseout = function () {
+        this.style.backgroundColor = '#FF5E5E';
+      };
+
+      if (onetimeLink) {
+        onetimeLink.style.color = '#6F6F6F';
+        onetimeLink.style.fontWeight = 'normal';
+      }
+    }
+
+    // Update prices when variant changes (if you have variant selector)
+    function updateSubscriptionPrices(variantPrice) {
+      const onetimePrice = document.getElementById('onetime-price');
+      const subscriptionPrice = document.getElementById('subscription-price');
+      const subscriptionCompare = document.getElementById('subscription-compare');
+
+      if (onetimePrice) {
+        onetimePrice.textContent = formatMoney(variantPrice);
+      }
+
+      if (subscriptionPrice && subscriptionCompare) {
+        const discountedPrice = Math.round(variantPrice * 0.85);
+        subscriptionPrice.textContent = formatMoney(discountedPrice);
+        subscriptionCompare.textContent = formatMoney(variantPrice);
+      }
+    }
+
+    // Format money in euros
+    function formatMoney(cents) {
+      return '€' + (cents / 100).toFixed(2).replace('.', ',');
+    }
+  </script>
 </div>
+
+{% schema %}
+{
+  "name": "Product Content",
+  "tag": "section",
+  "limit": 1,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Product Upsell"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_upsell",
+      "label": "Show global product upsell (optional)",
+      "default": false,
+      "info": "This will show the same upsell for all products. For product-specific upsells, use metafields instead."
+    },
+    {
+      "type": "product",
+      "id": "upsell_product",
+      "label": "Global upsell product"
+    },
+    {
+      "type": "text",
+      "id": "upsell_title",
+      "label": "Global upsell title",
+      "default": "Save Money with Bundle"
+    },
+    {
+      "type": "textarea",
+      "id": "upsell_text",
+      "label": "Global upsell description",
+      "default": "Save 33% by buying a 3 pack"
+    },
+    {
+      "type": "header",
+      "content": "Product-Specific Upsells"
+    },
+    {
+      "type": "paragraph",
+      "content": "To set different upsells for each product, use these metafields in your product settings:"
+    },
+    {
+      "type": "paragraph",
+      "content": "• custom.upsell_product: Product handle (e.g., 'product-handle')"
+    },
+    {
+      "type": "paragraph",
+      "content": "• custom.upsell_title: Custom title for this product"
+    },
+    {
+      "type": "paragraph",
+      "content": "• custom.upsell_text: Custom description for this product"
+    }
+  ]
+}
+{% endschema %}
